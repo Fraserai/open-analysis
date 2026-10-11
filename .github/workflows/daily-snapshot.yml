@@ -1,0 +1,58 @@
+name: Daily snapshot
+
+on:
+  schedule:
+    # 08:00 UTC = 6pm Brisbane, after the RBA publishes its 4pm rate. GitHub may start it some minutes late.
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tests
+        run: python -m unittest discover -s tests
+
+      # Without the keys the job would still run, on fallback data. Fail instead of committing that.
+      - name: Check secrets are set
+        env:
+          ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          test -n "$ARTIFICIAL_ANALYSIS_API_KEY" || { echo "::error::Repository secret ARTIFICIAL_ANALYSIS_API_KEY is not set"; exit 1; }
+          test -n "$OPENROUTER_API_KEY" || { echo "::error::Repository secret OPENROUTER_API_KEY is not set"; exit 1; }
+
+      - name: Build snapshot
+        env:
+          ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m openanalysis
+
+      - name: Check against references
+        run: python -m openanalysis.check
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots data/latest.json
+          if git diff --cached --quiet; then
+            echo "No change to commit"
+          else
+            git commit -m "Snapshot $(TZ=Australia/Brisbane date +%F)"
+            git push
+          fi
