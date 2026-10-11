@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.openanalysis.daily</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/sh</string>
+		<string>-c</string>
+		<string>cd /Users/caeseyfraser/Desktop/open-analysis &amp;&amp; exec /Library/Frameworks/Python.framework/Versions/3.11/bin/python3 -m openanalysis --data-dir backup</string>
+	</array>
+	<key>StandardErrorPath</key>
+	<string>/Users/caeseyfraser/Library/Logs/open-analysis/daily.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/caeseyfraser/Library/Logs/open-analysis/daily.log</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>18</integer>
+		<key>Minute</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>
