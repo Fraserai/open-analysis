@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-07",
-  "generated_at": "2026-11-07T02:46:18+11:00",
+  "snapshot_date": "2026-11-08",
+  "generated_at": "2026-11-08T01:45:26+11:00",
   "phase": 1,
   "scope_note": "Every value carries a scope. 'global' means the figure is not specific to Australia: a worldwide list price or benchmark, shown in AUD. Nothing in Phase 1 is measured in Australia.",
   "fx": {
     "aud_usd": 0.69,
     "usd_to_aud": 1.449275,
     "rate_date": "2026-11-06",
-    "days_old": 1,
+    "days_old": 2,
     "method": "rba_f11.1_csv",
     "description": "A$1 = USD, RBA 4pm Sydney representative rate. AUD = USD / aud_usd.",
     "source": "Reserve Bank of Australia",
@@ -53,12 +53,12 @@
     },
     "vercel_endpoints": {
       "status": "ok",
-      "models": 318,
+      "models": 320,
       "failed": 47
     },
     "openrouter_endpoints": {
       "status": "ok",
-      "models": 338,
+      "models": 339,
       "failed": 0
     },
     "rba_csv": {
@@ -154,12 +154,12 @@
   ],
   "summary": {
     "scope": "global",
-    "models": 467,
-    "on_gateways": 467,
-    "with_price": 467,
+    "models": 470,
+    "on_gateways": 470,
+    "with_price": 470,
     "with_intelligence": 51,
     "with_cost_per_task": 0,
-    "open_weights": 150,
+    "open_weights": 151,
     "smartest_open_model": {
       "id": "moonshotai/kimi-k3.1-pro",
       "name": "Kimi K3.1 Pro",
@@ -293,7 +293,7 @@
           {
             "id": "nvidia/nemotron-3.5-lightning",
             "intelligence_index": 5.5,
-            "blended_aud_per_1m": 0.1268
+            "blended_aud_per_1m": 0.1232
           },
           {
             "id": "xiaomi/mimo-v2.6-flash",
@@ -332,7 +332,7 @@
             "intelligence_to": 6,
             "id": "nvidia/nemotron-3.5-lightning",
             "intelligence_index": 5.5,
-            "blended_aud_per_1m": 0.1268
+            "blended_aud_per_1m": 0.1232
           },
           {
             "intelligence_from": 7,
@@ -380,7 +380,7 @@
           {
             "id": "nvidia/nemotron-3.5-lightning",
             "intelligence_index": 5.5,
-            "blended_aud_per_1m": 0.1268
+            "blended_aud_per_1m": 0.1232
           },
           {
             "id": "xiaomi/mimo-v2.6-flash",
@@ -419,7 +419,7 @@
             "intelligence_to": 6,
             "id": "nvidia/nemotron-3.5-lightning",
             "intelligence_index": 5.5,
-            "blended_aud_per_1m": 0.1268
+            "blended_aud_per_1m": 0.1232
           },
           {
             "intelligence_from": 7,
@@ -467,7 +467,7 @@
           {
             "id": "nvidia/nemotron-3.5-lightning",
             "intelligence_index": 5.5,
-            "blended_aud_per_1m": 0.1268
+            "blended_aud_per_1m": 0.1232
           },
           {
             "id": "xiaomi/mimo-v2.6-flash",
@@ -506,7 +506,7 @@
             "intelligence_to": 6,
             "id": "nvidia/nemotron-3.5-lightning",
             "intelligence_index": 5.5,
-            "blended_aud_per_1m": 0.1268
+            "blended_aud_per_1m": 0.1232
           },
           {
             "intelligence_from": 7,
@@ -902,6 +902,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Azure",
+            "tag": "azure",
+            "input_usd_per_1m": 10.0,
+            "output_usd_per_1m": 50.0,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "OpenAI",
             "tag": "openai",
             "input_usd_per_1m": 10.0,
@@ -1061,6 +1070,15 @@
               "eu",
               "us"
             ]
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "OpenAI",
+            "tag": "openai/flex",
+            "input_usd_per_1m": 1.0,
+            "output_usd_per_1m": 5.0,
+            "discount": 0,
+            "quantization": "unknown"
           },
           {
             "gateway": "openrouter",
@@ -1589,10 +1607,9 @@
             "blended_aud_per_1m": 5.7971
           },
           "openrouter": {
-            "input_usd_per_1m": 4.0,
-            "output_usd_per_1m": 20.0,
-            "blended_aud_per_1m": 11.5942,
-            "discount_removed": 0.5
+            "input_usd_per_1m": 2.0,
+            "output_usd_per_1m": 10.0,
+            "blended_aud_per_1m": 5.7971
           }
         }
       },
@@ -1647,15 +1664,6 @@
             "tag": "google-ai-studio/flex",
             "input_usd_per_1m": 1.0,
             "output_usd_per_1m": 5.0,
-            "discount": 0.5,
-            "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Google AI Studio",
-            "tag": "google-ai-studio",
-            "input_usd_per_1m": 2.0,
-            "output_usd_per_1m": 10.0,
             "discount": 0.5,
             "quantization": "unknown"
           },
@@ -1877,13 +1885,13 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 2.4638,
-          "output_per_1m": 12.3188,
-          "blended_3to1_per_1m": 4.9275,
-          "input_usd_per_1m": 1.7,
-          "output_usd_per_1m": 8.5,
+          "input_per_1m": 0.4764,
+          "output_per_1m": 11.7609,
+          "blended_3to1_per_1m": 3.2975,
+          "input_usd_per_1m": 0.3287,
+          "output_usd_per_1m": 8.115,
           "gateway": "vercel",
-          "provider": "boundless",
+          "provider": "relace",
           "quantization": "unknown"
         },
         "cheapest_quantized": {
@@ -1970,6 +1978,14 @@
           },
           {
             "gateway": "vercel",
+            "provider": "digitalocean",
+            "input_usd_per_1m": 2.0,
+            "output_usd_per_1m": 10.0,
+            "quantization": null,
+            "inference_regions": []
+          },
+          {
+            "gateway": "vercel",
             "provider": "fireworks",
             "input_usd_per_1m": 2.0,
             "output_usd_per_1m": 10.0,
@@ -2021,6 +2037,14 @@
             "provider": "parasail",
             "input_usd_per_1m": 2.0,
             "output_usd_per_1m": 10.0,
+            "quantization": null,
+            "inference_regions": []
+          },
+          {
+            "gateway": "vercel",
+            "provider": "relace",
+            "input_usd_per_1m": 0.32870000000000005,
+            "output_usd_per_1m": 8.115,
             "quantization": null,
             "inference_regions": []
           },
@@ -2124,6 +2148,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "DeepInfra",
+            "tag": "deepinfra/bf16",
+            "input_usd_per_1m": 1.9,
+            "output_usd_per_1m": 9.5,
+            "discount": 0.05,
+            "quantization": "bf16"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "Morph",
             "tag": "morph/fp8",
             "input_usd_per_1m": 1.9080000000000001,
@@ -2153,6 +2186,15 @@
             "gateway": "openrouter",
             "provider": "Phala",
             "tag": "phala/us",
+            "input_usd_per_1m": 2.0,
+            "output_usd_per_1m": 10.0,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "DigitalOcean",
+            "tag": "digitalocean",
             "input_usd_per_1m": 2.0,
             "output_usd_per_1m": 10.0,
             "discount": 0,
@@ -2211,6 +2253,15 @@
             "output_usd_per_1m": 10.0,
             "discount": 0,
             "quantization": "mxfp4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Alibaba",
+            "tag": "alibaba",
+            "input_usd_per_1m": 2.3,
+            "output_usd_per_1m": 11.5,
+            "discount": 0,
+            "quantization": "unknown"
           },
           {
             "gateway": "openrouter",
@@ -2590,6 +2641,15 @@
             "tag": "openai/flex",
             "input_usd_per_1m": 1.0,
             "output_usd_per_1m": 5.0,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Amazon Bedrock",
+            "tag": "amazon-bedrock/global",
+            "input_usd_per_1m": 2.0,
+            "output_usd_per_1m": 10.0,
             "discount": 0,
             "quantization": "unknown"
           },
@@ -3182,15 +3242,6 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Amazon Bedrock",
-            "tag": "amazon-bedrock/global",
-            "input_usd_per_1m": 2.0,
-            "output_usd_per_1m": 6.0,
-            "discount": 0,
-            "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "xAI",
             "tag": "xai/zdr",
             "input_usd_per_1m": 2.0,
@@ -3684,15 +3735,14 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.4058,
-          "output_per_1m": 1.2754,
-          "blended_3to1_per_1m": 0.6232,
-          "input_usd_per_1m": 0.28,
-          "output_usd_per_1m": 0.88,
-          "gateway": "openrouter",
-          "provider": "Baidu",
-          "quantization": "fp8",
-          "discount": 0.8
+          "input_per_1m": 0.2594,
+          "output_per_1m": 2.029,
+          "blended_3to1_per_1m": 0.7018,
+          "input_usd_per_1m": 0.179,
+          "output_usd_per_1m": 1.4,
+          "gateway": "vercel",
+          "provider": "wafer",
+          "quantization": "unknown"
         },
         "cheapest_quantized": {
           "input_per_1m": 0.1013,
@@ -4033,15 +4083,6 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Makora",
-            "tag": "makora/fp4",
-            "input_usd_per_1m": 0.18,
-            "output_usd_per_1m": 3.0,
-            "discount": 0,
-            "quantization": "fp4"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "AkashML",
             "tag": "akashml/fp4",
             "input_usd_per_1m": 0.19,
@@ -4051,12 +4092,12 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Baidu",
-            "tag": "baidu/fp8",
-            "input_usd_per_1m": 0.28,
-            "output_usd_per_1m": 0.88,
-            "discount": 0.8,
-            "quantization": "fp8"
+            "provider": "Makora",
+            "tag": "makora/fp4",
+            "input_usd_per_1m": 0.3,
+            "output_usd_per_1m": 3.0,
+            "discount": 0,
+            "quantization": "fp4"
           },
           {
             "gateway": "openrouter",
@@ -4189,7 +4230,7 @@
             "provider": "Inceptron",
             "tag": "inceptron/fp4",
             "input_usd_per_1m": 1.0,
-            "output_usd_per_1m": 3.08,
+            "output_usd_per_1m": 4.8999999999999995,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -4219,6 +4260,15 @@
             "output_usd_per_1m": 3.9600000000000004,
             "discount": 0.1,
             "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Baidu",
+            "tag": "baidu/fp8",
+            "input_usd_per_1m": 1.3986,
+            "output_usd_per_1m": 4.3956,
+            "discount": 0.001,
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -4263,15 +4313,6 @@
             "input_usd_per_1m": 1.4,
             "output_usd_per_1m": 4.4,
             "discount": 0.2,
-            "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Together",
-            "tag": "together",
-            "input_usd_per_1m": 1.4,
-            "output_usd_per_1m": 4.4,
-            "discount": 0,
             "quantization": "unknown"
           },
           {
@@ -4363,6 +4404,24 @@
             "output_usd_per_1m": 6.6000000000000005,
             "discount": 0,
             "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "BaseTen",
+            "tag": "baseten/us/fast",
+            "input_usd_per_1m": 2.0999999999999996,
+            "output_usd_per_1m": 6.6000000000000005,
+            "discount": 0,
+            "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "BaseTen",
+            "tag": "baseten/fast",
+            "input_usd_per_1m": 2.0999999999999996,
+            "output_usd_per_1m": 6.6000000000000005,
+            "discount": 0,
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -4654,15 +4713,6 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Google",
-            "tag": "google-vertex/global/flex",
-            "input_usd_per_1m": 0.375,
-            "output_usd_per_1m": 1.875,
-            "discount": 0.5,
-            "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "Google AI Studio",
             "tag": "google-ai-studio",
             "input_usd_per_1m": 0.75,
@@ -4754,16 +4804,7 @@
           "provider": "gmicloud",
           "quantization": "bf16"
         },
-        "cheapest_quantized": {
-          "input_per_1m": 5.7971,
-          "output_per_1m": 11.5942,
-          "blended_3to1_per_1m": 7.2464,
-          "input_usd_per_1m": 4.0,
-          "output_usd_per_1m": 8.0,
-          "gateway": "openrouter",
-          "provider": "PrimaLabs",
-          "quantization": "mxfp4"
-        },
+        "cheapest_quantized": null,
         "by_source": {
           "vercel": {
             "input_usd_per_1m": 0.435,
@@ -4887,11 +4928,11 @@
           {
             "gateway": "openrouter",
             "provider": "PrimaLabs",
-            "tag": "primalabs/mxfp4",
+            "tag": "primalabs/fp8",
             "input_usd_per_1m": 4.0,
             "output_usd_per_1m": 8.0,
             "discount": 0,
-            "quantization": "mxfp4"
+            "quantization": "fp8"
           }
         ]
       },
@@ -4932,13 +4973,13 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.1087,
-          "output_per_1m": 0.4348,
-          "blended_3to1_per_1m": 0.1902,
-          "input_usd_per_1m": 0.075,
-          "output_usd_per_1m": 0.3,
-          "gateway": "openrouter",
-          "provider": "Minimax",
+          "input_per_1m": 0.163,
+          "output_per_1m": 0.6522,
+          "blended_3to1_per_1m": 0.2853,
+          "input_usd_per_1m": 0.1125,
+          "output_usd_per_1m": 0.45,
+          "gateway": "vercel",
+          "provider": "gmicloud",
           "quantization": "unknown"
         },
         "cheapest_quantized": {
@@ -4958,9 +4999,10 @@
             "blended_aud_per_1m": 0.3804
           },
           "openrouter": {
-            "input_usd_per_1m": 0.075,
-            "output_usd_per_1m": 0.3,
-            "blended_aud_per_1m": 0.1902
+            "input_usd_per_1m": 0.3,
+            "output_usd_per_1m": 1.2,
+            "blended_aud_per_1m": 0.7609,
+            "discount_removed": 0.5
           }
         }
       },
@@ -5058,15 +5100,6 @@
             "output_usd_per_1m": 0.6,
             "quantization": null,
             "inference_regions": []
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Minimax",
-            "tag": "minimax",
-            "input_usd_per_1m": 0.075,
-            "output_usd_per_1m": 0.3,
-            "discount": 0,
-            "quantization": "unknown"
           },
           {
             "gateway": "openrouter",
@@ -5175,6 +5208,15 @@
             "output_usd_per_1m": 0.6,
             "discount": 0,
             "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Minimax",
+            "tag": "minimax",
+            "input_usd_per_1m": 0.15,
+            "output_usd_per_1m": 0.6,
+            "discount": 0,
+            "quantization": "unknown"
           }
         ]
       },
@@ -5225,13 +5267,13 @@
           "quantization": "fp8"
         },
         "cheapest_quantized": {
-          "input_per_1m": 0.0254,
-          "output_per_1m": 0.5797,
-          "blended_3to1_per_1m": 0.1639,
-          "input_usd_per_1m": 0.0175,
-          "output_usd_per_1m": 0.4,
+          "input_per_1m": 0.0087,
+          "output_per_1m": 0.7246,
+          "blended_3to1_per_1m": 0.1877,
+          "input_usd_per_1m": 0.006,
+          "output_usd_per_1m": 0.5,
           "gateway": "openrouter",
-          "provider": "OpenInference",
+          "provider": "Relace",
           "quantization": "fp4"
         },
         "by_source": {
@@ -5463,7 +5505,7 @@
           {
             "gateway": "vercel",
             "provider": "wafer",
-            "input_usd_per_1m": 0.16,
+            "input_usd_per_1m": 0.06599999999999999,
             "output_usd_per_1m": 0.5,
             "quantization": null,
             "inference_regions": [
@@ -5484,7 +5526,7 @@
             "provider": "OpenInference",
             "tag": "open-inference/fp4",
             "input_usd_per_1m": 0.0175,
-            "output_usd_per_1m": 0.39999999999999997,
+            "output_usd_per_1m": 0.6,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -5526,6 +5568,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Wafer",
+            "tag": "wafer/mxfp4",
+            "input_usd_per_1m": 0.06599999999999999,
+            "output_usd_per_1m": 0.5,
+            "discount": 0,
+            "quantization": "mxfp4"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "Alibaba",
             "tag": "alibaba",
             "input_usd_per_1m": 0.075,
@@ -5562,6 +5613,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Baidu",
+            "tag": "baidu/fp8",
+            "input_usd_per_1m": 0.09772,
+            "output_usd_per_1m": 0.39437,
+            "discount": 0.651,
+            "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "DeepInfra",
             "tag": "deepinfra/fp8",
             "input_usd_per_1m": 0.098,
@@ -5577,15 +5637,6 @@
             "output_usd_per_1m": 0.6,
             "discount": 0,
             "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Sail Research",
-            "tag": "sail-research/fp4/us",
-            "input_usd_per_1m": 0.101,
-            "output_usd_per_1m": 0.15,
-            "discount": 0,
-            "quantization": "fp4"
           },
           {
             "gateway": "openrouter",
@@ -5634,15 +5685,6 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Baidu",
-            "tag": "baidu/fp8",
-            "input_usd_per_1m": 0.14980000000000002,
-            "output_usd_per_1m": 0.60455,
-            "discount": 0.465,
-            "quantization": "fp8"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "DeepSeek",
             "tag": "deepseek",
             "input_usd_per_1m": 0.15,
@@ -5658,24 +5700,6 @@
             "output_usd_per_1m": 1.2,
             "discount": 0,
             "quantization": "fp8"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Sail Research",
-            "tag": "sail-research/fp4",
-            "input_usd_per_1m": 0.1515,
-            "output_usd_per_1m": 0.22499999999999998,
-            "discount": 0,
-            "quantization": "fp4"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Wafer",
-            "tag": "wafer/mxfp4",
-            "input_usd_per_1m": 0.16,
-            "output_usd_per_1m": 0.5,
-            "discount": 0,
-            "quantization": "mxfp4"
           },
           {
             "gateway": "openrouter",
@@ -5743,11 +5767,11 @@
           {
             "gateway": "openrouter",
             "provider": "Cohere",
-            "tag": "cohere",
+            "tag": "cohere/fp8",
             "input_usd_per_1m": 0.195,
             "output_usd_per_1m": 0.66,
             "discount": 0,
-            "quantization": "unknown"
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -5764,6 +5788,24 @@
             "tag": "phala",
             "input_usd_per_1m": 0.19999999999999998,
             "output_usd_per_1m": 1.2,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Fireworks",
+            "tag": "fireworks/spot",
+            "input_usd_per_1m": 0.21,
+            "output_usd_per_1m": 0.84,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "PrimaLabs",
+            "tag": "primalabs",
+            "input_usd_per_1m": 0.24,
+            "output_usd_per_1m": 0.96,
             "discount": 0,
             "quantization": "unknown"
           },
@@ -5899,15 +5941,6 @@
             "tag": "baseten/fast",
             "input_usd_per_1m": 0.6,
             "output_usd_per_1m": 2.4,
-            "discount": 0,
-            "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "PrimaLabs",
-            "tag": "primalabs",
-            "input_usd_per_1m": 0.8999999999999999,
-            "output_usd_per_1m": 3.5999999999999996,
             "discount": 0,
             "quantization": "unknown"
           }
@@ -6379,20 +6412,20 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.0412,
+          "input_per_1m": 0.0413,
           "output_per_1m": 0.1338,
-          "blended_3to1_per_1m": 0.0643,
-          "input_usd_per_1m": 0.0284,
+          "blended_3to1_per_1m": 0.0644,
+          "input_usd_per_1m": 0.0285,
           "output_usd_per_1m": 0.0923,
           "gateway": "vercel",
           "provider": "relace",
           "quantization": "unknown"
         },
         "cheapest_quantized": {
-          "input_per_1m": 0.0412,
+          "input_per_1m": 0.0413,
           "output_per_1m": 0.1338,
-          "blended_3to1_per_1m": 0.0643,
-          "input_usd_per_1m": 0.0284,
+          "blended_3to1_per_1m": 0.0644,
+          "input_usd_per_1m": 0.0285,
           "output_usd_per_1m": 0.0923,
           "gateway": "openrouter",
           "provider": "Relace",
@@ -6555,7 +6588,7 @@
           {
             "gateway": "vercel",
             "provider": "relace",
-            "input_usd_per_1m": 0.028399999999999998,
+            "input_usd_per_1m": 0.0285,
             "output_usd_per_1m": 0.0923,
             "quantization": null,
             "inference_regions": []
@@ -6636,7 +6669,7 @@
             "gateway": "openrouter",
             "provider": "Relace",
             "tag": "relace/fp4",
-            "input_usd_per_1m": 0.028399999999999998,
+            "input_usd_per_1m": 0.0285,
             "output_usd_per_1m": 0.0923,
             "discount": 0,
             "quantization": "fp4"
@@ -6646,7 +6679,7 @@
             "provider": "OpenInference",
             "tag": "open-inference/fp4",
             "input_usd_per_1m": 0.03,
-            "output_usd_per_1m": 0.22,
+            "output_usd_per_1m": 0.24,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -6667,6 +6700,24 @@
             "output_usd_per_1m": 0.19999999999999998,
             "discount": 0,
             "quantization": "nvfp4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Darkbloom",
+            "tag": "darkbloom/fp4",
+            "input_usd_per_1m": 0.065,
+            "output_usd_per_1m": 0.18,
+            "discount": 0,
+            "quantization": "fp4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Tenstorrent",
+            "tag": "tenstorrent/fp8",
+            "input_usd_per_1m": 0.075,
+            "output_usd_per_1m": 0.25,
+            "discount": 0,
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -6806,11 +6857,11 @@
           {
             "gateway": "openrouter",
             "provider": "Cohere",
-            "tag": "cohere",
+            "tag": "cohere/nvfp4",
             "input_usd_per_1m": 0.15,
             "output_usd_per_1m": 0.5,
             "discount": 0,
-            "quantization": "unknown"
+            "quantization": "nvfp4"
           },
           {
             "gateway": "openrouter",
@@ -6904,6 +6955,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Parasail",
+            "tag": "parasail/fp4",
+            "input_usd_per_1m": 0.15,
+            "output_usd_per_1m": 0.5,
+            "discount": 0,
+            "quantization": "fp4"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "BaseTen",
             "tag": "baseten/fp8",
             "input_usd_per_1m": 0.15,
@@ -6973,15 +7033,6 @@
             "output_usd_per_1m": 0.625,
             "discount": 0,
             "quantization": "fp4"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Fireworks",
-            "tag": "fireworks/us",
-            "input_usd_per_1m": 0.22499999999999998,
-            "output_usd_per_1m": 0.75,
-            "discount": 0,
-            "quantization": "unknown"
           }
         ]
       },
@@ -7154,11 +7205,11 @@
           {
             "gateway": "openrouter",
             "provider": "Cohere",
-            "tag": "cohere",
+            "tag": "cohere/fp8",
             "input_usd_per_1m": 0.14,
             "output_usd_per_1m": 0.28,
             "discount": 0,
-            "quantization": "unknown"
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -7193,6 +7244,15 @@
             "tag": "venice/fp8",
             "input_usd_per_1m": 0.175,
             "output_usd_per_1m": 0.35,
+            "discount": 0,
+            "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Tenstorrent",
+            "tag": "tenstorrent/fp8",
+            "input_usd_per_1m": 0.19999999999999998,
+            "output_usd_per_1m": 0.39999999999999997,
             "discount": 0,
             "quantization": "fp8"
           }
@@ -7480,15 +7540,6 @@
             "output_usd_per_1m": 4.25,
             "discount": 0,
             "quantization": "fp4"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "BaseTen",
-            "tag": "baseten/fp4",
-            "input_usd_per_1m": 1.25,
-            "output_usd_per_1m": 4.25,
-            "discount": 0,
-            "quantization": "fp4"
           }
         ]
       },
@@ -7714,14 +7765,15 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.8417,
-          "output_per_1m": 2.5252,
-          "blended_3to1_per_1m": 1.2626,
-          "input_usd_per_1m": 0.5808,
-          "output_usd_per_1m": 1.7424,
+          "input_per_1m": 0.9546,
+          "output_per_1m": 2.8638,
+          "blended_3to1_per_1m": 1.4319,
+          "input_usd_per_1m": 0.65868,
+          "output_usd_per_1m": 1.97604,
           "gateway": "openrouter",
-          "provider": "Alibaba",
-          "quantization": "unknown"
+          "provider": "Baidu",
+          "quantization": "fp8",
+          "discount": 0.501
         },
         "cheapest_quantized": {
           "input_per_1m": 0.1688,
@@ -7880,12 +7932,12 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Alibaba",
-            "tag": "alibaba",
-            "input_usd_per_1m": 0.5808,
-            "output_usd_per_1m": 1.7424,
-            "discount": 0,
-            "quantization": "unknown"
+            "provider": "Baidu",
+            "tag": "baidu/fp8",
+            "input_usd_per_1m": 0.65868,
+            "output_usd_per_1m": 1.97604,
+            "discount": 0.501,
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -7988,15 +8040,6 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Baidu",
-            "tag": "baidu/fp8",
-            "input_usd_per_1m": 1.32,
-            "output_usd_per_1m": 3.9600000000000004,
-            "discount": 0,
-            "quantization": "fp8"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "Parasail",
             "tag": "parasail/fp8",
             "input_usd_per_1m": 1.32,
@@ -8057,6 +8100,15 @@
             "output_usd_per_1m": 2.4,
             "discount": 0,
             "quantization": "fp4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Venice",
+            "tag": "venice",
+            "input_usd_per_1m": 1.6500000000000001,
+            "output_usd_per_1m": 4.95,
+            "discount": 0,
+            "quantization": "unknown"
           },
           {
             "gateway": "openrouter",
@@ -8226,6 +8278,15 @@
             "output_usd_per_1m": 1.5,
             "discount": 0,
             "quantization": "fp4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "PrimeIntellect",
+            "tag": "primeintellect/fp8",
+            "input_usd_per_1m": 0.035,
+            "output_usd_per_1m": 1.9309999999999998,
+            "discount": 0,
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -8608,15 +8669,6 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Together",
-            "tag": "together",
-            "input_usd_per_1m": 0.3,
-            "output_usd_per_1m": 1.2,
-            "discount": 0,
-            "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "Parasail",
             "tag": "parasail/fp8",
             "input_usd_per_1m": 0.3,
@@ -8842,24 +8894,24 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.2354,
-          "output_per_1m": 14.1262,
-          "blended_3to1_per_1m": 3.7081,
-          "input_usd_per_1m": 0.1624,
-          "output_usd_per_1m": 9.7471,
+          "input_per_1m": 0.2258,
+          "output_per_1m": 13.5345,
+          "blended_3to1_per_1m": 3.553,
+          "input_usd_per_1m": 0.1558,
+          "output_usd_per_1m": 9.3388,
           "gateway": "vercel",
           "provider": "relace",
           "quantization": "unknown"
         },
         "cheapest_quantized": {
-          "input_per_1m": 0.4,
-          "output_per_1m": 13.913,
-          "blended_3to1_per_1m": 3.7783,
-          "input_usd_per_1m": 0.276,
-          "output_usd_per_1m": 9.6,
+          "input_per_1m": 0.2643,
+          "output_per_1m": 13.5345,
+          "blended_3to1_per_1m": 3.5819,
+          "input_usd_per_1m": 0.1824,
+          "output_usd_per_1m": 9.3388,
           "gateway": "openrouter",
-          "provider": "Wafer",
-          "quantization": "mxfp4"
+          "provider": "Relace",
+          "quantization": "fp4"
         },
         "by_source": {
           "vercel": {
@@ -9010,8 +9062,8 @@
           {
             "gateway": "vercel",
             "provider": "relace",
-            "input_usd_per_1m": 0.1624,
-            "output_usd_per_1m": 9.7471,
+            "input_usd_per_1m": 0.1558,
+            "output_usd_per_1m": 9.338799999999999,
             "quantization": null,
             "inference_regions": []
           },
@@ -9051,21 +9103,21 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Relace",
-            "tag": "relace/fp4",
-            "input_usd_per_1m": 0.1529,
-            "output_usd_per_1m": 10.1522,
-            "discount": 0,
-            "quantization": "fp4"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "Wafer",
             "tag": "wafer/fast",
-            "input_usd_per_1m": 0.161,
+            "input_usd_per_1m": 0.155,
             "output_usd_per_1m": 16.0,
             "discount": 0,
             "quantization": "mxfp4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Relace",
+            "tag": "relace/fp4",
+            "input_usd_per_1m": 0.18239999999999998,
+            "output_usd_per_1m": 9.338799999999999,
+            "discount": 0,
+            "quantization": "fp4"
           },
           {
             "gateway": "openrouter",
@@ -9081,7 +9133,7 @@
             "provider": "InferenceNet",
             "tag": "inference-net/us",
             "input_usd_per_1m": 0.234,
-            "output_usd_per_1m": 16.5,
+            "output_usd_per_1m": 15.0,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -9090,7 +9142,7 @@
             "provider": "InferenceNet",
             "tag": "inference-net/fp4",
             "input_usd_per_1m": 0.234,
-            "output_usd_per_1m": 16.5,
+            "output_usd_per_1m": 15.0,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -9134,8 +9186,8 @@
             "gateway": "openrouter",
             "provider": "InferenceNet",
             "tag": "inference-net/us/fast",
-            "input_usd_per_1m": 0.5,
-            "output_usd_per_1m": 22.0,
+            "input_usd_per_1m": 0.44999999999999996,
+            "output_usd_per_1m": 18.0,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -9143,8 +9195,8 @@
             "gateway": "openrouter",
             "provider": "InferenceNet",
             "tag": "inference-net/fast",
-            "input_usd_per_1m": 0.5,
-            "output_usd_per_1m": 22.0,
+            "input_usd_per_1m": 0.44999999999999996,
+            "output_usd_per_1m": 18.0,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -9276,15 +9328,6 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Moonshot AI",
-            "tag": "moonshotai",
-            "input_usd_per_1m": 3.0,
-            "output_usd_per_1m": 15.0,
-            "discount": 0,
-            "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "Alibaba",
             "tag": "alibaba",
             "input_usd_per_1m": 3.45,
@@ -9305,6 +9348,15 @@
             "gateway": "openrouter",
             "provider": "Fireworks",
             "tag": "fireworks/us",
+            "input_usd_per_1m": 4.5,
+            "output_usd_per_1m": 22.5,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Fireworks",
+            "tag": "fireworks/fast",
             "input_usd_per_1m": 4.5,
             "output_usd_per_1m": 22.5,
             "discount": 0,
@@ -9359,13 +9411,13 @@
           "quantization": "bf16"
         },
         "cheapest_quantized": {
-          "input_per_1m": 0.087,
-          "output_per_1m": 0.5072,
-          "blended_3to1_per_1m": 0.192,
-          "input_usd_per_1m": 0.06,
-          "output_usd_per_1m": 0.35,
+          "input_per_1m": 0.2174,
+          "output_per_1m": 0.7246,
+          "blended_3to1_per_1m": 0.3442,
+          "input_usd_per_1m": 0.15,
+          "output_usd_per_1m": 0.5,
           "gateway": "openrouter",
-          "provider": "Darkbloom",
+          "provider": "PrimeIntellect",
           "quantization": "nvfp4"
         },
         "by_source": {
@@ -9432,21 +9484,21 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Darkbloom",
-            "tag": "darkbloom/nvfp4",
-            "input_usd_per_1m": 0.06,
-            "output_usd_per_1m": 0.35,
-            "discount": 0,
-            "quantization": "nvfp4"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "Crusoe",
             "tag": "crusoe/bf16",
             "input_usd_per_1m": 0.09999999999999999,
             "output_usd_per_1m": 0.39999999999999997,
             "discount": 0,
             "quantization": "bf16"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "PrimeIntellect",
+            "tag": "primeintellect/nvfp4",
+            "input_usd_per_1m": 0.15,
+            "output_usd_per_1m": 0.5,
+            "discount": 0,
+            "quantization": "nvfp4"
           },
           {
             "gateway": "openrouter",
@@ -9501,6 +9553,15 @@
             "output_usd_per_1m": 0.5,
             "discount": 0,
             "quantization": "fp4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Nebius",
+            "tag": "nebius/bf16",
+            "input_usd_per_1m": 0.3,
+            "output_usd_per_1m": 0.8999999999999999,
+            "discount": 0,
+            "quantization": "bf16"
           }
         ]
       },
@@ -9651,14 +9712,15 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.9565,
-          "output_per_1m": 2.8696,
-          "blended_3to1_per_1m": 1.4348,
-          "input_usd_per_1m": 0.66,
-          "output_usd_per_1m": 1.98,
-          "gateway": "vercel",
-          "provider": "deepseek",
-          "quantization": "unknown"
+          "input_per_1m": 0.9797,
+          "output_per_1m": 1.9594,
+          "blended_3to1_per_1m": 1.2246,
+          "input_usd_per_1m": 0.676,
+          "output_usd_per_1m": 1.352,
+          "gateway": "openrouter",
+          "provider": "Baidu",
+          "quantization": "fp8",
+          "discount": 0.6
         },
         "cheapest_quantized": {
           "input_per_1m": 1.3043,
@@ -9680,7 +9742,7 @@
             "input_usd_per_1m": 1.74,
             "output_usd_per_1m": 3.48,
             "blended_aud_per_1m": 3.1522,
-            "discount_removed": 0.5048
+            "discount_removed": 0.6107
           }
         }
       },
@@ -9759,20 +9821,20 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "StreamLake",
-            "tag": "streamlake/fp8",
-            "input_usd_per_1m": 0.861648,
-            "output_usd_per_1m": 1.723296,
-            "discount": 0.5048,
+            "provider": "Baidu",
+            "tag": "baidu/fp8",
+            "input_usd_per_1m": 0.6759999999999999,
+            "output_usd_per_1m": 1.3519999999999999,
+            "discount": 0.6,
             "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
-            "provider": "Baidu",
-            "tag": "baidu/fp8",
-            "input_usd_per_1m": 0.87035,
-            "output_usd_per_1m": 1.7407,
-            "discount": 0.485,
+            "provider": "StreamLake",
+            "tag": "streamlake/fp8",
+            "input_usd_per_1m": 0.677382,
+            "output_usd_per_1m": 1.354764,
+            "discount": 0.6107,
             "quantization": "fp8"
           },
           {
@@ -9864,6 +9926,15 @@
             "output_usd_per_1m": 3.38,
             "discount": 0,
             "quantization": "fp4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Nebius",
+            "tag": "nebius/fp8",
+            "input_usd_per_1m": 1.75,
+            "output_usd_per_1m": 3.5,
+            "discount": 0,
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -9991,15 +10062,6 @@
             "output_usd_per_1m": 4.05,
             "quantization": "fp4",
             "inference_regions": []
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Together",
-            "tag": "together",
-            "input_usd_per_1m": 1.0,
-            "output_usd_per_1m": 4.05,
-            "discount": 0,
-            "quantization": "unknown"
           }
         ]
       },
@@ -10111,14 +10173,6 @@
             "input_usd_per_1m": 0.5,
             "output_usd_per_1m": 2.2,
             "quantization": "fp4",
-            "inference_regions": []
-          },
-          {
-            "gateway": "vercel",
-            "provider": "fireworks",
-            "input_usd_per_1m": 0.6,
-            "output_usd_per_1m": 2.4,
-            "quantization": null,
             "inference_regions": []
           },
           {
@@ -10268,6 +10322,15 @@
               "eu",
               "us"
             ]
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Google",
+            "tag": "google-vertex/global/flex",
+            "input_usd_per_1m": 0.15,
+            "output_usd_per_1m": 1.25,
+            "discount": 0,
+            "quantization": "unknown"
           },
           {
             "gateway": "openrouter",
@@ -10674,7 +10737,7 @@
           "output_usd_per_1m": 1.5,
           "gateway": "openrouter",
           "provider": "Cohere",
-          "quantization": "unknown"
+          "quantization": "fp8"
         },
         "cheapest_quantized": null,
         "by_source": {
@@ -10710,11 +10773,11 @@
           {
             "gateway": "openrouter",
             "provider": "Cohere",
-            "tag": "cohere",
+            "tag": "cohere/fp8",
             "input_usd_per_1m": 0.3,
             "output_usd_per_1m": 1.5,
             "discount": 0,
-            "quantization": "unknown"
+            "quantization": "fp8"
           }
         ]
       },
@@ -10855,9 +10918,9 @@
       "price_aud": {
         "scope": "global",
         "basis": "list price",
-        "input_per_1m": 0.0725,
-        "output_per_1m": 0.2899,
-        "blended_3to1_per_1m": 0.1268,
+        "input_per_1m": 0.087,
+        "output_per_1m": 0.2319,
+        "blended_3to1_per_1m": 0.1232,
         "free": false,
         "source": "vercel",
         "cheapest_available": {
@@ -10882,9 +10945,9 @@
         },
         "by_source": {
           "vercel": {
-            "input_usd_per_1m": 0.05,
-            "output_usd_per_1m": 0.2,
-            "blended_aud_per_1m": 0.1268
+            "input_usd_per_1m": 0.06,
+            "output_usd_per_1m": 0.16,
+            "blended_aud_per_1m": 0.1232
           },
           "openrouter": {
             "input_usd_per_1m": 0.07,
@@ -10926,14 +10989,6 @@
           },
           {
             "gateway": "vercel",
-            "provider": "fireworks",
-            "input_usd_per_1m": 0.049999999999999996,
-            "output_usd_per_1m": 0.19999999999999998,
-            "quantization": null,
-            "inference_regions": []
-          },
-          {
-            "gateway": "vercel",
             "provider": "runinfra",
             "input_usd_per_1m": 0.04,
             "output_usd_per_1m": 0.12,
@@ -10956,6 +11011,15 @@
             "input_usd_per_1m": 0.046900000000000004,
             "output_usd_per_1m": 0.134,
             "discount": 0.33,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Fireworks",
+            "tag": "fireworks",
+            "input_usd_per_1m": 0.049999999999999996,
+            "output_usd_per_1m": 0.19999999999999998,
+            "discount": 0,
             "quantization": "unknown"
           },
           {
@@ -11420,15 +11484,6 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "PrimeIntellect",
-            "tag": "primeintellect/fp8",
-            "input_usd_per_1m": 0.267,
-            "output_usd_per_1m": 0.447,
-            "discount": 0,
-            "quantization": "fp8"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "DeepInfra",
             "tag": "deepinfra/fp8/priority",
             "input_usd_per_1m": 0.3,
@@ -11444,6 +11499,33 @@
             "output_usd_per_1m": 0.09999999999999999,
             "discount": 0,
             "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Io Net",
+            "tag": "io-net",
+            "input_usd_per_1m": 0.36100000000000004,
+            "output_usd_per_1m": 1.0925,
+            "discount": 0.05,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "SambaNova",
+            "tag": "sambanova",
+            "input_usd_per_1m": 0.38,
+            "output_usd_per_1m": 1.15,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "PrimeIntellect",
+            "tag": "primeintellect/fp4",
+            "input_usd_per_1m": 0.39999999999999997,
+            "output_usd_per_1m": 0.67,
+            "discount": 0,
+            "quantization": "fp4"
           },
           {
             "gateway": "openrouter",
@@ -13279,6 +13361,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Venice",
+            "tag": "venice/fp8",
+            "input_usd_per_1m": 0.325,
+            "output_usd_per_1m": 3.25,
+            "discount": 0,
+            "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "Alibaba",
             "tag": "alibaba",
             "input_usd_per_1m": 0.44999999999999996,
@@ -14346,6 +14437,15 @@
             "inference_regions": [
               "eu"
             ]
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Amazon Bedrock",
+            "tag": "amazon-bedrock/eu-west-1",
+            "input_usd_per_1m": 0.06,
+            "output_usd_per_1m": 0.24,
+            "discount": 0,
+            "quantization": "unknown"
           },
           {
             "gateway": "openrouter",
@@ -17699,6 +17799,15 @@
             "output_usd_per_1m": 2.5,
             "quantization": null,
             "inference_regions": []
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Seed",
+            "tag": "seed/fp8",
+            "input_usd_per_1m": 0.5,
+            "output_usd_per_1m": 2.5,
+            "discount": 0,
+            "quantization": "fp8"
           }
         ]
       },
@@ -18616,8 +18725,8 @@
             "gateway": "openrouter",
             "provider": "CoreWeave",
             "tag": "coreweave/fp8",
-            "input_usd_per_1m": 0.55,
-            "output_usd_per_1m": 1.6500000000000001,
+            "input_usd_per_1m": 0.5,
+            "output_usd_per_1m": 1.5,
             "discount": 0,
             "quantization": "fp8"
           }
@@ -19045,20 +19154,21 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.087,
-          "output_per_1m": 0.2609,
-          "blended_3to1_per_1m": 0.1304,
-          "input_usd_per_1m": 0.06,
-          "output_usd_per_1m": 0.18,
-          "gateway": "vercel",
-          "provider": "deepinfra",
-          "quantization": "fp8"
+          "input_per_1m": 0.0631,
+          "output_per_1m": 0.1262,
+          "blended_3to1_per_1m": 0.0789,
+          "input_usd_per_1m": 0.04354,
+          "output_usd_per_1m": 0.08708,
+          "gateway": "openrouter",
+          "provider": "StreamLake",
+          "quantization": "fp8",
+          "discount": 0.689
         },
         "cheapest_quantized": {
-          "input_per_1m": 0.0725,
+          "input_per_1m": 0.0599,
           "output_per_1m": 0.6522,
-          "blended_3to1_per_1m": 0.2174,
-          "input_usd_per_1m": 0.05,
+          "blended_3to1_per_1m": 0.2079,
+          "input_usd_per_1m": 0.0413,
           "output_usd_per_1m": 0.45,
           "gateway": "openrouter",
           "provider": "Relace",
@@ -19158,7 +19268,7 @@
             "gateway": "openrouter",
             "provider": "Relace",
             "tag": "relace/fp4",
-            "input_usd_per_1m": 0.049999999999999996,
+            "input_usd_per_1m": 0.041299999999999996,
             "output_usd_per_1m": 0.44999999999999996,
             "discount": 0,
             "quantization": "fp4"
@@ -19167,18 +19277,18 @@
             "gateway": "openrouter",
             "provider": "StreamLake",
             "tag": "streamlake/fp8",
-            "input_usd_per_1m": 0.08399999999999999,
-            "output_usd_per_1m": 0.16799999999999998,
-            "discount": 0.4,
+            "input_usd_per_1m": 0.043539999999999995,
+            "output_usd_per_1m": 0.08707999999999999,
+            "discount": 0.689,
             "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
             "provider": "Baidu",
             "tag": "baidu/fp8",
-            "input_usd_per_1m": 0.08988,
-            "output_usd_per_1m": 0.17976,
-            "discount": 0.358,
+            "input_usd_per_1m": 0.044239999999999995,
+            "output_usd_per_1m": 0.08847999999999999,
+            "discount": 0.684,
             "quantization": "fp8"
           },
           {
@@ -19306,25 +19416,24 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.074,
-          "output_per_1m": 0.2219,
-          "blended_3to1_per_1m": 0.111,
-          "input_usd_per_1m": 0.05104,
-          "output_usd_per_1m": 0.15312,
-          "gateway": "openrouter",
-          "provider": "Baidu",
-          "quantization": "fp8",
-          "discount": 0.884
+          "input_per_1m": 0.058,
+          "output_per_1m": 0.3043,
+          "blended_3to1_per_1m": 0.1196,
+          "input_usd_per_1m": 0.04,
+          "output_usd_per_1m": 0.21,
+          "gateway": "vercel",
+          "provider": "boundless",
+          "quantization": "unknown"
         },
         "cheapest_quantized": {
-          "input_per_1m": 0.1014,
-          "output_per_1m": 0.2029,
-          "blended_3to1_per_1m": 0.1268,
-          "input_usd_per_1m": 0.07,
-          "output_usd_per_1m": 0.14,
+          "input_per_1m": 0.0668,
+          "output_per_1m": 0.4348,
+          "blended_3to1_per_1m": 0.1588,
+          "input_usd_per_1m": 0.0461,
+          "output_usd_per_1m": 0.3,
           "gateway": "openrouter",
-          "provider": "Relace",
-          "quantization": "fp4"
+          "provider": "Wafer",
+          "quantization": "nvfp4"
         },
         "by_source": {
           "vercel": {
@@ -19333,9 +19442,9 @@
             "blended_aud_per_1m": 0.2355
           },
           "openrouter": {
-            "input_usd_per_1m": 0.0514,
+            "input_usd_per_1m": 0.0461,
             "output_usd_per_1m": 0.3,
-            "blended_aud_per_1m": 0.1646
+            "blended_aud_per_1m": 0.1588
           }
         }
       },
@@ -19465,18 +19574,9 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Baidu",
-            "tag": "baidu/fp8",
-            "input_usd_per_1m": 0.05104,
-            "output_usd_per_1m": 0.15312,
-            "discount": 0.884,
-            "quantization": "fp8"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "Wafer",
             "tag": "wafer/us",
-            "input_usd_per_1m": 0.051399999999999994,
+            "input_usd_per_1m": 0.0461,
             "output_usd_per_1m": 0.3,
             "discount": 0,
             "quantization": "nvfp4"
@@ -19489,15 +19589,6 @@
             "output_usd_per_1m": 0.18,
             "discount": 0,
             "quantization": "fp8"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Relace",
-            "tag": "relace/fp4",
-            "input_usd_per_1m": 0.07,
-            "output_usd_per_1m": 0.14,
-            "discount": 0,
-            "quantization": "fp4"
           },
           {
             "gateway": "openrouter",
@@ -19591,12 +19682,21 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Cohere",
-            "tag": "cohere",
+            "provider": "Nebius",
+            "tag": "nebius/fp8",
             "input_usd_per_1m": 0.14,
             "output_usd_per_1m": 0.28,
             "discount": 0,
-            "quantization": "unknown"
+            "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Cohere",
+            "tag": "cohere/fp8",
+            "input_usd_per_1m": 0.14,
+            "output_usd_per_1m": 0.28,
+            "discount": 0,
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -19872,13 +19972,13 @@
           "discount": 0.831
         },
         "cheapest_quantized": {
-          "input_per_1m": 0.0254,
-          "output_per_1m": 0.5797,
-          "blended_3to1_per_1m": 0.1639,
-          "input_usd_per_1m": 0.0175,
-          "output_usd_per_1m": 0.4,
+          "input_per_1m": 0.0087,
+          "output_per_1m": 0.7246,
+          "blended_3to1_per_1m": 0.1877,
+          "input_usd_per_1m": 0.006,
+          "output_usd_per_1m": 0.5,
           "gateway": "openrouter",
-          "provider": "OpenInference",
+          "provider": "Relace",
           "quantization": "fp4"
         },
         "by_source": {
@@ -20100,7 +20200,7 @@
             "provider": "OpenInference",
             "tag": "open-inference/fp4",
             "input_usd_per_1m": 0.0175,
-            "output_usd_per_1m": 0.39999999999999997,
+            "output_usd_per_1m": 0.6,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -20156,15 +20256,6 @@
             "input_usd_per_1m": 0.103,
             "output_usd_per_1m": 0.6,
             "discount": 0,
-            "quantization": "fp8"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "DeepInfra",
-            "tag": "deepinfra/fp8/flex",
-            "input_usd_per_1m": 0.112,
-            "output_usd_per_1m": 0.33599999999999997,
-            "discount": 0.3,
             "quantization": "fp8"
           },
           {
@@ -20277,6 +20368,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Phala",
+            "tag": "phala",
+            "input_usd_per_1m": 0.21,
+            "output_usd_per_1m": 0.84,
+            "discount": 0.3,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "DigitalOcean",
             "tag": "digitalocean",
             "input_usd_per_1m": 0.22499999999999998,
@@ -20323,11 +20423,11 @@
           {
             "gateway": "openrouter",
             "provider": "Cohere",
-            "tag": "cohere",
+            "tag": "cohere/fp8",
             "input_usd_per_1m": 0.3,
             "output_usd_per_1m": 1.2,
             "discount": 0,
-            "quantization": "unknown"
+            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -20491,6 +20591,77 @@
             "inference_regions": [
               "us"
             ]
+          }
+        ]
+      },
+      "speed_from_australia": null,
+      "spend_in_australia": null,
+      "australian_usage": null,
+      "latency_from_australia": null,
+      "open_vs_closed_usage": null,
+      "providers_in_australia": null,
+      "runs_in_australia": null
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017-ultrafast",
+      "name": "DeepSeek V4.1 Flash 1017 Ultrafast",
+      "creator": "deepseek",
+      "ids": {
+        "vercel": "deepseek/deepseek-v4.1-flash-1017-ultrafast",
+        "openrouter": null,
+        "artificial_analysis": null
+      },
+      "gateway_match": "vercel_only",
+      "on_gateways": true,
+      "open_weights": null,
+      "open_weights_basis": "unknown: not listed on OpenRouter",
+      "context_window": 1048576,
+      "max_output_tokens": 1048576,
+      "intelligence": null,
+      "price_aud": {
+        "scope": "global",
+        "basis": "list price",
+        "input_per_1m": 3.4783,
+        "output_per_1m": 13.913,
+        "blended_3to1_per_1m": 6.087,
+        "free": false,
+        "source": "vercel",
+        "cheapest_available": {
+          "input_per_1m": 3.4783,
+          "output_per_1m": 13.913,
+          "blended_3to1_per_1m": 6.087,
+          "input_usd_per_1m": 2.4,
+          "output_usd_per_1m": 9.6,
+          "gateway": "vercel",
+          "provider": "fireworks",
+          "quantization": "unknown"
+        },
+        "cheapest_quantized": null,
+        "by_source": {
+          "vercel": {
+            "input_usd_per_1m": 2.4,
+            "output_usd_per_1m": 9.6,
+            "blended_aud_per_1m": 6.087
+          }
+        }
+      },
+      "cost_per_task_aud": null,
+      "smartest_open": null,
+      "value_aud": null,
+      "spread": {
+        "by_cost_per_task": null,
+        "by_token_price": null
+      },
+      "providers_global": {
+        "scope": "global",
+        "providers": [
+          {
+            "gateway": "vercel",
+            "provider": "fireworks",
+            "input_usd_per_1m": 2.4,
+            "output_usd_per_1m": 9.6,
+            "quantization": null,
+            "inference_regions": []
           }
         ]
       },
@@ -21099,15 +21270,6 @@
             "output_usd_per_1m": 0.39999999999999997,
             "discount": 0,
             "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Google AI Studio",
-            "tag": "google-ai-studio/priority",
-            "input_usd_per_1m": 0.18,
-            "output_usd_per_1m": 0.72,
-            "discount": 0,
-            "quantization": "unknown"
           }
         ]
       },
@@ -21514,6 +21676,15 @@
             "output_usd_per_1m": 3.0,
             "quantization": null,
             "inference_regions": []
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Google",
+            "tag": "google-vertex/global/flex",
+            "input_usd_per_1m": 0.25,
+            "output_usd_per_1m": 1.5,
+            "discount": 0,
+            "quantization": "unknown"
           },
           {
             "gateway": "openrouter",
@@ -22382,15 +22553,6 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "Google",
-            "tag": "google-vertex/global/flex",
-            "input_usd_per_1m": 1.0,
-            "output_usd_per_1m": 6.0,
-            "discount": 0,
-            "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "Google AI Studio",
             "tag": "google-ai-studio/flex",
             "input_usd_per_1m": 1.0,
@@ -23057,6 +23219,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Google",
+            "tag": "google-vertex/global/flex",
+            "input_usd_per_1m": 0.375,
+            "output_usd_per_1m": 1.875,
+            "discount": 0.5,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "Google AI Studio",
             "tag": "google-ai-studio/flex",
             "input_usd_per_1m": 0.375,
@@ -23585,6 +23756,15 @@
           {
             "gateway": "openrouter",
             "provider": "DeepInfra",
+            "tag": "deepinfra/bf16/flex",
+            "input_usd_per_1m": 0.04,
+            "output_usd_per_1m": 0.12,
+            "discount": 0,
+            "quantization": "bf16"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "DeepInfra",
             "tag": "deepinfra/bf16",
             "input_usd_per_1m": 0.049999999999999996,
             "output_usd_per_1m": 0.15,
@@ -23599,6 +23779,15 @@
             "output_usd_per_1m": 0.15,
             "discount": 0,
             "quantization": "int4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "DeepInfra",
+            "tag": "deepinfra/bf16/priority",
+            "input_usd_per_1m": 0.075,
+            "output_usd_per_1m": 0.22499999999999998,
+            "discount": 0,
+            "quantization": "bf16"
           }
         ]
       },
@@ -23680,6 +23869,15 @@
             "output_usd_per_1m": 0.44999999999999996,
             "discount": 0,
             "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Nebius",
+            "tag": "nebius/fp8",
+            "input_usd_per_1m": 0.09999999999999999,
+            "output_usd_per_1m": 0.3,
+            "discount": 0,
+            "quantization": "fp8"
           }
         ]
       },
@@ -23716,13 +23914,13 @@
         "free": false,
         "source": "openrouter",
         "cheapest_available": {
-          "input_per_1m": 0.0725,
-          "output_per_1m": 0.1449,
-          "blended_3to1_per_1m": 0.0906,
-          "input_usd_per_1m": 0.05,
-          "output_usd_per_1m": 0.1,
+          "input_per_1m": 0.058,
+          "output_per_1m": 0.0725,
+          "blended_3to1_per_1m": 0.0616,
+          "input_usd_per_1m": 0.04,
+          "output_usd_per_1m": 0.05,
           "gateway": "openrouter",
-          "provider": "DeepInfra",
+          "provider": "Parasail",
           "quantization": "bf16"
         },
         "cheapest_quantized": null,
@@ -23744,6 +23942,15 @@
       "providers_global": {
         "scope": "global",
         "providers": [
+          {
+            "gateway": "openrouter",
+            "provider": "Parasail",
+            "tag": "parasail/bf16",
+            "input_usd_per_1m": 0.04,
+            "output_usd_per_1m": 0.049999999999999996,
+            "discount": 0,
+            "quantization": "bf16"
+          },
           {
             "gateway": "openrouter",
             "provider": "DeepInfra",
@@ -23788,14 +23995,14 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.058,
-          "output_per_1m": 0.2174,
-          "blended_3to1_per_1m": 0.0978,
-          "input_usd_per_1m": 0.04,
-          "output_usd_per_1m": 0.15,
+          "input_per_1m": 0.0478,
+          "output_per_1m": 0.1435,
+          "blended_3to1_per_1m": 0.0717,
+          "input_usd_per_1m": 0.033,
+          "output_usd_per_1m": 0.099,
           "gateway": "openrouter",
-          "provider": "Darkbloom",
-          "quantization": "unknown"
+          "provider": "PrimeIntellect",
+          "quantization": "bf16"
         },
         "cheapest_quantized": {
           "input_per_1m": 0.1014,
@@ -23816,7 +24023,8 @@
           "openrouter": {
             "input_usd_per_1m": 0.09,
             "output_usd_per_1m": 0.3,
-            "blended_aud_per_1m": 0.2065
+            "blended_aud_per_1m": 0.2065,
+            "discount_removed": 0.25
           }
         }
       },
@@ -23864,6 +24072,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "PrimeIntellect",
+            "tag": "primeintellect/bf16",
+            "input_usd_per_1m": 0.032999999999999995,
+            "output_usd_per_1m": 0.099,
+            "discount": 0,
+            "quantization": "bf16"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "Darkbloom",
             "tag": "darkbloom",
             "input_usd_per_1m": 0.04,
@@ -23873,20 +24090,20 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "PrimeIntellect",
-            "tag": "primeintellect/bf16",
-            "input_usd_per_1m": 0.049,
-            "output_usd_per_1m": 0.14600000000000002,
-            "discount": 0,
-            "quantization": "bf16"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "DekaLLM",
             "tag": "dekallm/bf16",
             "input_usd_per_1m": 0.06,
             "output_usd_per_1m": 0.33,
             "discount": 0,
+            "quantization": "bf16"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "NextBit",
+            "tag": "nextbit/bf16",
+            "input_usd_per_1m": 0.0675,
+            "output_usd_per_1m": 0.22499999999999998,
+            "discount": 0.25,
             "quantization": "bf16"
           },
           {
@@ -23918,19 +24135,19 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "NextBit",
-            "tag": "nextbit/bf16",
+            "provider": "Io Net",
+            "tag": "io-net/bf16",
             "input_usd_per_1m": 0.09,
-            "output_usd_per_1m": 0.3,
+            "output_usd_per_1m": 0.31,
             "discount": 0,
             "quantization": "bf16"
           },
           {
             "gateway": "openrouter",
-            "provider": "Io Net",
-            "tag": "io-net/bf16",
-            "input_usd_per_1m": 0.09,
-            "output_usd_per_1m": 0.31,
+            "provider": "CoreWeave",
+            "tag": "coreweave/bf16",
+            "input_usd_per_1m": 0.09999999999999999,
+            "output_usd_per_1m": 0.3,
             "discount": 0,
             "quantization": "bf16"
           },
@@ -24163,6 +24380,68 @@
             "output_usd_per_1m": 0.6,
             "discount": 0,
             "quantization": "fp8"
+          }
+        ]
+      },
+      "speed_from_australia": null,
+      "spend_in_australia": null,
+      "australian_usage": null,
+      "latency_from_australia": null,
+      "open_vs_closed_usage": null,
+      "providers_in_australia": null,
+      "runs_in_australia": null
+    },
+    {
+      "id": "humansand/ampersand-v0.1",
+      "name": "Ampersand v0.1",
+      "creator": "humansand",
+      "ids": {
+        "vercel": "humansand/ampersand-v0.1",
+        "openrouter": null,
+        "artificial_analysis": null
+      },
+      "gateway_match": "vercel_only",
+      "on_gateways": true,
+      "open_weights": null,
+      "open_weights_basis": "unknown: not listed on OpenRouter",
+      "context_window": 1000000,
+      "max_output_tokens": 32768,
+      "intelligence": null,
+      "price_aud": {
+        "scope": "global",
+        "basis": "list price",
+        "input_per_1m": 0.0,
+        "output_per_1m": 0.0,
+        "blended_3to1_per_1m": 0.0,
+        "free": true,
+        "source": "vercel",
+        "cheapest_available": null,
+        "cheapest_quantized": null,
+        "by_source": {
+          "vercel": {
+            "input_usd_per_1m": 0.0,
+            "output_usd_per_1m": 0.0,
+            "blended_aud_per_1m": 0.0
+          }
+        }
+      },
+      "cost_per_task_aud": null,
+      "smartest_open": null,
+      "value_aud": null,
+      "spread": {
+        "by_cost_per_task": null,
+        "by_token_price": null
+      },
+      "providers_global": {
+        "scope": "global",
+        "providers": [
+          {
+            "gateway": "vercel",
+            "provider": "humansand",
+            "input_usd_per_1m": 0.0,
+            "output_usd_per_1m": 0.0,
+            "quantization": null,
+            "inference_regions": []
           }
         ]
       },
@@ -24938,15 +25217,15 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.1087,
-          "output_per_1m": 0.3261,
-          "blended_3to1_per_1m": 0.163,
-          "input_usd_per_1m": 0.075,
-          "output_usd_per_1m": 0.225,
+          "input_per_1m": 0.0652,
+          "output_per_1m": 0.1957,
+          "blended_3to1_per_1m": 0.0978,
+          "input_usd_per_1m": 0.045,
+          "output_usd_per_1m": 0.135,
           "gateway": "openrouter",
           "provider": "Novita",
           "quantization": "unknown",
-          "discount": 0.75
+          "discount": 0.85
         },
         "cheapest_quantized": {
           "input_per_1m": 0.1087,
@@ -24969,7 +25248,7 @@
             "input_usd_per_1m": 0.3,
             "output_usd_per_1m": 0.9,
             "blended_aud_per_1m": 0.6522,
-            "discount_removed": 0.75
+            "discount_removed": 0.85
           }
         }
       },
@@ -24993,21 +25272,21 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Novita",
+            "tag": "novita",
+            "input_usd_per_1m": 0.045,
+            "output_usd_per_1m": 0.135,
+            "discount": 0.85,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "DeepInfra",
             "tag": "deepinfra/fp4",
             "input_usd_per_1m": 0.075,
             "output_usd_per_1m": 0.22499999999999998,
             "discount": 0.75,
             "quantization": "fp4"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Novita",
-            "tag": "novita",
-            "input_usd_per_1m": 0.075,
-            "output_usd_per_1m": 0.22499999999999998,
-            "discount": 0.75,
-            "quantization": "unknown"
           }
         ]
       },
@@ -25341,6 +25620,65 @@
           }
         ]
       },
+      "speed_from_australia": null,
+      "spend_in_australia": null,
+      "australian_usage": null,
+      "latency_from_australia": null,
+      "open_vs_closed_usage": null,
+      "providers_in_australia": null,
+      "runs_in_australia": null
+    },
+    {
+      "id": "liquid/lfm-3-1.7b",
+      "name": "LFM3-1.7B",
+      "creator": "liquid",
+      "ids": {
+        "vercel": null,
+        "openrouter": "liquid/lfm-3-1.7b",
+        "artificial_analysis": null
+      },
+      "gateway_match": "openrouter_only",
+      "on_gateways": true,
+      "open_weights": true,
+      "open_weights_basis": "OpenRouter lists weights at huggingface.co/LiquidAI/LFM3-1.7B",
+      "context_window": 262144,
+      "max_output_tokens": 8192,
+      "intelligence": null,
+      "price_aud": {
+        "scope": "global",
+        "basis": "list price",
+        "input_per_1m": 0.1159,
+        "output_per_1m": 0.2899,
+        "blended_3to1_per_1m": 0.1594,
+        "free": false,
+        "source": "openrouter",
+        "cheapest_available": {
+          "input_per_1m": 0.1159,
+          "output_per_1m": 0.2899,
+          "blended_3to1_per_1m": 0.1594,
+          "input_usd_per_1m": 0.08,
+          "output_usd_per_1m": 0.2,
+          "gateway": "openrouter",
+          "provider": null,
+          "quantization": "unknown"
+        },
+        "cheapest_quantized": null,
+        "by_source": {
+          "openrouter": {
+            "input_usd_per_1m": 0.08,
+            "output_usd_per_1m": 0.2,
+            "blended_aud_per_1m": 0.1594
+          }
+        }
+      },
+      "cost_per_task_aud": null,
+      "smartest_open": null,
+      "value_aud": null,
+      "spread": {
+        "by_cost_per_task": null,
+        "by_token_price": null
+      },
+      "providers_global": null,
       "speed_from_australia": null,
       "spend_in_australia": null,
       "australian_usage": null,
@@ -26203,19 +26541,19 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "SambaNova",
-            "tag": "sambanova-turbo",
-            "input_usd_per_1m": 0.44999999999999996,
-            "output_usd_per_1m": 0.8999999999999999,
-            "discount": 0.25,
-            "quantization": "unknown"
-          },
-          {
-            "gateway": "openrouter",
             "provider": "Groq",
             "tag": "groq",
             "input_usd_per_1m": 0.59,
             "output_usd_per_1m": 0.7899999999999999,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "SambaNova",
+            "tag": "sambanova-turbo",
+            "input_usd_per_1m": 0.6,
+            "output_usd_per_1m": 1.2,
             "discount": 0,
             "quantization": "unknown"
           },
@@ -27278,9 +27616,9 @@
             "blended_aud_per_1m": 0.7609
           },
           "openrouter": {
-            "input_usd_per_1m": 0.27,
-            "output_usd_per_1m": 0.95,
-            "blended_aud_per_1m": 0.6377
+            "input_usd_per_1m": 0.3,
+            "output_usd_per_1m": 1.2,
+            "blended_aud_per_1m": 0.7609
           }
         }
       },
@@ -28505,11 +28843,11 @@
         "free": false,
         "source": "openrouter",
         "cheapest_available": {
-          "input_per_1m": 0.6377,
-          "output_per_1m": 3.1884,
-          "blended_3to1_per_1m": 1.2754,
-          "input_usd_per_1m": 0.44,
-          "output_usd_per_1m": 2.2,
+          "input_per_1m": 0.5797,
+          "output_per_1m": 2.8986,
+          "blended_3to1_per_1m": 1.1594,
+          "input_usd_per_1m": 0.4,
+          "output_usd_per_1m": 2.0,
           "gateway": "openrouter",
           "provider": "Mistral",
           "quantization": "unknown"
@@ -28533,6 +28871,15 @@
       "providers_global": {
         "scope": "global",
         "providers": [
+          {
+            "gateway": "openrouter",
+            "provider": "Mistral",
+            "tag": "mistral/zdr",
+            "input_usd_per_1m": 0.39999999999999997,
+            "output_usd_per_1m": 2.0,
+            "discount": 0,
+            "quantization": "unknown"
+          },
           {
             "gateway": "openrouter",
             "provider": "Mistral",
@@ -29848,15 +30195,6 @@
             "output_usd_per_1m": 3.5,
             "discount": 0,
             "quantization": "fp4"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Venice",
-            "tag": "venice/int4",
-            "input_usd_per_1m": 0.75,
-            "output_usd_per_1m": 3.5,
-            "discount": 0,
-            "quantization": "int4"
           },
           {
             "gateway": "openrouter",
@@ -36581,6 +36919,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "OpenAI",
+            "tag": "openai/flex",
+            "input_usd_per_1m": 2.0,
+            "output_usd_per_1m": 10.0,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "Amazon Bedrock",
             "tag": "amazon-bedrock/global",
             "input_usd_per_1m": 4.0,
@@ -38585,11 +38932,11 @@
           "quantization": "bf16"
         },
         "cheapest_quantized": {
-          "input_per_1m": 0.0391,
-          "output_per_1m": 0.1464,
-          "blended_3to1_per_1m": 0.0659,
-          "input_usd_per_1m": 0.027,
-          "output_usd_per_1m": 0.101,
+          "input_per_1m": 0.0348,
+          "output_per_1m": 0.129,
+          "blended_3to1_per_1m": 0.0583,
+          "input_usd_per_1m": 0.024,
+          "output_usd_per_1m": 0.089,
           "gateway": "openrouter",
           "provider": "PrimeIntellect",
           "quantization": "fp4"
@@ -38601,9 +38948,9 @@
             "blended_aud_per_1m": 0.2899
           },
           "openrouter": {
-            "input_usd_per_1m": 0.027,
-            "output_usd_per_1m": 0.101,
-            "blended_aud_per_1m": 0.0659
+            "input_usd_per_1m": 0.024,
+            "output_usd_per_1m": 0.089,
+            "blended_aud_per_1m": 0.0583
           }
         }
       },
@@ -38645,14 +38992,6 @@
           },
           {
             "gateway": "vercel",
-            "provider": "fireworks",
-            "input_usd_per_1m": 0.15,
-            "output_usd_per_1m": 0.6,
-            "quantization": null,
-            "inference_regions": []
-          },
-          {
-            "gateway": "vercel",
             "provider": "groq",
             "input_usd_per_1m": 0.15,
             "output_usd_per_1m": 0.6,
@@ -38687,8 +39026,8 @@
             "gateway": "openrouter",
             "provider": "PrimeIntellect",
             "tag": "primeintellect/fp4",
-            "input_usd_per_1m": 0.027,
-            "output_usd_per_1m": 0.101,
+            "input_usd_per_1m": 0.024,
+            "output_usd_per_1m": 0.08900000000000001,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -38811,6 +39150,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "SambaNova",
+            "tag": "sambanova",
+            "input_usd_per_1m": 0.14,
+            "output_usd_per_1m": 0.95,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "Amazon Bedrock",
             "tag": "amazon-bedrock/eu-west-1",
             "input_usd_per_1m": 0.15,
@@ -38849,6 +39197,15 @@
             "gateway": "openrouter",
             "provider": "Phala",
             "tag": "phala",
+            "input_usd_per_1m": 0.15,
+            "output_usd_per_1m": 0.6,
+            "discount": 0,
+            "quantization": "unknown"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Together",
+            "tag": "together",
             "input_usd_per_1m": 0.15,
             "output_usd_per_1m": 0.6,
             "discount": 0,
@@ -38936,10 +39293,10 @@
         },
         "cheapest_quantized": {
           "input_per_1m": 0.0058,
-          "output_per_1m": 0.0261,
-          "blended_3to1_per_1m": 0.0109,
+          "output_per_1m": 0.0246,
+          "blended_3to1_per_1m": 0.0105,
           "input_usd_per_1m": 0.004,
-          "output_usd_per_1m": 0.018,
+          "output_usd_per_1m": 0.017,
           "gateway": "openrouter",
           "provider": "PrimeIntellect",
           "quantization": "fp4"
@@ -39004,7 +39361,7 @@
             "provider": "PrimeIntellect",
             "tag": "primeintellect/fp4",
             "input_usd_per_1m": 0.004,
-            "output_usd_per_1m": 0.018,
+            "output_usd_per_1m": 0.017,
             "discount": 0,
             "quantization": "fp4"
           },
@@ -41593,6 +41950,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Novita",
+            "tag": "novita/bf16",
+            "input_usd_per_1m": 0.19999999999999998,
+            "output_usd_per_1m": 0.7,
+            "discount": 0,
+            "quantization": "bf16"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "SiliconFlow",
             "tag": "siliconflow/fp8",
             "input_usd_per_1m": 0.29,
@@ -41878,14 +42244,14 @@
         "free": false,
         "source": "openrouter",
         "cheapest_available": {
-          "input_per_1m": 0.3623,
-          "output_per_1m": 2.8986,
-          "blended_3to1_per_1m": 0.9964,
-          "input_usd_per_1m": 0.25,
-          "output_usd_per_1m": 2.0,
+          "input_per_1m": 0.2826,
+          "output_per_1m": 2.2609,
+          "blended_3to1_per_1m": 0.7772,
+          "input_usd_per_1m": 0.195,
+          "output_usd_per_1m": 1.56,
           "gateway": "openrouter",
-          "provider": "SiliconFlow",
-          "quantization": "fp8"
+          "provider": "Alibaba",
+          "quantization": "unknown"
         },
         "cheapest_quantized": null,
         "by_source": {
@@ -41906,6 +42272,15 @@
       "providers_global": {
         "scope": "global",
         "providers": [
+          {
+            "gateway": "openrouter",
+            "provider": "Alibaba",
+            "tag": "alibaba",
+            "input_usd_per_1m": 0.195,
+            "output_usd_per_1m": 1.56,
+            "discount": 0,
+            "quantization": "unknown"
+          },
           {
             "gateway": "openrouter",
             "provider": "SiliconFlow",
@@ -41995,7 +42370,16 @@
           "provider": "DeepInfra",
           "quantization": "fp8"
         },
-        "cheapest_quantized": null,
+        "cheapest_quantized": {
+          "input_per_1m": 0.0942,
+          "output_per_1m": 1.087,
+          "blended_3to1_per_1m": 0.3424,
+          "input_usd_per_1m": 0.065,
+          "output_usd_per_1m": 0.75,
+          "gateway": "openrouter",
+          "provider": "Darkbloom",
+          "quantization": "fp4"
+        },
         "by_source": {
           "openrouter": {
             "input_usd_per_1m": 0.14,
@@ -42014,6 +42398,15 @@
       "providers_global": {
         "scope": "global",
         "providers": [
+          {
+            "gateway": "openrouter",
+            "provider": "Darkbloom",
+            "tag": "darkbloom/fp4",
+            "input_usd_per_1m": 0.065,
+            "output_usd_per_1m": 0.75,
+            "discount": 0,
+            "quantization": "fp4"
+          },
           {
             "gateway": "openrouter",
             "provider": "DeepInfra",
@@ -42256,11 +42649,11 @@
         "free": false,
         "source": "openrouter",
         "cheapest_available": {
-          "input_per_1m": 0.0841,
-          "output_per_1m": 0.1232,
-          "blended_3to1_per_1m": 0.0938,
-          "input_usd_per_1m": 0.058,
-          "output_usd_per_1m": 0.085,
+          "input_per_1m": 0.0594,
+          "output_per_1m": 0.087,
+          "blended_3to1_per_1m": 0.0663,
+          "input_usd_per_1m": 0.041,
+          "output_usd_per_1m": 0.06,
           "gateway": "openrouter",
           "provider": "PrimeIntellect",
           "quantization": "bf16"
@@ -42297,8 +42690,8 @@
             "gateway": "openrouter",
             "provider": "PrimeIntellect",
             "tag": "primeintellect/bf16",
-            "input_usd_per_1m": 0.058,
-            "output_usd_per_1m": 0.08499999999999999,
+            "input_usd_per_1m": 0.041,
+            "output_usd_per_1m": 0.06,
             "discount": 0,
             "quantization": "bf16"
           },
@@ -42583,6 +42976,15 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "CoreWeave",
+            "tag": "coreweave/fp8",
+            "input_usd_per_1m": 0.09999999999999999,
+            "output_usd_per_1m": 0.8899999999999999,
+            "discount": 0,
+            "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "AkashML",
             "tag": "akashml/fp8",
             "input_usd_per_1m": 0.09999999999999999,
@@ -42603,15 +43005,6 @@
             "gateway": "openrouter",
             "provider": "DeepInfra",
             "tag": "deepinfra/fp8",
-            "input_usd_per_1m": 0.09999999999999999,
-            "output_usd_per_1m": 0.95,
-            "discount": 0,
-            "quantization": "fp8"
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "CoreWeave",
-            "tag": "coreweave/fp8",
             "input_usd_per_1m": 0.09999999999999999,
             "output_usd_per_1m": 0.95,
             "discount": 0,
@@ -42646,10 +43039,10 @@
           },
           {
             "gateway": "openrouter",
-            "provider": "AtlasCloud",
-            "tag": "atlas-cloud/fp8",
-            "input_usd_per_1m": 0.25,
-            "output_usd_per_1m": 1.25,
+            "provider": "SiliconFlow",
+            "tag": "siliconflow/fp8",
+            "input_usd_per_1m": 0.24,
+            "output_usd_per_1m": 1.7999999999999998,
             "discount": 0,
             "quantization": "fp8"
           }
@@ -43169,7 +43562,7 @@
     },
     {
       "id": "ricursiveai/ripple-65b-preview",
-      "name": "ricursiveAI/Ripple-65B-Preview",
+      "name": "Ripple 65B Preview",
       "creator": "ricursiveai",
       "ids": {
         "vercel": null,
@@ -46016,8 +46409,8 @@
           "input_usd_per_1m": 0.18,
           "output_usd_per_1m": 0.6,
           "gateway": "openrouter",
-          "provider": null,
-          "quantization": "unknown"
+          "provider": "GMICloud",
+          "quantization": "bf16"
         },
         "cheapest_quantized": null,
         "by_source": {
@@ -46035,7 +46428,20 @@
         "by_cost_per_task": null,
         "by_token_price": null
       },
-      "providers_global": null,
+      "providers_global": {
+        "scope": "global",
+        "providers": [
+          {
+            "gateway": "openrouter",
+            "provider": "GMICloud",
+            "tag": "gmicloud/bf16",
+            "input_usd_per_1m": 0.18,
+            "output_usd_per_1m": 0.6,
+            "discount": 0,
+            "quantization": "bf16"
+          }
+        ]
+      },
       "speed_from_australia": null,
       "spend_in_australia": null,
       "australian_usage": null,
@@ -46085,8 +46491,8 @@
           "input_usd_per_1m": 0.834,
           "output_usd_per_1m": 2.501,
           "gateway": "openrouter",
-          "provider": "DeepInfra",
-          "quantization": "fp4"
+          "provider": "Cohere",
+          "quantization": "mxfp4"
         },
         "by_source": {
           "vercel": {
@@ -46140,11 +46546,11 @@
           {
             "gateway": "openrouter",
             "provider": "Cohere",
-            "tag": "cohere",
+            "tag": "cohere/mxfp4",
             "input_usd_per_1m": 0.834,
             "output_usd_per_1m": 2.501,
             "discount": 0,
-            "quantization": "unknown"
+            "quantization": "mxfp4"
           },
           {
             "gateway": "openrouter",
@@ -46511,7 +46917,7 @@
           "input_usd_per_1m": 2.5,
           "output_usd_per_1m": 7.5,
           "gateway": "openrouter",
-          "provider": null,
+          "provider": "Unbiased",
           "quantization": "unknown"
         },
         "cheapest_quantized": null,
@@ -46530,7 +46936,20 @@
         "by_cost_per_task": null,
         "by_token_price": null
       },
-      "providers_global": null,
+      "providers_global": {
+        "scope": "global",
+        "providers": [
+          {
+            "gateway": "openrouter",
+            "provider": "Unbiased",
+            "tag": "unbiased",
+            "input_usd_per_1m": 2.5,
+            "output_usd_per_1m": 7.5,
+            "discount": 0,
+            "quantization": "unknown"
+          }
+        ]
+      },
       "speed_from_australia": null,
       "spend_in_australia": null,
       "australian_usage": null,
@@ -47717,15 +48136,14 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 0.7826,
-          "output_per_1m": 2.8696,
-          "blended_3to1_per_1m": 1.3043,
-          "input_usd_per_1m": 0.54,
-          "output_usd_per_1m": 1.98,
-          "gateway": "openrouter",
-          "provider": "Novita",
-          "quantization": "fp8",
-          "discount": 0.1
+          "input_per_1m": 0.8696,
+          "output_per_1m": 3.1884,
+          "blended_3to1_per_1m": 1.4493,
+          "input_usd_per_1m": 0.6,
+          "output_usd_per_1m": 2.2,
+          "gateway": "vercel",
+          "provider": "bedrock",
+          "quantization": "unknown"
         },
         "cheapest_quantized": {
           "input_per_1m": 0.5797,
@@ -47812,11 +48230,20 @@
           },
           {
             "gateway": "openrouter",
+            "provider": "Venice",
+            "tag": "venice/fp4",
+            "input_usd_per_1m": 0.40040000000000003,
+            "output_usd_per_1m": 1.9292,
+            "discount": 0.272,
+            "quantization": "fp4"
+          },
+          {
+            "gateway": "openrouter",
             "provider": "Novita",
             "tag": "novita/fp8",
-            "input_usd_per_1m": 0.54,
-            "output_usd_per_1m": 1.9800000000000002,
-            "discount": 0.1,
+            "input_usd_per_1m": 0.6,
+            "output_usd_per_1m": 2.2,
+            "discount": 0,
             "quantization": "fp8"
           },
           {
@@ -48295,15 +48722,14 @@
         "free": false,
         "source": "vercel",
         "cheapest_available": {
-          "input_per_1m": 1.3026,
-          "output_per_1m": 4.0939,
-          "blended_3to1_per_1m": 2.0004,
-          "input_usd_per_1m": 0.8988,
-          "output_usd_per_1m": 2.8248,
+          "input_per_1m": 1.3043,
+          "output_per_1m": 4.2029,
+          "blended_3to1_per_1m": 2.029,
+          "input_usd_per_1m": 0.9,
+          "output_usd_per_1m": 2.9,
           "gateway": "openrouter",
-          "provider": "Baidu",
-          "quantization": "fp8",
-          "discount": 0.358
+          "provider": "Chutes",
+          "quantization": "fp8"
         },
         "cheapest_quantized": null,
         "by_source": {
@@ -48344,15 +48770,6 @@
             "output_usd_per_1m": 4.4,
             "quantization": null,
             "inference_regions": []
-          },
-          {
-            "gateway": "openrouter",
-            "provider": "Baidu",
-            "tag": "baidu/fp8",
-            "input_usd_per_1m": 0.8987999999999999,
-            "output_usd_per_1m": 2.8248,
-            "discount": 0.358,
-            "quantization": "fp8"
           },
           {
             "gateway": "openrouter",
@@ -48421,6 +48838,15 @@
             "gateway": "openrouter",
             "provider": "Nebius",
             "tag": "nebius/fp8",
+            "input_usd_per_1m": 1.4,
+            "output_usd_per_1m": 4.4,
+            "discount": 0,
+            "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Baidu",
+            "tag": "baidu/fp8",
             "input_usd_per_1m": 1.4,
             "output_usd_per_1m": 4.4,
             "discount": 0,
@@ -48801,6 +49227,15 @@
           {
             "gateway": "openrouter",
             "provider": "Alibaba",
+            "tag": "alibaba/fp8",
+            "input_usd_per_1m": 0.966,
+            "output_usd_per_1m": 3.036,
+            "discount": 0,
+            "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Alibaba",
             "tag": "alibaba/fp8/us-east-1",
             "input_usd_per_1m": 1.12,
             "output_usd_per_1m": 3.52,
@@ -48833,6 +49268,15 @@
             "output_usd_per_1m": 4.4,
             "discount": 0,
             "quantization": "fp4"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Together",
+            "tag": "together",
+            "input_usd_per_1m": 1.4,
+            "output_usd_per_1m": 4.4,
+            "discount": 0,
+            "quantization": "unknown"
           },
           {
             "gateway": "openrouter",
@@ -48896,6 +49340,15 @@
             "output_usd_per_1m": 4.4,
             "discount": 0,
             "quantization": "fp8"
+          },
+          {
+            "gateway": "openrouter",
+            "provider": "Mistral",
+            "tag": "mistral/eu",
+            "input_usd_per_1m": 1.54,
+            "output_usd_per_1m": 4.84,
+            "discount": 0,
+            "quantization": "unknown"
           },
           {
             "gateway": "openrouter",
@@ -49367,10 +49820,10 @@
     ],
     "gateway_match": {
       "exact": 167,
-      "openrouter_only": 149,
+      "openrouter_only": 150,
       "override": 8,
       "relaxed": 12,
-      "vercel_only": 131
+      "vercel_only": 133
     },
     "intelligence_source": {
       "artificial_analysis_via_openrouter": 51
@@ -49379,7 +49832,7 @@
       "openrouter_copy": 51
     },
     "openrouter_entries_excluded": {
-      "variants (:free, :batch, ...)": 53,
+      "variants (:free, :batch, ...)": 59,
       "aliases": 19,
       "routers": 9
     },
@@ -49387,11 +49840,6 @@
     "low_confidence_matches": [],
     "possible_duplicates": [],
     "gateway_price_gaps": [
-      {
-        "id": "google/gemini-4-argon",
-        "vercel_blended_aud_per_1m": 5.7971,
-        "openrouter_blended_aud_per_1m": 11.5942
-      },
       {
         "id": "tencent/hy4",
         "vercel_blended_aud_per_1m": 0.9063,
@@ -49410,7 +49858,7 @@
       {
         "id": "minimax/minimax-m3.1-flash",
         "vercel_blended_aud_per_1m": 0.3804,
-        "openrouter_blended_aud_per_1m": 0.1902
+        "openrouter_blended_aud_per_1m": 0.7609
       },
       {
         "id": "deepseek/deepseek-v4.1-flash-1017",
@@ -49505,7 +49953,7 @@
       {
         "id": "openai/gpt-oss-120b",
         "vercel_blended_aud_per_1m": 0.2899,
-        "openrouter_blended_aud_per_1m": 0.0659
+        "openrouter_blended_aud_per_1m": 0.0583
       }
     ]
   }
