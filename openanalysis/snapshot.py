@@ -48,7 +48,13 @@ POINTS = [
      f"Intelligence Index points per A$1 of blended token price per 1M tokens, for models scoring {VALUE_FLOOR} "
      "or more. Higher is better value. Based on token price, not cost per task."),
     (9, "open_vs_closed_usage", "planned", AUSTRALIA, "Open versus closed model share of usage."),
-    (10, "providers_in_australia", "planned", AUSTRALIA, "Providers serving the model from Australian infrastructure."),
+    (10, "providers_in_australia", "phase_1", AUSTRALIA,
+     "Providers serving the model from Australia, as the gateways list them: Vercel AI Gateway deployments in an "
+     "Australian cloud region, at that region's price, and OpenRouter providers that list an Australian datacenter "
+     "(OpenRouter does not say which datacenter serves a request, so this is weaker evidence). Prices in AUD, ex GST. "
+     "vs_list_price compares the cheapest Australian deployment with the model's list price. A count of 0 means "
+     "neither gateway lists an Australian deployment; the model may still be available in Australia directly from a "
+     "cloud provider. Null where the model is on neither gateway or provider data was not fetched."),
     ("bonus", "runs_in_australia", "planned", AUSTRALIA, "Whether the model can be run inside Australia."),
 ]
 
@@ -100,12 +106,29 @@ def _openrouter_models(raw):
     return kept, dict(dropped)
 
 
-def _providers(vercel_endpoints, openrouter_endpoints):
-    """Every provider serving the model on either gateway, with the price each one charges."""
+def _providers(vercel_endpoints, openrouter_endpoints, openrouter_providers=None):
+    """Every provider serving the model on either gateway, with the price each one charges.
+
+    openrouter_providers: {provider name: OpenRouter's provider entry}, for headquarters and datacenters.
+    """
     providers = []
     for endpoint in vercel_endpoints or []:
         pricing = endpoint.get("pricing") or {}
-        regions = sorted({r.get("geo_region") for r in endpoint.get("inference_regions") or [] if r.get("geo_region")})
+        inference_regions = endpoint.get("inference_regions") or []
+        regions = sorted({r.get("geo_region") for r in inference_regions if r.get("geo_region")})
+        detail = []
+        for region in inference_regions:
+            # A region can carry its own price; without one the endpoint's price applies.
+            region_pricing = region.get("pricing") or pricing
+            detail.append({
+                "geo_region": region.get("geo_region"),
+                "provider_region": region.get("provider_region"),
+                "region_scope": region.get("scope"),
+                "input_usd_per_1m": _per_1m(region_pricing.get("prompt")),
+                "output_usd_per_1m": _per_1m(region_pricing.get("completion")),
+                # Price rises past a token threshold; the figures above are the first tier.
+                "tiered": bool(region_pricing.get("prompt_tiers") or region_pricing.get("completion_tiers")),
+            })
         providers.append({
             "gateway": "vercel",
             "provider": endpoint.get("provider_name"),
@@ -113,11 +136,13 @@ def _providers(vercel_endpoints, openrouter_endpoints):
             "output_usd_per_1m": _per_1m(pricing.get("completion")),
             "quantization": endpoint.get("quantization"),
             "inference_regions": regions,
+            "regions": detail,
         })
     for endpoint in openrouter_endpoints or []:
         if (endpoint.get("status") or 0) < 0:       # OpenRouter marks a down endpoint with a negative status
             continue
         pricing = endpoint.get("pricing") or {}
+        listing = (openrouter_providers or {}).get(endpoint.get("provider_name")) or {}
         providers.append({
             "gateway": "openrouter",
             "provider": endpoint.get("provider_name"),
@@ -127,8 +152,63 @@ def _providers(vercel_endpoints, openrouter_endpoints):
             # The prices above are what is charged, after this fraction off the provider's list price.
             "discount": pricing.get("discount") or 0,
             "quantization": endpoint.get("quantization"),
+            # Countries the provider lists for itself, not for this model; None where OpenRouter gives none.
+            "headquarters": listing.get("headquarters"),
+            "datacenters": listing.get("datacenters") or None,
         })
     return providers
+
+
+def _australia(providers, list_price, usd_to_aud):
+    """Point 10: deployments of the model in Australia, as the gateways list them.
+
+    Vercel names the cloud region of a deployment and its price there. OpenRouter lists the
+    countries a provider has datacenters in, but not which one serves a given request, so
+    an OpenRouter provider with an Australian datacenter is labelled as the weaker evidence.
+    Returns None when there is no provider data to look in.
+    """
+    if not providers:
+        return None
+    deployments = []
+    for provider in providers:
+        if provider["gateway"] == "vercel":
+            for region in provider.get("regions") or []:
+                if (region.get("geo_region") or "").lower() == "au":
+                    deployments.append({
+                        "gateway": "vercel", "provider": provider["provider"],
+                        "region": region.get("provider_region") or "au",
+                        "basis": "Vercel AI Gateway lists this deployment in an Australian region, at this region's price.",
+                        "input_usd_per_1m": region["input_usd_per_1m"], "output_usd_per_1m": region["output_usd_per_1m"],
+                        **({"tiered": True} if region.get("tiered") else {}),
+                    })
+        elif "AU" in (provider.get("datacenters") or []) and not (provider.get("tag") or "").endswith("/flex"):
+            deployments.append({
+                "gateway": "openrouter", "provider": provider["provider"], "region": "AU",
+                "basis": "OpenRouter lists an Australian datacenter for this provider, but not which datacenter "
+                         "serves a request.",
+                "input_usd_per_1m": provider["input_usd_per_1m"], "output_usd_per_1m": provider["output_usd_per_1m"],
+            })
+
+    for deployment in deployments:
+        if deployment["input_usd_per_1m"] is not None and deployment["output_usd_per_1m"] is not None:
+            input_usd, output_usd = deployment["input_usd_per_1m"], deployment["output_usd_per_1m"]
+            deployment.update({
+                "input_usd_per_1m": round(input_usd, 6), "output_usd_per_1m": round(output_usd, 6),
+                "input_aud_per_1m": round(input_usd * usd_to_aud, 4), "output_aud_per_1m": round(output_usd * usd_to_aud, 4),
+                "blended_aud_per_1m": round(metrics.blended(input_usd, output_usd) * usd_to_aud, 4),
+            })
+    priced = [d for d in deployments if d.get("blended_aud_per_1m")]
+    cheapest = min(priced, key=lambda d: d["blended_aud_per_1m"]) if priced else None
+    listed = (list_price or {}).get("blended_3to1_per_1m")
+    return {
+        "scope": AUSTRALIA,
+        "count": len(deployments),
+        "providers": deployments,
+        "cheapest": {k: cheapest[k] for k in ("gateway", "provider", "region", "input_aud_per_1m", "output_aud_per_1m",
+                                              "blended_aud_per_1m")} if cheapest else None,
+        # What the cheapest Australian deployment costs relative to the model's list price: 0.1 is 10% more.
+        "vs_list_price": round(cheapest["blended_aud_per_1m"] / listed - 1, 4) if cheapest and listed else None,
+    }
 
 
 def _quantized(provider):
@@ -269,6 +349,7 @@ def _model(*, model_id, name, creator, vercel, openrouter, aa_model, intelligenc
            providers, usd_to_aud, forced_open):
     ids = [m["id"] for m in (vercel, openrouter) if m]
     is_open, basis = _open_weights(ids, openrouter, forced_open)
+    price = _price(vercel, openrouter, aa_model, providers, usd_to_aud)
     model = {
         "id": model_id,
         "name": name,
@@ -279,6 +360,8 @@ def _model(*, model_id, name, creator, vercel, openrouter, aa_model, intelligenc
             "artificial_analysis": aa_model["slug"] if aa_model else None,
         },
         "gateway_match": gateway_match,
+        # Release date of the Artificial Analysis entry the score comes from.
+        "release_date": (aa_model or {}).get("release_date"),
         "on_gateways": bool(ids),
         "open_weights": is_open,
         "open_weights_basis": basis,
@@ -286,18 +369,23 @@ def _model(*, model_id, name, creator, vercel, openrouter, aa_model, intelligenc
         "max_output_tokens": (vercel or {}).get("max_tokens")
                              or ((openrouter or {}).get("top_provider") or {}).get("max_completion_tokens"),
         "intelligence": intelligence_block,
-        "price_aud": _price(vercel, openrouter, aa_model, providers, usd_to_aud),
+        "price_aud": price,
         "cost_per_task_aud": None,
         "smartest_open": None,
         "value_aud": None,
         "spread": {"by_cost_per_task": None, "by_token_price": None},
-        # Who serves the model anywhere in the world. Groundwork for point 10; says nothing about Australia yet.
+        # Who serves the model anywhere in the world; the Australian ones are picked out in point 10.
         "providers_global": {"scope": GLOBAL, "providers": providers} if providers else None,
+        "providers_in_australia": _australia(providers, price, usd_to_aud),
     }
     for _, field, status, _, _ in POINTS:
         if status == "planned":
             model[field] = None
     return model
+
+
+def _in_australia(model):
+    return bool((model["providers_in_australia"] or {}).get("count"))
 
 
 def _spread(models, cost_of, cost_field, role, x_label, empty_reason):
@@ -310,12 +398,15 @@ def _spread(models, cost_of, cost_field, role, x_label, empty_reason):
     everything, per_model = metrics.spread_map(points(plotted), cost_field)
     available, per_available = metrics.spread_map(points([m for m in plotted if m["on_gateways"]]), cost_field)
     opened, per_open = metrics.spread_map(points([m for m in plotted if m["open_weights"]]), cost_field)
+    hosted, per_hosted = metrics.spread_map(points([m for m in plotted if _in_australia(m)]), cost_field)
     for model_id, stats in per_model.items():
         stats["scope"] = GLOBAL
         if model_id in per_available:
             stats["on_available_frontier"] = per_available[model_id]["on_frontier"]
         if model_id in per_open:
             stats["on_open_frontier"] = per_open[model_id]["on_frontier"]
+        if model_id in per_hosted:
+            stats["on_australian_hosted_frontier"] = per_hosted[model_id]["on_frontier"]
     block = {
         "scope": GLOBAL,
         "role": role,
@@ -325,6 +416,7 @@ def _spread(models, cost_of, cost_field, role, x_label, empty_reason):
         "all_models": everything,
         "available_models": available,
         "open_models": opened,
+        "australian_hosted_models": hosted,
     }
     if not plotted:
         block["reason"] = empty_reason
@@ -345,6 +437,7 @@ def build(raw, status, snapshot_date, previous_fx=None, cost_per_task=None):
     aa_index = ArtificialAnalysisIndex(aa_data) if aa_data else None
     vercel_endpoints = raw.get("vercel_endpoints") or {}
     openrouter_endpoints = raw.get("openrouter_endpoints") or {}
+    openrouter_providers = {p["name"]: p for p in (raw.get("openrouter_providers") or {}).get("data", [])}
 
     disagreements, models = [], []
     for row in join_gateways(vercel, openrouter, overrides["gateway_aliases"]):
@@ -360,7 +453,8 @@ def build(raw, status, snapshot_date, previous_fx=None, cost_per_task=None):
             vercel=on_vercel, openrouter=on_openrouter, aa_model=aa_model, intelligence_block=block,
             gateway_match=row["match"],
             providers=_providers(vercel_endpoints.get(on_vercel["id"]) if on_vercel else None,
-                                 openrouter_endpoints.get(on_openrouter["id"]) if on_openrouter else None),
+                                 openrouter_endpoints.get(on_openrouter["id"]) if on_openrouter else None,
+                                 openrouter_providers),
             usd_to_aud=usd_to_aud, forced_open=overrides["open_weights"]))
 
     # Models Artificial Analysis scores that neither gateway lists (unreleased, or
@@ -491,13 +585,19 @@ def build(raw, status, snapshot_date, previous_fx=None, cost_per_task=None):
         return {"id": model["id"], "name": model["name"], "intelligence_index": model["intelligence"]["index"],
                 "blended_aud_per_1m": (model["price_aud"] or {}).get("blended_3to1_per_1m")}
 
+    hosted = [m for m in models if _in_australia(m)]
+    if status.get("openrouter_providers", {}).get("status") != "ok":
+        warnings.append("openrouter_providers unavailable: Australian datacenters on OpenRouter were not checked.")
+
     return {
         "schema_version": SCHEMA_VERSION,
         "snapshot_date": snapshot_date.isoformat(),
         "generated_at": datetime.now(ZoneInfo(config.TIMEZONE)).isoformat(timespec="seconds"),
         "phase": 1,
         "scope_note": "Every value carries a scope. 'global' means the figure is not specific to Australia: "
-                      "a worldwide list price or benchmark, shown in AUD. Nothing in Phase 1 is measured in Australia.",
+                      "a worldwide list price or benchmark, shown in AUD. 'australia' means it is about Australia: "
+                      "in Phase 1, deployments in Australia as the gateways list them. Nothing is yet measured from "
+                      "Australia.",
         "fx": rate,
         "attribution": ATTRIBUTION,
         "sources": status,
@@ -517,6 +617,17 @@ def build(raw, status, snapshot_date, previous_fx=None, cost_per_task=None):
             "value_floor_intelligence": VALUE_FLOOR,
             "best_value_top5": [{**summary_entry(m), "index_points_per_aud": m["value_aud"]["index_points_per_aud"]}
                                 for m in by_value[:5]],
+            "hosted_in_australia": {
+                "scope": AUSTRALIA,
+                "models": len(hosted),
+                "with_intelligence": sum(1 for m in hosted if m["intelligence"]),
+                "models_by_intelligence": [
+                    {**summary_entry(m), "australian_blended_aud_per_1m":
+                        (m["providers_in_australia"]["cheapest"] or {}).get("blended_aud_per_1m"),
+                     "australian_providers": sorted({f"{p['provider']} ({p['region']})"
+                                                     for p in m["providers_in_australia"]["providers"]})}
+                    for m in hosted if m["intelligence"]],
+            },
         },
         "spread_map": {
             "definitions": {
@@ -528,6 +639,9 @@ def build(raw, status, snapshot_date, previous_fx=None, cost_per_task=None):
                 "all_models": "Every model with a score and a cost.",
                 "available_models": "Only models listed on Vercel AI Gateway or OpenRouter.",
                 "open_models": "Only open-weights models.",
+                "australian_hosted_models": "Only models a gateway lists as deployed in Australia (point 10). Costs "
+                                            "are the same global figures as the other views; the Australian deployment "
+                                            "can cost more, see providers_in_australia.vs_list_price.",
             },
             "by_cost_per_task": by_cost_per_task,
             "by_token_price": by_token_price,
@@ -558,6 +672,9 @@ CSV_COLUMNS = [
     "cost_per_task_aud", "cost_per_task_source", "cost_per_task_on_frontier", "cost_per_task_dominated_by",
     "value_index_points_per_aud", "token_price_on_frontier", "token_price_dominated_by",
     "vercel_id", "openrouter_id", "artificial_analysis_slug", "scope",
+    # Point 10. Scope australia; the columns before these are global.
+    "au_provider_count", "au_cheapest_blended_aud_per_1m", "au_cheapest_provider", "au_cheapest_region",
+    "au_vs_list_price",
 ]
 
 
@@ -569,6 +686,8 @@ def _csv_rows(snapshot):
         task, task_spread = model["cost_per_task_aud"] or {}, model["spread"]["by_cost_per_task"] or {}
         cheapest = price.get("cheapest_available") or {}
         quantized = price.get("cheapest_quantized") or {}
+        australia = model["providers_in_australia"] or {}
+        au_cheapest = australia.get("cheapest") or {}
         yield [
             model["id"], model["name"], model["creator"], model["on_gateways"], model["open_weights"],
             score.get("index"), score.get("source"),
@@ -579,6 +698,8 @@ def _csv_rows(snapshot):
             (model["value_aud"] or {}).get("index_points_per_aud"),
             spread.get("on_frontier"), spread.get("dominated_by"),
             model["ids"]["vercel"], model["ids"]["openrouter"], model["ids"]["artificial_analysis"], GLOBAL,
+            australia.get("count"), au_cheapest.get("blended_aud_per_1m"), au_cheapest.get("provider"),
+            au_cheapest.get("region"), australia.get("vs_list_price"),
         ]
 
 

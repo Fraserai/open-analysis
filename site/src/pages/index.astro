@@ -1,0 +1,298 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SpreadChart from "../components/SpreadChart.astro";
+import data from "../data/today.json";
+import { aud, creator, deployment, longDate, multiple, percent, shortDate } from "../lib/format";
+
+type Model = (typeof data.models)[number];
+const byId: Record<string, Model> = Object.fromEntries(data.models.map((m) => [m.id, m]));
+const { insights, counts } = data;
+
+const sweet = insights.sweet_spot && byId[insights.sweet_spot.id];
+const next = insights.sweet_spot && byId[insights.sweet_spot.next_id];
+const top = insights.top && byId[insights.top.id];
+const over = insights.overpay && byId[insights.overpay.id];
+const overCheap = insights.overpay && byId[insights.overpay.cheaper_id];
+const gap = insights.australia_gap;
+
+const hosted = data.australia.hosted;
+const premiums = [...new Set(hosted.map((m) => m.vs_list_price).filter((p) => p != null))];
+const where = [...new Set(hosted.flatMap((m) => m.deployments.map((d) => deployment(d.provider, d.region))))];
+const leaderboard = data.models.filter((m) => m.cost_per_task_aud != null).slice(0, 12);
+const maxScore = Math.ceil(Math.max(...data.models.map((m) => m.intelligence)) / 10) * 10;
+const changes = data.changes;
+---
+
+<Layout>
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-line">
+    <div class="grid-bg pointer-events-none absolute inset-0"></div>
+    <div class="relative mx-auto max-w-6xl px-5 pt-20 pb-16">
+      <p class="text-sm text-zinc-400">
+        <span class="text-value">●</span> Australian AI market · {longDate(data.date)}
+      </p>
+      <h1 class="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.04em] text-balance md:text-7xl">
+        {percent(insights.dominated_share)} of today's AI models are <span class="text-over">overpriced</span>.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400 text-pretty">
+        Of {counts.current_with_cost_per_task} current models with a measured cost per task, {counts.dominated} are
+        beaten by one that's at least as smart and cheaper. Here's what's actually worth paying for — in Australian
+        dollars, updated every morning.
+      </p>
+    </div>
+
+    <!-- Headline numbers -->
+    <div class="relative mx-auto grid max-w-6xl gap-px overflow-hidden border-t border-line bg-line md:grid-cols-4">
+      {sweet && (
+        <div class="bg-ink p-6">
+          <p class="text-xs font-medium tracking-wide text-value uppercase">Sweet spot</p>
+          <p class="mt-3 num text-4xl font-semibold">{aud(sweet.cost_per_task_aud)}</p>
+          <p class="mt-1 text-sm text-zinc-300">{sweet.name} · {sweet.points} points</p>
+          <p class="mt-3 text-sm leading-relaxed text-zinc-500">
+            The next step up, {next?.name} at {insights.sweet_spot.next_points}, costs {multiple(insights.sweet_spot.jump)} more.
+          </p>
+        </div>
+      )}
+      {top && (
+        <div class="bg-ink p-6">
+          <p class="text-xs font-medium tracking-wide text-zinc-400 uppercase">Smartest you can buy</p>
+          <p class="mt-3 num text-4xl font-semibold">{aud(top.cost_per_task_aud)}</p>
+          <p class="mt-1 text-sm text-zinc-300">{top.name} · {top.points} points</p>
+          <p class="mt-3 text-sm leading-relaxed text-zinc-500">
+            {multiple(top.cost_per_task_aud! / sweet!.cost_per_task_aud!)} the sweet spot's cost for {top.points - sweet!.points} more points.
+          </p>
+        </div>
+      )}
+      {over && overCheap && (
+        <div class="bg-ink p-6">
+          <p class="text-xs font-medium tracking-wide text-over uppercase">Biggest overpay</p>
+          <p class="mt-3 num text-4xl font-semibold">{multiple(insights.overpay.multiple)}</p>
+          <p class="mt-1 text-sm text-zinc-300">{over.name} vs {overCheap.name}</p>
+          <p class="mt-3 text-sm leading-relaxed text-zinc-500">
+            Both score {insights.overpay.points}. One costs {aud(over.cost_per_task_aud)} a task, the other {aud(overCheap.cost_per_task_aud)}.
+          </p>
+        </div>
+      )}
+      {gap && (
+        <div class="bg-ink p-6">
+          <p class="text-xs font-medium tracking-wide text-wattle uppercase">Cost of staying in Australia</p>
+          <p class="mt-3 text-4xl font-semibold">
+            <span class="text-base font-normal text-zinc-500">up to </span><span class="num">{multiple(gap.multiple)}</span>
+          </p>
+          <p class="mt-1 text-sm text-zinc-300">at {gap.need}+ points</p>
+          <p class="mt-3 text-sm leading-relaxed text-zinc-500">
+            Onshore, the cheapest is {gap.australia.name} at {aud(gap.australia.cost_per_task_aud)}. Offshore, {gap.anywhere.name} at {aud(gap.anywhere.cost_per_task_aud)}.
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Spread map -->
+  <section id="spread" class="mx-auto max-w-6xl scroll-mt-20 px-5 pt-20">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="text-sm text-value">The spread map</p>
+        <h2 class="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Smarts against price, every current model</h2>
+        <p class="mt-3 max-w-2xl text-zinc-400">
+          Up and to the left is better. The green line is the frontier: the {counts.frontier} models nothing beats.
+          Everything below it is paying for intelligence it could get cheaper.
+        </p>
+      </div>
+    </div>
+    <div class="mt-8 rounded-2xl border border-line bg-panel p-4 md:p-8">
+      <SpreadChart />
+    </div>
+
+    <!-- Ladder -->
+    <h3 class="mt-14 text-lg font-semibold">The cheapest way to buy each level of intelligence</h3>
+    <div class="mt-5 flex snap-x gap-3 overflow-x-auto pb-2 lg:grid lg:grid-cols-6 lg:overflow-visible">
+      {data.ladder.filter((l) => l.to >= 30).map((l) => (
+        <div class="min-w-[170px] snap-start rounded-xl border border-line bg-panel p-4 lg:min-w-0">
+          <p class="num text-xs text-zinc-500">Need {l.from}–{l.to}</p>
+          <p class="mt-2 font-medium">{l.name}</p>
+          <p class="text-xs text-zinc-500">{creator(l.creator)} · {l.points} points</p>
+          <p class="mt-3 num text-2xl font-semibold text-value">{aud(l.cost_per_task_aud)}</p>
+          <p class="text-xs text-zinc-500">per task</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Australia -->
+  <section id="australia" class="mx-auto mt-24 max-w-6xl scroll-mt-20 px-5">
+    <div class="overflow-hidden rounded-3xl border border-wattle/20 bg-gradient-to-b from-wattle/[0.07] to-transparent">
+      <div class="grid gap-10 p-6 md:grid-cols-[1fr_1.6fr] md:p-10">
+        <div>
+          <p class="text-sm text-wattle">If your data must stay in Australia</p>
+          <h2 class="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
+            <span class="num">{counts.hosted_in_australia}</span> of <span class="num">{counts.on_gateways}</span> models are hosted here.
+          </h2>
+          <p class="mt-4 leading-relaxed text-zinc-400">
+            Across Vercel AI Gateway and OpenRouter, only these are listed as running in Australia, all on{" "}
+            <span class="text-zinc-200">{where.join(", ")}</span>{premiums.length === 1 && (
+              <>, at <span class="text-zinc-200">{percent(premiums[0]!)} over list price</span></>
+            )}. None of the cheap open models leading the market is hosted here.
+          </p>
+          <ul class="mt-6 divide-y divide-wattle/10 rounded-xl border border-wattle/20">
+            {hosted.map((m) => (
+              <li class="flex items-center justify-between gap-3 px-4 py-2.5 text-sm">
+                <span class="text-zinc-100">{m.name}</span>
+                <span class="num text-xs text-zinc-500">
+                  {m.intelligence} pts · <span class="text-wattle">{aud(m.blended_aud_per_1m)}</span>/1M
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p class="mt-6 text-xs leading-relaxed text-zinc-500">
+            Listed by the gateways only. A model may still be available in Australia directly from a cloud provider.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-line text-left text-xs text-zinc-500">
+                <th class="py-3 pr-4 font-medium">You need</th>
+                <th class="py-3 pr-4 font-medium">Cheapest in Australia</th>
+                <th class="py-3 pr-4 font-medium">Cheapest anywhere</th>
+                <th class="py-3 text-right font-medium">Cost of staying</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.australia.gap.map((row) => (
+                <tr class="border-b border-line/60">
+                  <td class="py-3.5 pr-4 num text-zinc-300">{row.need}+</td>
+                  <td class="py-3.5 pr-4">
+                    {row.australia ? (
+                      <>
+                        <span class="text-zinc-100">{row.australia.name}</span>
+                        <span class="num ml-2 text-zinc-500">{aud(row.australia.cost_per_task_aud)}</span>
+                      </>
+                    ) : <span class="text-zinc-500">Nothing hosted</span>}
+                  </td>
+                  <td class="py-3.5 pr-4">
+                    {row.australia && row.anywhere.id === row.australia.id ? (
+                      <span class="text-zinc-500">Same</span>
+                    ) : (
+                      <>
+                        <span class="text-zinc-100">{row.anywhere.name}</span>
+                        <span class="num ml-2 text-zinc-500">{aud(row.anywhere.cost_per_task_aud)}</span>
+                      </>
+                    )}
+                  </td>
+                  <td class="py-3.5 text-right num font-semibold">
+                    {row.multiple == null ? <span class="text-zinc-500">—</span>
+                      : row.multiple <= 1 ? <span class="text-zinc-500">None</span>
+                      : <span class={row.multiple >= 10 ? "text-wattle" : "text-zinc-200"}>{multiple(row.multiple)}</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leaderboard preview -->
+  <section id="leaderboard" class="mx-auto mt-24 max-w-6xl scroll-mt-20 px-5">
+    <p class="text-sm text-value">Leaderboard</p>
+    <div class="mt-2 flex flex-wrap items-end justify-between gap-4">
+      <h2 class="text-3xl font-semibold tracking-tight md:text-4xl">The smartest current models, and whether they're worth it</h2>
+      <span class="text-sm text-zinc-500">{counts.current} current models · released since {shortDate(data.current_rule.released_on_or_after)}</span>
+    </div>
+
+    <div class="mt-8 overflow-x-auto rounded-2xl border border-line">
+      <table class="w-full min-w-[760px] text-sm">
+        <thead class="bg-panel">
+          <tr class="text-left text-xs text-zinc-500">
+            <th class="px-5 py-3 font-medium">Model</th>
+            <th class="px-5 py-3 font-medium">Intelligence</th>
+            <th class="px-5 py-3 text-right font-medium">Cost / task</th>
+            <th class="px-5 py-3 text-right font-medium">Price / 1M tokens</th>
+            <th class="px-5 py-3 font-medium">Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          {leaderboard.map((m) => {
+            const swap = m.spread?.better_swap;
+            return (
+              <tr class="border-t border-line transition hover:bg-white/[0.02]">
+                <td class="px-5 py-4">
+                  <div class="flex items-center gap-2">
+                    <span class="font-medium text-zinc-100">{m.name}</span>
+                    {m.new && <span class="rounded bg-value/15 px-1.5 py-0.5 text-[10px] font-semibold text-value">NEW</span>}
+                    {m.open_weights && <span class="rounded border border-line px-1.5 py-0.5 text-[10px] text-zinc-400">OPEN</span>}
+                    {m.australia?.hosted && <span class="rounded bg-wattle/15 px-1.5 py-0.5 text-[10px] font-semibold text-wattle">AU</span>}
+                  </div>
+                  <div class="mt-0.5 text-xs text-zinc-500">{creator(m.creator)}</div>
+                </td>
+                <td class="px-5 py-4">
+                  <div class="flex items-center gap-3">
+                    <span class="num w-9 text-zinc-100">{m.intelligence}</span>
+                    <div class="h-1.5 w-28 overflow-hidden rounded-full bg-white/[0.06]">
+                      <div class="h-full rounded-full bg-zinc-300" style={`width:${(m.intelligence / maxScore) * 100}%`}></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-5 py-4 text-right num text-zinc-100">{aud(m.cost_per_task_aud)}</td>
+                <td class="px-5 py-4 text-right num text-zinc-400">{aud(m.price?.blended_aud_per_1m)}</td>
+                <td class="px-5 py-4">
+                  {m.spread?.on_frontier ? (
+                    <span class="inline-flex items-center gap-1.5 rounded-full bg-value/10 px-2.5 py-1 text-xs font-medium text-value">
+                      ✓ Best at its price
+                    </span>
+                  ) : swap ? (
+                    <span class="text-xs text-zinc-400">
+                      Switch to <span class="text-zinc-100">{swap.name}</span>{" "}
+                      <span class="text-over">−{percent(1 - swap.cost_per_task_aud! / m.cost_per_task_aud!)}</span>
+                    </span>
+                  ) : null}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- What changed -->
+  {changes && (
+    <section class="mx-auto mt-24 max-w-6xl px-5">
+      <p class="text-sm text-value">What changed</p>
+      <h2 class="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Since {shortDate(changes.since)}</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-line bg-panel p-6">
+          <p class="text-sm font-medium text-zinc-300">New models</p>
+          <ul class="mt-4 space-y-3">
+            {changes.new_models.map((m) => (
+              <li class="flex items-center justify-between gap-4 text-sm">
+                <span class="text-zinc-100">{m.name}</span>
+                <span class="num text-zinc-500">{m.points} pts</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-line bg-panel p-6">
+          <p class="text-sm font-medium text-zinc-300">Price moves</p>
+          <ul class="mt-4 space-y-3">
+            {changes.price_changes.map((p) => (
+              <li class="flex items-center justify-between gap-4 text-sm">
+                <span class="text-zinc-100">{p.name}</span>
+                <span class="num">
+                  <span class="text-zinc-500">{aud(p.was)} → {aud(p.now)}</span>
+                  <span class={`ml-3 ${p.change < 0 ? "text-value" : "text-over"}`}>
+                    {p.change < 0 ? "↓" : "↑"} {percent(Math.abs(p.change))}
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p class="mt-5 text-xs text-zinc-500">List price per 1M tokens, 3:1 input to output.</p>
+        </div>
+      </div>
+    </section>
+  )}
+</Layout>

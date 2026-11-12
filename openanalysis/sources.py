@@ -18,9 +18,11 @@ AA_URL = "https://artificialanalysis.ai/api/v2/data/llms/models"
 AA_COSTS_URL = "https://artificialanalysis.ai/api/v2/language/models/free"
 VERCEL_MODELS_URL = "https://ai-gateway.vercel.sh/v1/models"
 OPENROUTER_MODELS_URL = "https://openrouter.ai/api/v1/models"
+# Each provider's headquarters and datacenter countries.
+OPENROUTER_PROVIDERS_URL = "https://openrouter.ai/api/v1/providers"
 
 JSON_SOURCES = ("artificial_analysis", "artificial_analysis_costs", "vercel_models", "vercel_endpoints",
-                "openrouter_models", "openrouter_endpoints")
+                "openrouter_models", "openrouter_endpoints", "openrouter_providers")
 TEXT_SOURCES = {"rba_csv": "rba_f11.1.csv", "rba_rss": "rba_exchange_rates.xml"}
 
 
@@ -77,6 +79,7 @@ def collect(skip_endpoints=False):
     or_headers = {"Authorization": f"Bearer {or_key}"} if or_key else {}
     _attempt(raw, status, "openrouter_models", lambda: http.get_json(OPENROUTER_MODELS_URL, headers=or_headers))
     status["openrouter_models"]["authenticated"] = bool(or_key)
+    _attempt(raw, status, "openrouter_providers", lambda: http.get_json(OPENROUTER_PROVIDERS_URL, headers=or_headers))
 
     wanted = {
         "vercel": (VERCEL_MODELS_URL, None, lambda m: m.get("type") == "language"),

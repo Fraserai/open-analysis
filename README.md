@@ -62,6 +62,7 @@ Tests: `python3 -m unittest discover -s tests`
 | Artificial Analysis (beta) | `/api/v2/language/models/free` | same key | Cost per Intelligence Index task |
 | Vercel AI Gateway | `/v1/models`, `/v1/models/{id}/endpoints` | none | Prices, providers |
 | OpenRouter | `/api/v1/models`, `/api/v1/models/{id}/endpoints` | `OPENROUTER_API_KEY` | Prices, providers, discounts, open-weights status |
+| OpenRouter | `/api/v1/providers` | same key | Each provider's headquarters and datacenter countries |
 | Reserve Bank of Australia | F11.1 exchange rates CSV, RSS fallback | none | AUD/USD |
 
 **Attribution is required** wherever Artificial Analysis data is shown: credit
@@ -70,7 +71,8 @@ Tests: `python3 -m unittest discover -s tests`
 ## Where each data point stands
 
 Every value has a `scope`: `global` (a worldwide figure shown in AUD) or `australia` (measured in or
-about Australia). Everything filled so far is `global`.
+about Australia). Everything filled so far is `global`, except point 10, which lists Australian deployments as
+the gateways report them. Nothing is yet measured from Australia.
 
 | # | Field | Status | Definition |
 | --- | --- | --- | --- |
@@ -83,7 +85,7 @@ about Australia). Everything filled so far is `global`.
 | 7 | `smartest_open` | filled | Intelligence Index, open-weights flag, rank among open models. |
 | 8 | `value_aud` | filled | Intelligence Index points per A$1 of blended token price, for models scoring 30 or more. |
 | 9 | `open_vs_closed_usage` | planned | |
-| 10 | `providers_in_australia` | planned | |
+| 10 | `providers_in_australia` | filled | Deployments in Australia as the gateways list them: Vercel AI Gateway deployments in an Australian cloud region, at that region's price, and OpenRouter providers that list an Australian datacenter. AUD, ex GST, with `vs_list_price` (the premium over list price). `count: 0` means neither gateway lists one, not that the model can't be had in Australia. |
 | + | `runs_in_australia` | planned | |
 
 ## Cost per task: the hand-transcribed fallback
@@ -110,8 +112,8 @@ points, as Artificial Analysis's chart displays them, so 46.3 and 46.4 count as 
 - **Frontier** – models nothing dominates.
 - **Cheapest per intelligence level** – the cheapest model scoring at or above each level.
 
-Each is worked out three ways: `all_models`, `available_models` (listed on Vercel or OpenRouter) and
-`open_models`.
+Each is worked out four ways: `all_models`, `available_models` (listed on Vercel or OpenRouter),
+`open_models` and `australian_hosted_models` (deployed in Australia, point 10).
 
 `spread_map.by_cost_per_task` is the main map and the one the references use. It covers every model
 Artificial Analysis has a cost for, which is more than its chart shows, so its frontier can include
@@ -129,8 +131,13 @@ model spends on a task.
   (nearly every closed model states none). The cheapest quantized deployment (fp4, int4 and the like) is
   reported separately as `cheapest_quantized`, with its quantization. Both leave out OpenRouter's `flex`
   endpoints (a slower service tier) and endpoints that are down.
-- **`providers_global`** lists every provider on both gateways with its price. It is global, kept as
-  groundwork for point 10, and says nothing yet about serving from Australia.
+- **`providers_global`** lists every provider on both gateways with its price. On Vercel each provider also
+  carries its cloud regions (`regions`, with any region-specific price); on OpenRouter, the provider's
+  headquarters and datacenter countries.
+- **Providers in Australia** (point 10) come from those two fields. Vercel's region is per deployment, so it is
+  the stronger evidence. OpenRouter's datacenter list is per provider and does not say which datacenter serves a
+  request, so each entry says which kind it is (`basis`). The spread map has an `australian_hosted_models` view
+  using the same global costs; the Australian deployment can cost more (`vs_list_price`).
 - **AUD conversion** uses the latest RBA 4pm rate on or before the snapshot date; `fx.rate_date` says which day.
 - **Rows** – one per model on either gateway, plus one for each model only Artificial Analysis lists
   (`id` starts `aa:`, `on_gateways` is false).

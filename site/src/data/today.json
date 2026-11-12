@@ -1,0 +1,2505 @@
+{
+ "date": "2026-10-23",
+ "generated_at": "2026-10-23T11:05:38+11:00",
+ "fx": {
+  "aud_usd": 0.7018,
+  "usd_to_aud": 1.424907,
+  "rate_date": "2026-10-22"
+ },
+ "current_rule": {
+  "days": 90,
+  "released_on_or_after": "2026-07-25"
+ },
+ "counts": {
+  "all_models": 763,
+  "on_gateways": 473,
+  "current": 53,
+  "current_with_cost_per_task": 47,
+  "current_open_weights": 19,
+  "hosted_in_australia": 5,
+  "current_hosted_in_australia": 3,
+  "frontier": 9,
+  "dominated": 38
+ },
+ "insights": {
+  "top": {
+   "id": "anthropic/claude-opus-5.5",
+   "points": 58,
+   "cost_per_task_aud": 8.5238
+  },
+  "sweet_spot": {
+   "id": "xiaomi/mimo-v2.6-pro",
+   "points": 46,
+   "cost_per_task_aud": 0.1898,
+   "next_id": "openai/gpt-6.1-sol",
+   "next_points": 52,
+   "next_cost_per_task_aud": 1.0319,
+   "jump": 5.4
+  },
+  "overpay": {
+   "id": "spacexai/grok-4.7",
+   "cheaper_id": "xiaomi/mimo-v2.6-pro",
+   "points": 46,
+   "cost_per_task_aud": 5.3267,
+   "cheaper_cost_per_task_aud": 0.1898,
+   "multiple": 28.1
+  },
+  "australia_gap": {
+   "need": 46,
+   "australia": {
+    "id": "anthropic/claude-sonnet-5.5",
+    "name": "Claude Sonnet 5.5",
+    "creator": "anthropic",
+    "points": 56,
+    "intelligence": 56,
+    "cost_per_task_aud": 7.7813
+   },
+   "anywhere": {
+    "id": "xiaomi/mimo-v2.6-pro",
+    "name": "MiMo V2.6 Pro",
+    "creator": "xiaomi",
+    "points": 46,
+    "intelligence": 46.3,
+    "cost_per_task_aud": 0.1898
+   },
+   "multiple": 41.0
+  },
+  "dominated_share": 0.809
+ },
+ "frontier": [
+  "aa:granite-4-2-3b",
+  "ibm-granite/granite-4.2-8b",
+  "meta/muse-glimmer-30b",
+  "xiaomi/mimo-v2.6-flash",
+  "xiaomi/mimo-v2.6-pro",
+  "openai/gpt-6.1-sol",
+  "google/gemini-4-argon",
+  "anthropic/claude-sonnet-5.5",
+  "anthropic/claude-opus-5.5"
+ ],
+ "ladder": [
+  {
+   "from": 0,
+   "to": 9,
+   "id": "aa:granite-4-2-3b",
+   "name": "Granite 4.2 3B",
+   "creator": "ibm",
+   "points": 9,
+   "intelligence": 9.1,
+   "cost_per_task_aud": 0.0085
+  },
+  {
+   "from": 10,
+   "to": 11,
+   "id": "ibm-granite/granite-4.2-8b",
+   "name": "Granite 4.2 8B",
+   "creator": "ibm-granite",
+   "points": 11,
+   "intelligence": 11.1,
+   "cost_per_task_aud": 0.0336
+  },
+  {
+   "from": 12,
+   "to": 18,
+   "id": "meta/muse-glimmer-30b",
+   "name": "Muse Glimmer 30B",
+   "creator": "meta",
+   "points": 18,
+   "intelligence": 17.5,
+   "cost_per_task_aud": 0.0821
+  },
+  {
+   "from": 19,
+   "to": 38,
+   "id": "xiaomi/mimo-v2.6-flash",
+   "name": "MiMo V2.6 Flash",
+   "creator": "xiaomi",
+   "points": 38,
+   "intelligence": 37.9,
+   "cost_per_task_aud": 0.0889
+  },
+  {
+   "from": 39,
+   "to": 46,
+   "id": "xiaomi/mimo-v2.6-pro",
+   "name": "MiMo V2.6 Pro",
+   "creator": "xiaomi",
+   "points": 46,
+   "intelligence": 46.3,
+   "cost_per_task_aud": 0.1898
+  },
+  {
+   "from": 47,
+   "to": 52,
+   "id": "openai/gpt-6.1-sol",
+   "name": "GPT-6.1 Sol",
+   "creator": "openai",
+   "points": 52,
+   "intelligence": 51.8,
+   "cost_per_task_aud": 1.0319
+  },
+  {
+   "from": 53,
+   "to": 53,
+   "id": "google/gemini-4-argon",
+   "name": "Gemini 4 Argon",
+   "creator": "google",
+   "points": 53,
+   "intelligence": 52.6,
+   "cost_per_task_aud": 2.836
+  },
+  {
+   "from": 54,
+   "to": 56,
+   "id": "anthropic/claude-sonnet-5.5",
+   "name": "Claude Sonnet 5.5",
+   "creator": "anthropic",
+   "points": 56,
+   "intelligence": 56,
+   "cost_per_task_aud": 7.7813
+  },
+  {
+   "from": 57,
+   "to": 58,
+   "id": "anthropic/claude-opus-5.5",
+   "name": "Claude Opus 5.5",
+   "creator": "anthropic",
+   "points": 58,
+   "intelligence": 57.6,
+   "cost_per_task_aud": 8.5238
+  }
+ ],
+ "australia": {
+  "gap": [
+   {
+    "need": 38,
+    "australia": {
+     "id": "anthropic/claude-haiku-5.5",
+     "name": "Claude Haiku 5.5",
+     "creator": "anthropic",
+     "points": 43,
+     "intelligence": 43.4,
+     "cost_per_task_aud": 0.3032
+    },
+    "anywhere": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    },
+    "multiple": 3.4
+   },
+   {
+    "need": 43,
+    "australia": {
+     "id": "anthropic/claude-haiku-5.5",
+     "name": "Claude Haiku 5.5",
+     "creator": "anthropic",
+     "points": 43,
+     "intelligence": 43.4,
+     "cost_per_task_aud": 0.3032
+    },
+    "anywhere": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    },
+    "multiple": 1.6
+   },
+   {
+    "need": 46,
+    "australia": {
+     "id": "anthropic/claude-sonnet-5.5",
+     "name": "Claude Sonnet 5.5",
+     "creator": "anthropic",
+     "points": 56,
+     "intelligence": 56,
+     "cost_per_task_aud": 7.7813
+    },
+    "anywhere": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    },
+    "multiple": 41.0
+   },
+   {
+    "need": 52,
+    "australia": {
+     "id": "anthropic/claude-sonnet-5.5",
+     "name": "Claude Sonnet 5.5",
+     "creator": "anthropic",
+     "points": 56,
+     "intelligence": 56,
+     "cost_per_task_aud": 7.7813
+    },
+    "anywhere": {
+     "id": "openai/gpt-6.1-sol",
+     "name": "GPT-6.1 Sol",
+     "creator": "openai",
+     "points": 52,
+     "intelligence": 51.8,
+     "cost_per_task_aud": 1.0319
+    },
+    "multiple": 7.5
+   },
+   {
+    "need": 53,
+    "australia": {
+     "id": "anthropic/claude-sonnet-5.5",
+     "name": "Claude Sonnet 5.5",
+     "creator": "anthropic",
+     "points": 56,
+     "intelligence": 56,
+     "cost_per_task_aud": 7.7813
+    },
+    "anywhere": {
+     "id": "google/gemini-4-argon",
+     "name": "Gemini 4 Argon",
+     "creator": "google",
+     "points": 53,
+     "intelligence": 52.6,
+     "cost_per_task_aud": 2.836
+    },
+    "multiple": 2.7
+   },
+   {
+    "need": 56,
+    "australia": {
+     "id": "anthropic/claude-sonnet-5.5",
+     "name": "Claude Sonnet 5.5",
+     "creator": "anthropic",
+     "points": 56,
+     "intelligence": 56,
+     "cost_per_task_aud": 7.7813
+    },
+    "anywhere": {
+     "id": "anthropic/claude-sonnet-5.5",
+     "name": "Claude Sonnet 5.5",
+     "creator": "anthropic",
+     "points": 56,
+     "intelligence": 56,
+     "cost_per_task_aud": 7.7813
+    },
+    "multiple": 1.0
+   },
+   {
+    "need": 58,
+    "australia": {
+     "id": "anthropic/claude-opus-5.5",
+     "name": "Claude Opus 5.5",
+     "creator": "anthropic",
+     "points": 58,
+     "intelligence": 57.6,
+     "cost_per_task_aud": 8.5238
+    },
+    "anywhere": {
+     "id": "anthropic/claude-opus-5.5",
+     "name": "Claude Opus 5.5",
+     "creator": "anthropic",
+     "points": 58,
+     "intelligence": 57.6,
+     "cost_per_task_aud": 8.5238
+    },
+    "multiple": 1.0
+   }
+  ],
+  "frontier": [
+   "anthropic/claude-haiku-5.5",
+   "anthropic/claude-sonnet-5.5",
+   "anthropic/claude-opus-5.5"
+  ],
+  "hosted": [
+   {
+    "id": "anthropic/claude-opus-5.5",
+    "name": "Claude Opus 5.5",
+    "creator": "anthropic",
+    "intelligence": 57.6,
+    "current": true,
+    "deployments": [
+     {
+      "gateway": "vercel",
+      "provider": "bedrock",
+      "region": "ap-southeast-2"
+     }
+    ],
+    "blended_aud_per_1m": 12.5392,
+    "vs_list_price": 0.1
+   },
+   {
+    "id": "anthropic/claude-sonnet-5.5",
+    "name": "Claude Sonnet 5.5",
+    "creator": "anthropic",
+    "intelligence": 56,
+    "current": true,
+    "deployments": [
+     {
+      "gateway": "vercel",
+      "provider": "bedrock",
+      "region": "ap-southeast-2"
+     }
+    ],
+    "blended_aud_per_1m": 6.2696,
+    "vs_list_price": 0.1
+   },
+   {
+    "id": "anthropic/claude-opus-5",
+    "name": "Claude Opus 5",
+    "creator": "anthropic",
+    "intelligence": 50.8,
+    "current": false,
+    "deployments": [
+     {
+      "gateway": "vercel",
+      "provider": "bedrock",
+      "region": "ap-southeast-2"
+     }
+    ],
+    "blended_aud_per_1m": 15.674,
+    "vs_list_price": 0.1
+   },
+   {
+    "id": "anthropic/claude-haiku-5.5",
+    "name": "Claude Haiku 5.5",
+    "creator": "anthropic",
+    "intelligence": 43.4,
+    "current": true,
+    "deployments": [
+     {
+      "gateway": "vercel",
+      "provider": "bedrock",
+      "region": "ap-southeast-2"
+     }
+    ],
+    "blended_aud_per_1m": 0.3135,
+    "vs_list_price": 0.1
+   },
+   {
+    "id": "anthropic/claude-sonnet-5",
+    "name": "Claude Sonnet 5",
+    "creator": "anthropic",
+    "intelligence": 38.2,
+    "current": false,
+    "deployments": [
+     {
+      "gateway": "vercel",
+      "provider": "bedrock",
+      "region": "ap-southeast-2"
+     }
+    ],
+    "blended_aud_per_1m": 6.2696,
+    "vs_list_price": 0.1
+   }
+  ]
+ },
+ "changes": {
+  "since": "2026-10-14",
+  "new_models": [
+   {
+    "id": "deepseek/deepseek-v4.1-flash-1017",
+    "name": "DeepSeek V4.1 Flash 1017",
+    "points": 45
+   },
+   {
+    "id": "aa:ling-3-1-flash-1019",
+    "name": "Ling 3.1 Flash 1019",
+    "points": 44
+   },
+   {
+    "id": "minimax/minimax-m3.1-flash",
+    "name": "MiniMax-M3.1-Flash",
+    "points": 43
+   },
+   {
+    "id": "meta/muse-spark-open",
+    "name": "Muse Spark Open",
+    "points": 39
+   },
+   {
+    "id": "aa:agnes-2-5-pro-beta",
+    "name": "Agnes 2.5 Pro Beta",
+    "points": 35
+   },
+   {
+    "id": "reflection/beam",
+    "name": "Beam 1.0",
+    "points": 30
+   },
+   {
+    "id": "nvidia/nemotron-3.5-super-vl",
+    "name": "NVIDIA Nemotron 3.5 Super VL",
+    "points": 27
+   }
+  ],
+  "price_changes": [
+   {
+    "id": "aa:quasar-438b",
+    "name": "Quasar 438B (Max, Based on GLM-5.2)",
+    "was": 1.2929,
+    "now": 0.2351,
+    "change": -0.818
+   },
+   {
+    "id": "deepseek/deepseek-v4.1-flash",
+    "name": "DeepSeek V4.1 Flash",
+    "was": 0.7542,
+    "now": 0.187,
+    "change": -0.752
+   },
+   {
+    "id": "mistral/mistral-large-4",
+    "name": "Mistral Large 4",
+    "was": 1.4833,
+    "now": 2.9424,
+    "change": 0.984
+   }
+  ],
+  "score_changes": [
+   {
+    "id": "upstage/solar-pro4",
+    "name": "Solar Pro 4",
+    "was": 28.2,
+    "now": 26.6
+   }
+  ]
+ },
+ "models": [
+  {
+   "id": "anthropic/claude-opus-5.5",
+   "name": "Claude Opus 5.5",
+   "creator": "anthropic",
+   "release_date": "2026-09-22",
+   "new": false,
+   "intelligence": 57.6,
+   "points": 58,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 8.5238,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 5.6996,
+    "output_aud_per_1m": 28.4981,
+    "blended_aud_per_1m": 11.3993,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 11.3993,
+    "cheapest_provider": "anthropic",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": true,
+    "providers": [
+     "bedrock ap-southeast-2"
+    ],
+    "blended_aud_per_1m": 12.5392,
+    "vs_list_price": 0.1
+   },
+   "spread": {
+    "on_frontier": true,
+    "dominates": 1,
+    "beaten_by": 0,
+    "better_swap": null,
+    "on_australian_frontier": true
+   }
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "name": "Claude Sonnet 5.5",
+   "creator": "anthropic",
+   "release_date": "2026-09-28",
+   "new": false,
+   "intelligence": 56,
+   "points": 56,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 7.7813,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 2.8498,
+    "output_aud_per_1m": 14.2491,
+    "blended_aud_per_1m": 5.6996,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 5.6996,
+    "cheapest_provider": "anthropic",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": true,
+    "providers": [
+     "bedrock ap-southeast-2"
+    ],
+    "blended_aud_per_1m": 6.2696,
+    "vs_list_price": 0.1
+   },
+   "spread": {
+    "on_frontier": true,
+    "dominates": 1,
+    "beaten_by": 0,
+    "better_swap": null,
+    "on_australian_frontier": true
+   }
+  },
+  {
+   "id": "anthropic/claude-fable-5.1",
+   "name": "Claude Fable 5.1",
+   "creator": "anthropic",
+   "release_date": "2026-09-01",
+   "new": false,
+   "intelligence": 53.4,
+   "points": 53,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 10.8716,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 14.2491,
+    "output_aud_per_1m": 71.2454,
+    "blended_aud_per_1m": 28.4981,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 28.4981,
+    "cheapest_provider": "anthropic",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 4,
+    "better_swap": {
+     "id": "google/gemini-4-argon",
+     "name": "Gemini 4 Argon",
+     "creator": "google",
+     "points": 53,
+     "intelligence": 52.6,
+     "cost_per_task_aud": 2.836
+    }
+   }
+  },
+  {
+   "id": "openai/gpt-6-astra",
+   "name": "GPT-6 Astra",
+   "creator": "openai",
+   "release_date": "2026-09-03",
+   "new": false,
+   "intelligence": 52.7,
+   "points": 53,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 4.6416,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 14.2491,
+    "output_aud_per_1m": 71.2454,
+    "blended_aud_per_1m": 28.4981,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 28.4981,
+    "cheapest_provider": "azure",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 4,
+    "beaten_by": 1,
+    "better_swap": {
+     "id": "google/gemini-4-argon",
+     "name": "Gemini 4 Argon",
+     "creator": "google",
+     "points": 53,
+     "intelligence": 52.6,
+     "cost_per_task_aud": 2.836
+    }
+   }
+  },
+  {
+   "id": "google/gemini-4-argon",
+   "name": "Gemini 4 Argon",
+   "creator": "google",
+   "release_date": "2026-09-30",
+   "new": false,
+   "intelligence": 52.6,
+   "points": 53,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 2.836,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 2.8498,
+    "output_aud_per_1m": 14.2491,
+    "blended_aud_per_1m": 5.6996,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 5.6996,
+    "cheapest_provider": "google",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": true,
+    "dominates": 8,
+    "beaten_by": 0,
+    "better_swap": null
+   }
+  },
+  {
+   "id": "meta/muse-wonder-1.0",
+   "name": "Muse Wonder",
+   "creator": "meta",
+   "release_date": "2026-10-12",
+   "new": true,
+   "intelligence": 52.4,
+   "points": 52,
+   "open_weights": null,
+   "on_gateways": true,
+   "cost_per_task_aud": 6.4345,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 5.6996,
+    "output_aud_per_1m": 28.4981,
+    "blended_aud_per_1m": 11.3993,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 11.3993,
+    "cheapest_provider": "meta",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 1,
+    "beaten_by": 3,
+    "better_swap": {
+     "id": "openai/gpt-6.1-sol",
+     "name": "GPT-6.1 Sol",
+     "creator": "openai",
+     "points": 52,
+     "intelligence": 51.8,
+     "cost_per_task_aud": 1.0319
+    }
+   }
+  },
+  {
+   "id": "openai/gpt-6.1-sol",
+   "name": "GPT-6.1 Sol",
+   "creator": "openai",
+   "release_date": "2026-09-29",
+   "new": false,
+   "intelligence": 51.8,
+   "points": 52,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.0319,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 2.8498,
+    "output_aud_per_1m": 14.2491,
+    "blended_aud_per_1m": 5.6996,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 5.6996,
+    "cheapest_provider": "azure",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": true,
+    "dominates": 18,
+    "beaten_by": 0,
+    "better_swap": null
+   }
+  },
+  {
+   "id": "meta/muse-spark-1.3",
+   "name": "Muse Spark 1.3",
+   "creator": "meta",
+   "release_date": "2026-09-02",
+   "new": false,
+   "intelligence": 48.1,
+   "points": 48,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 2.2868,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 1.7811,
+    "output_aud_per_1m": 6.0559,
+    "blended_aud_per_1m": 2.8498,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 2.8498,
+    "cheapest_provider": "meta",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 5,
+    "beaten_by": 2,
+    "better_swap": {
+     "id": "openai/gpt-6.1-sol",
+     "name": "GPT-6.1 Sol",
+     "creator": "openai",
+     "points": 52,
+     "intelligence": 51.8,
+     "cost_per_task_aud": 1.0319
+    }
+   }
+  },
+  {
+   "id": "openai/gpt-6-sol",
+   "name": "GPT-6 Sol",
+   "creator": "openai",
+   "release_date": "2026-09-22",
+   "new": false,
+   "intelligence": 47.6,
+   "points": 48,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.4886,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 2.8498,
+    "output_aud_per_1m": 14.2491,
+    "blended_aud_per_1m": 5.6996,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 5.6996,
+    "cheapest_provider": "azure",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 10,
+    "beaten_by": 1,
+    "better_swap": {
+     "id": "openai/gpt-6.1-sol",
+     "name": "GPT-6.1 Sol",
+     "creator": "openai",
+     "points": 52,
+     "intelligence": 51.8,
+     "cost_per_task_aud": 1.0319
+    }
+   }
+  },
+  {
+   "id": "spacexai/grok-4.7",
+   "name": "Grok 4.7",
+   "creator": "xai",
+   "release_date": "2026-09-21",
+   "new": false,
+   "intelligence": 46.4,
+   "points": 46,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 5.3267,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 2.8498,
+    "output_aud_per_1m": 8.5494,
+    "blended_aud_per_1m": 4.2747,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 4.2747,
+    "cheapest_provider": "xai",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 1,
+    "beaten_by": 6,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "xiaomi/mimo-v2.6-pro",
+   "name": "MiMo V2.6 Pro",
+   "creator": "xiaomi",
+   "release_date": "2026-09-21",
+   "new": false,
+   "intelligence": 46.3,
+   "points": 46,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.1898,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.6198,
+    "output_aud_per_1m": 1.2397,
+    "blended_aud_per_1m": 0.7748,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.6585,
+    "cheapest_provider": "gmicloud",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": true,
+    "dominates": 28,
+    "beaten_by": 0,
+    "better_swap": null
+   }
+  },
+  {
+   "id": "alibaba/qwen3.8-max-0902",
+   "name": "Qwen3.8 Max 0902",
+   "creator": "alibaba",
+   "release_date": "2026-09-02",
+   "new": false,
+   "intelligence": 45.4,
+   "points": 45,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 7.7066,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 2.8498,
+    "output_aud_per_1m": 8.5494,
+    "blended_aud_per_1m": 4.2747,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 4.2747,
+    "cheapest_provider": "alibaba",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 10,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "name": "DeepSeek V4.1 Flash 1017",
+   "creator": "deepseek",
+   "release_date": "2026-10-17",
+   "new": true,
+   "intelligence": 45.1,
+   "points": 45,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.3733,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.1069,
+    "output_aud_per_1m": 0.4275,
+    "blended_aud_per_1m": 0.187,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.187,
+    "cheapest_provider": "pareto",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 21,
+    "beaten_by": 1,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "zai/glm-5.3",
+   "name": "GLM 5.3",
+   "creator": "zai",
+   "release_date": "2026-08-18",
+   "new": false,
+   "intelligence": 44.8,
+   "points": 45,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 2.8578,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 1.9949,
+    "output_aud_per_1m": 6.2696,
+    "blended_aud_per_1m": 3.0636,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.69,
+    "cheapest_provider": "wafer",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 3,
+    "beaten_by": 6,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "spacexai/grok-4.6",
+   "name": "Grok 4.6",
+   "creator": "xai",
+   "release_date": "2026-08-12",
+   "new": false,
+   "intelligence": 44.3,
+   "points": 44,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 2.1157,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 2.8498,
+    "output_aud_per_1m": 8.5494,
+    "blended_aud_per_1m": 4.2747,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 4.2747,
+    "cheapest_provider": "xai",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 3,
+    "beaten_by": 5,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "aa:ling-3-1-flash-1019",
+   "name": "Ling 3.1 Flash 1019",
+   "creator": "inclusionai",
+   "release_date": "2026-10-22",
+   "new": true,
+   "intelligence": 43.9,
+   "points": 44,
+   "open_weights": null,
+   "on_gateways": false,
+   "cost_per_task_aud": 2.1211,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.4275,
+    "output_aud_per_1m": 1.2824,
+    "blended_aud_per_1m": 0.6412,
+    "source": "artificial_analysis",
+    "cheapest_blended_aud_per_1m": null,
+    "cheapest_provider": null,
+    "cheapest_gateway": null
+   },
+   "australia": null,
+   "spread": {
+    "on_frontier": false,
+    "dominates": 2,
+    "beaten_by": 6,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "stepfun/step-5-preview",
+   "name": "Step 5 Preview",
+   "creator": "stepfun",
+   "release_date": "2026-09-18",
+   "new": false,
+   "intelligence": 43.7,
+   "points": 44,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.4625,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 1.4249,
+    "output_aud_per_1m": 3.8472,
+    "blended_aud_per_1m": 2.0305,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 2.0305,
+    "cheapest_provider": "deepinfra",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 7,
+    "beaten_by": 3,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "anthropic/claude-haiku-5.5",
+   "name": "Claude Haiku 5.5",
+   "creator": "anthropic",
+   "release_date": "2026-10-07",
+   "new": false,
+   "intelligence": 43.4,
+   "points": 43,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.3032,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.1425,
+    "output_aud_per_1m": 0.7125,
+    "blended_aud_per_1m": 0.285,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.285,
+    "cheapest_provider": "anthropic",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": true,
+    "providers": [
+     "bedrock ap-southeast-2"
+    ],
+    "blended_aud_per_1m": 0.3135,
+    "vs_list_price": 0.1
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 18,
+    "beaten_by": 1,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    },
+    "on_australian_frontier": true
+   }
+  },
+  {
+   "id": "minimax/minimax-m3.1-flash",
+   "name": "MiniMax-M3.1-Flash",
+   "creator": "minimax",
+   "release_date": "2026-10-19",
+   "new": true,
+   "intelligence": 42.7,
+   "points": 43,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.3136,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.2137,
+    "output_aud_per_1m": 0.8549,
+    "blended_aud_per_1m": 0.374,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.374,
+    "cheapest_provider": "minimax",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 17,
+    "beaten_by": 2,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "zai/glm-5.3-flash",
+   "name": "GLM 5.3 Flash",
+   "creator": "zai",
+   "release_date": "2026-08-26",
+   "new": false,
+   "intelligence": 41.8,
+   "points": 42,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.4041,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.2137,
+    "output_aud_per_1m": 0.7125,
+    "blended_aud_per_1m": 0.3384,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.0763,
+    "cheapest_provider": "Relace",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 15,
+    "beaten_by": 4,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "inclusionai/ling-3.1-flash",
+   "name": "Ling 3.1 Flash",
+   "creator": "inclusionai",
+   "release_date": "2026-10-01",
+   "new": false,
+   "intelligence": 41.1,
+   "points": 41,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.4275,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.4275,
+    "output_aud_per_1m": 1.2824,
+    "blended_aud_per_1m": 0.6412,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.1603,
+    "cheapest_provider": "Novita",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 6,
+    "beaten_by": 6,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "google/gemini-3.8-flash",
+   "name": "Gemini 3.8 Flash",
+   "creator": "google",
+   "release_date": "2026-09-02",
+   "new": false,
+   "intelligence": 40.9,
+   "points": 41,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.7709,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 1.0687,
+    "output_aud_per_1m": 5.3434,
+    "blended_aud_per_1m": 2.1374,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 2.1374,
+    "cheapest_provider": "google",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 2,
+    "beaten_by": 9,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "alibaba/qwen3.8-max",
+   "name": "Qwen 3.8 Max",
+   "creator": "alibaba",
+   "release_date": "2026-08-03",
+   "new": false,
+   "intelligence": 40.2,
+   "points": 40,
+   "open_weights": null,
+   "on_gateways": true,
+   "cost_per_task_aud": 3.8045,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 2.8498,
+    "output_aud_per_1m": 8.5494,
+    "blended_aud_per_1m": 4.2747,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 4.2747,
+    "cheapest_provider": "alibaba",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 19,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "alibaba/qwen3.8-2.4t-a95b",
+   "name": "Qwen3.8 2.4T A95B",
+   "creator": "alibaba",
+   "release_date": "2026-08-12",
+   "new": false,
+   "intelligence": 39.9,
+   "points": 40,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 3.071,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 2.8498,
+    "output_aud_per_1m": 8.5494,
+    "blended_aud_per_1m": 4.2747,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 4.2747,
+    "cheapest_provider": "fireworks",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 1,
+    "beaten_by": 18,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "aa:qwen3-8-flash-next",
+   "name": "Qwen3.8-Flash-Next",
+   "creator": "alibaba",
+   "release_date": "2026-08-26",
+   "new": false,
+   "intelligence": 39.8,
+   "points": 40,
+   "open_weights": null,
+   "on_gateways": false,
+   "cost_per_task_aud": 0.5304,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.2137,
+    "output_aud_per_1m": 0.6697,
+    "blended_aud_per_1m": 0.3277,
+    "source": "artificial_analysis",
+    "cheapest_blended_aud_per_1m": null,
+    "cheapest_provider": null,
+    "cheapest_gateway": null
+   },
+   "australia": null,
+   "spread": {
+    "on_frontier": false,
+    "dominates": 11,
+    "beaten_by": 5,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "google/gemini-3.7-flash",
+   "name": "Gemini 3.7 Flash",
+   "creator": "google",
+   "release_date": "2026-08-13",
+   "new": false,
+   "intelligence": 39.6,
+   "points": 40,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": null,
+   "cost_per_task_source": null,
+   "price": {
+    "input_aud_per_1m": 1.0687,
+    "output_aud_per_1m": 5.3434,
+    "blended_aud_per_1m": 2.1374,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 2.1374,
+    "cheapest_provider": "google",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": null
+  },
+  {
+   "id": "meta/muse-spark-1.2",
+   "name": "Muse Spark 1.2",
+   "creator": "meta",
+   "release_date": "2026-08-05",
+   "new": false,
+   "intelligence": 39.6,
+   "points": 40,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.3889,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 1.7811,
+    "output_aud_per_1m": 6.0559,
+    "blended_aud_per_1m": 2.8498,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 2.8498,
+    "cheapest_provider": "meta",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 5,
+    "beaten_by": 8,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "name": "DeepSeek V4.1 Flash",
+   "creator": "deepseek",
+   "release_date": "2026-09-10",
+   "new": false,
+   "intelligence": 39.5,
+   "points": 40,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.5704,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.1069,
+    "output_aud_per_1m": 0.4275,
+    "blended_aud_per_1m": 0.187,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.187,
+    "cheapest_provider": "pareto",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 10,
+    "beaten_by": 6,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "meta/muse-spark-open",
+   "name": "Muse Spark Open",
+   "creator": "meta",
+   "release_date": "2026-10-15",
+   "new": true,
+   "intelligence": 38.9,
+   "points": 39,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.2019,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 1.7811,
+    "output_aud_per_1m": 6.0559,
+    "blended_aud_per_1m": 2.8498,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 2.8498,
+    "cheapest_provider": "baseten",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 3,
+    "beaten_by": 8,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-pro",
+     "name": "MiMo V2.6 Pro",
+     "creator": "xiaomi",
+     "points": 46,
+     "intelligence": 46.3,
+     "cost_per_task_aud": 0.1898
+    }
+   }
+  },
+  {
+   "id": "mistral/mistral-large-4",
+   "name": "Mistral Large 4",
+   "creator": "mistral",
+   "release_date": "2026-10-06",
+   "new": false,
+   "intelligence": 38.4,
+   "points": 38,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.616,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 1.9379,
+    "output_aud_per_1m": 5.9561,
+    "blended_aud_per_1m": 2.9424,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 2.9424,
+    "cheapest_provider": "mistral",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 15,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "openai/gpt-6-luna",
+   "name": "GPT-6 Luna",
+   "creator": "openai",
+   "release_date": "2026-09-22",
+   "new": false,
+   "intelligence": 38.1,
+   "points": 38,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.0966,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.1425,
+    "output_aud_per_1m": 0.7125,
+    "blended_aud_per_1m": 0.285,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.285,
+    "cheapest_provider": "azure",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 14,
+    "beaten_by": 1,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "xiaomi/mimo-v2.6-flash",
+   "name": "MiMo V2.6 Flash",
+   "creator": "xiaomi",
+   "release_date": "2026-09-21",
+   "new": false,
+   "intelligence": 37.9,
+   "points": 38,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.0889,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.1995,
+    "output_aud_per_1m": 0.399,
+    "blended_aud_per_1m": 0.2494,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.212,
+    "cheapest_provider": "gmicloud",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": true,
+    "dominates": 15,
+    "beaten_by": 0,
+    "better_swap": null
+   }
+  },
+  {
+   "id": "deepseek/deepseek-v4-pro-0813",
+   "name": "DeepSeek V4 Pro 0813",
+   "creator": "deepseek",
+   "release_date": "2026-08-13",
+   "new": false,
+   "intelligence": 36,
+   "points": 36,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.9604,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.9404,
+    "output_aud_per_1m": 2.8213,
+    "blended_aud_per_1m": 1.4107,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 1.2414,
+    "cheapest_provider": "Alibaba",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 3,
+    "beaten_by": 9,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "aa:agnes-2-5-pro-beta",
+   "name": "Agnes 2.5 Pro Beta",
+   "creator": "agnes-ai",
+   "release_date": "2026-08-26",
+   "new": false,
+   "intelligence": 35.2,
+   "points": 35,
+   "open_weights": null,
+   "on_gateways": false,
+   "cost_per_task_aud": null,
+   "cost_per_task_source": null,
+   "price": {
+    "input_aud_per_1m": 0.1425,
+    "output_aud_per_1m": 0.4275,
+    "blended_aud_per_1m": 0.2137,
+    "source": "artificial_analysis",
+    "cheapest_blended_aud_per_1m": null,
+    "cheapest_provider": null,
+    "cheapest_gateway": null
+   },
+   "australia": null,
+   "spread": null
+  },
+  {
+   "id": "aa:deepseek-v4-flash-vision",
+   "name": "DeepSeek V4 Flash Vision (Max)",
+   "creator": "deepseek",
+   "release_date": "2026-08-21",
+   "new": false,
+   "intelligence": 34.8,
+   "points": 35,
+   "open_weights": null,
+   "on_gateways": false,
+   "cost_per_task_aud": 1.4789,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.627,
+    "output_aud_per_1m": 1.8809,
+    "blended_aud_per_1m": 0.9404,
+    "source": "artificial_analysis",
+    "cheapest_blended_aud_per_1m": null,
+    "cheapest_provider": null,
+    "cheapest_gateway": null
+   },
+   "australia": null,
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 15,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "deepseek/deepseek-v4-flash-0731",
+   "name": "DeepSeek V4 Flash 0731",
+   "creator": "deepseek",
+   "release_date": "2026-07-31",
+   "new": false,
+   "intelligence": 34.3,
+   "points": 34,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.2119,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.1083,
+    "output_aud_per_1m": 0.218,
+    "blended_aud_per_1m": 0.1357,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.1176,
+    "cheapest_provider": "boundless",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 6,
+    "beaten_by": 3,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "alibaba/qwen3.8-27b",
+   "name": "Qwen3.8 27B",
+   "creator": "alibaba",
+   "release_date": "2026-08-14",
+   "new": false,
+   "intelligence": 33.7,
+   "points": 34,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.4356,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.7125,
+    "output_aud_per_1m": 4.2747,
+    "blended_aud_per_1m": 1.603,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.2494,
+    "cheapest_provider": "runinfra",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 15,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "reflection/beam",
+   "name": "Beam 1.0",
+   "creator": "reflection",
+   "release_date": "2026-10-16",
+   "new": true,
+   "intelligence": 30.3,
+   "points": 30,
+   "open_weights": null,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.3223,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.57,
+    "output_aud_per_1m": 1.7099,
+    "blended_aud_per_1m": 0.8549,
+    "source": "artificial_analysis",
+    "cheapest_blended_aud_per_1m": 0.6234,
+    "cheapest_provider": "nebius",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 3,
+    "beaten_by": 6,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "aa:quasar-438b",
+   "name": "Quasar 438B (Max, Based on GLM-5.2)",
+   "creator": "multiversecomputing",
+   "release_date": "2026-08-10",
+   "new": false,
+   "intelligence": 26.7,
+   "points": 27,
+   "open_weights": null,
+   "on_gateways": false,
+   "cost_per_task_aud": null,
+   "cost_per_task_source": null,
+   "price": {
+    "input_aud_per_1m": 0.1567,
+    "output_aud_per_1m": 0.4702,
+    "blended_aud_per_1m": 0.2351,
+    "source": "artificial_analysis",
+    "cheapest_blended_aud_per_1m": null,
+    "cheapest_provider": null,
+    "cheapest_gateway": null
+   },
+   "australia": null,
+   "spread": null
+  },
+  {
+   "id": "upstage/solar-pro4",
+   "name": "Solar Pro 4",
+   "creator": "upstage",
+   "release_date": "2026-08-06",
+   "new": false,
+   "intelligence": 26.6,
+   "points": 27,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 1.0135,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.4275,
+    "output_aud_per_1m": 1.7099,
+    "blended_aud_per_1m": 0.7481,
+    "source": "openrouter",
+    "cheapest_blended_aud_per_1m": 0.374,
+    "cheapest_provider": "Upstage",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 13,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "name": "NVIDIA Nemotron 3.5 Super VL",
+   "creator": "nvidia",
+   "release_date": "2026-10-15",
+   "new": true,
+   "intelligence": 26.5,
+   "points": 27,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.2682,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.285,
+    "output_aud_per_1m": 0.7125,
+    "blended_aud_per_1m": 0.3918,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.2494,
+    "cheapest_provider": "Crusoe",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 3,
+    "beaten_by": 4,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "aa:apodex-1-1",
+   "name": "Apodex 1.1",
+   "creator": "apodex",
+   "release_date": "2026-08-30",
+   "new": false,
+   "intelligence": 26.4,
+   "points": 26,
+   "open_weights": null,
+   "on_gateways": false,
+   "cost_per_task_aud": 0.6607,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.4275,
+    "output_aud_per_1m": 4.2747,
+    "blended_aud_per_1m": 1.3893,
+    "source": "artificial_analysis",
+    "cheapest_blended_aud_per_1m": null,
+    "cheapest_provider": null,
+    "cheapest_gateway": null
+   },
+   "australia": null,
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 13,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "thinkingmachines/inkling-small",
+   "name": "Inkling Small",
+   "creator": "thinkingmachines",
+   "release_date": "2026-07-30",
+   "new": false,
+   "intelligence": 25.7,
+   "points": 26,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.1275,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.6412,
+    "output_aud_per_1m": 1.7099,
+    "blended_aud_per_1m": 0.9084,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.7481,
+    "cheapest_provider": "thinkingmachines",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 3,
+    "beaten_by": 2,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "inclusionai/ling-3.0-flash-vl",
+   "name": "Ling 3.0 Flash VL",
+   "creator": "inclusionai",
+   "release_date": "2026-09-10",
+   "new": false,
+   "intelligence": 24.6,
+   "points": 25,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": null,
+   "cost_per_task_source": null,
+   "price": {
+    "input_aud_per_1m": 0.1069,
+    "output_aud_per_1m": 0.3135,
+    "blended_aud_per_1m": 0.1585,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.1282,
+    "cheapest_provider": "DeepInfra",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": null
+  },
+  {
+   "id": "upstage/solar-mini4",
+   "name": "Solar Mini 4",
+   "creator": "upstage",
+   "release_date": "2026-09-22",
+   "new": false,
+   "intelligence": 24.1,
+   "points": 24,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.5209,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.1425,
+    "output_aud_per_1m": 0.57,
+    "blended_aud_per_1m": 0.2494,
+    "source": "openrouter",
+    "cheapest_blended_aud_per_1m": 0.1247,
+    "cheapest_provider": "Upstage",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 11,
+    "better_swap": {
+     "id": "xiaomi/mimo-v2.6-flash",
+     "name": "MiMo V2.6 Flash",
+     "creator": "xiaomi",
+     "points": 38,
+     "intelligence": 37.9,
+     "cost_per_task_aud": 0.0889
+    }
+   }
+  },
+  {
+   "id": "inclusionai/ling-3.0-flash-fin",
+   "name": "Ling 3.0 Flash Fin",
+   "creator": "inclusionai",
+   "release_date": "2026-09-11",
+   "new": false,
+   "intelligence": 22.6,
+   "points": 23,
+   "open_weights": null,
+   "on_gateways": true,
+   "cost_per_task_aud": null,
+   "cost_per_task_source": null,
+   "price": {
+    "input_aud_per_1m": 0.1069,
+    "output_aud_per_1m": 0.3135,
+    "blended_aud_per_1m": 0.1585,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.1585,
+    "cheapest_provider": "novita",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": null
+  },
+  {
+   "id": "inclusionai/ling-3.0-flash",
+   "name": "Ling 3.0 Flash",
+   "creator": "inclusionai",
+   "release_date": "2026-08-04",
+   "new": false,
+   "intelligence": 20.1,
+   "points": 20,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": null,
+   "cost_per_task_source": null,
+   "price": {
+    "input_aud_per_1m": 0.0299,
+    "output_aud_per_1m": 0.0898,
+    "blended_aud_per_1m": 0.0449,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.0449,
+    "cheapest_provider": "novita",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": null
+  },
+  {
+   "id": "meta/muse-glimmer-30b",
+   "name": "Muse Glimmer 30B",
+   "creator": "meta",
+   "release_date": "2026-08-10",
+   "new": false,
+   "intelligence": 17.5,
+   "points": 18,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.0821,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.4987,
+    "output_aud_per_1m": 2.1374,
+    "blended_aud_per_1m": 0.9084,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.7481,
+    "cheapest_provider": "DeepInfra",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": true,
+    "dominates": 3,
+    "beaten_by": 0,
+    "better_swap": null
+   }
+  },
+  {
+   "id": "nvidia/nemotron-3.5-lightning",
+   "name": "Nemotron 3.5 Lightning 30B",
+   "creator": "nvidia",
+   "release_date": "2026-08-11",
+   "new": false,
+   "intelligence": 12.9,
+   "points": 13,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.1133,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.0712,
+    "output_aud_per_1m": 0.285,
+    "blended_aud_per_1m": 0.1247,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.0979,
+    "cheapest_provider": "Io Net",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 1,
+    "beaten_by": 4,
+    "better_swap": {
+     "id": "meta/muse-glimmer-30b",
+     "name": "Muse Glimmer 30B",
+     "creator": "meta",
+     "points": 18,
+     "intelligence": 17.5,
+     "cost_per_task_aud": 0.0821
+    }
+   }
+  },
+  {
+   "id": "aa:granite-4-2-30b",
+   "name": "Granite 4.2 30B",
+   "creator": "ibm",
+   "release_date": "2026-08-25",
+   "new": false,
+   "intelligence": 12.7,
+   "points": 13,
+   "open_weights": null,
+   "on_gateways": false,
+   "cost_per_task_aud": 0.1022,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.228,
+    "output_aud_per_1m": 0.9262,
+    "blended_aud_per_1m": 0.4025,
+    "source": "artificial_analysis",
+    "cheapest_blended_aud_per_1m": null,
+    "cheapest_provider": null,
+    "cheapest_gateway": null
+   },
+   "australia": null,
+   "spread": {
+    "on_frontier": false,
+    "dominates": 2,
+    "beaten_by": 3,
+    "better_swap": {
+     "id": "meta/muse-glimmer-30b",
+     "name": "Muse Glimmer 30B",
+     "creator": "meta",
+     "points": 18,
+     "intelligence": 17.5,
+     "cost_per_task_aud": 0.0821
+    }
+   }
+  },
+  {
+   "id": "inception/mercury-2.5",
+   "name": "Mercury 2.5",
+   "creator": "inception",
+   "release_date": "2026-09-08",
+   "new": false,
+   "intelligence": 12.3,
+   "points": 12,
+   "open_weights": false,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.1663,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.057,
+    "output_aud_per_1m": 0.2137,
+    "blended_aud_per_1m": 0.0962,
+    "source": "vercel",
+    "cheapest_blended_aud_per_1m": 0.0962,
+    "cheapest_provider": "inception",
+    "cheapest_gateway": "vercel"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": false,
+    "dominates": 0,
+    "beaten_by": 6,
+    "better_swap": {
+     "id": "meta/muse-glimmer-30b",
+     "name": "Muse Glimmer 30B",
+     "creator": "meta",
+     "points": 18,
+     "intelligence": 17.5,
+     "cost_per_task_aud": 0.0821
+    }
+   }
+  },
+  {
+   "id": "ibm-granite/granite-4.2-8b",
+   "name": "Granite 4.2 8B",
+   "creator": "ibm-granite",
+   "release_date": "2026-08-25",
+   "new": false,
+   "intelligence": 11.1,
+   "points": 11,
+   "open_weights": true,
+   "on_gateways": true,
+   "cost_per_task_aud": 0.0336,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.0855,
+    "output_aud_per_1m": 0.3562,
+    "blended_aud_per_1m": 0.1532,
+    "source": "openrouter",
+    "cheapest_blended_aud_per_1m": 0.1532,
+    "cheapest_provider": "DeepInfra",
+    "cheapest_gateway": "openrouter"
+   },
+   "australia": {
+    "hosted": false,
+    "providers": [],
+    "blended_aud_per_1m": null,
+    "vs_list_price": null
+   },
+   "spread": {
+    "on_frontier": true,
+    "dominates": 0,
+    "beaten_by": 0,
+    "better_swap": null
+   }
+  },
+  {
+   "id": "aa:granite-4-2-3b",
+   "name": "Granite 4.2 3B",
+   "creator": "ibm",
+   "release_date": "2026-08-25",
+   "new": false,
+   "intelligence": 9.1,
+   "points": 9,
+   "open_weights": null,
+   "on_gateways": false,
+   "cost_per_task_aud": 0.0085,
+   "cost_per_task_source": "artificial_analysis_api",
+   "price": {
+    "input_aud_per_1m": 0.0427,
+    "output_aud_per_1m": 0.171,
+    "blended_aud_per_1m": 0.0748,
+    "source": "artificial_analysis",
+    "cheapest_blended_aud_per_1m": null,
+    "cheapest_provider": null,
+    "cheapest_gateway": null
+   },
+   "australia": null,
+   "spread": {
+    "on_frontier": true,
+    "dominates": 0,
+    "beaten_by": 0,
+    "better_swap": null
+   }
+  }
+ ],
+ "attribution": [
+  {
+   "source": "Artificial Analysis",
+   "url": "https://artificialanalysis.ai/",
+   "used_for": "Intelligence Index and cost per Intelligence Index task"
+  },
+  {
+   "source": "Reserve Bank of Australia",
+   "url": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
+   "used_for": "AUD/USD daily exchange rate"
+  },
+  {
+   "source": "Vercel AI Gateway",
+   "url": "https://vercel.com/ai-gateway/models",
+   "used_for": "Model prices and providers"
+  },
+  {
+   "source": "OpenRouter",
+   "url": "https://openrouter.ai/models",
+   "used_for": "Model prices, providers and open-weights status"
+  }
+ ]
+}

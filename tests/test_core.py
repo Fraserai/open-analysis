@@ -232,7 +232,9 @@ class SnapshotTest(unittest.TestCase):
                 {"id": "openai/text-embedding-3", "name": "Embedding", "type": "embedding", "pricing": {"input": "0.0000001"}},
             ]},
             "vercel_endpoints": {"alibaba/qwen3-coder": [
-                {"provider_name": "alibaba", "pricing": {"prompt": "0.0000015", "completion": "0.0000075"}},
+                {"provider_name": "alibaba", "pricing": {"prompt": "0.0000015", "completion": "0.0000075"},
+                 "inference_regions": [{"scope": "specific", "geo_region": "au", "provider_region": "ap-southeast-2",
+                                        "pricing": {"prompt": "0.00000165", "completion": "0.00000825"}}]},
                 {"provider_name": "vertex", "pricing": {"prompt": "0.00000022", "completion": "0.0000018"},
                  "inference_regions": [{"geo_region": "us"}]},
             ]},
@@ -258,7 +260,8 @@ class SnapshotTest(unittest.TestCase):
             {"slug": slug, "artificial_analysis_intelligence_index_cost": cost and {"cost_per_task": {"total_cost": cost}}}
             for slug, cost in api_costs.items()]} if api_costs else None
         status = {"artificial_analysis": {"status": "ok" if with_aa else "skipped", "detail": "no key"},
-                  "vercel_models": {"status": "ok"}, "openrouter_models": {"status": "ok"}}
+                  "vercel_models": {"status": "ok"}, "openrouter_models": {"status": "ok"},
+                  "openrouter_providers": {"status": "ok"}}
         with mock.patch.object(snapshot, "MIN_PRICED_MODELS", 1):
             return snapshot.build(raw, status, date(2026, 10, 11), cost_per_task=cost_per_task)
 
@@ -374,6 +377,57 @@ class SnapshotTest(unittest.TestCase):
         # A model with only unstated-precision providers has no quantized offer.
         price = snapshot._price(None, openrouter, None, snapshot._providers(None, endpoints[3:4]), 1.0)
         self.assertEqual((price["cheapest_available"]["provider"], price["cheapest_quantized"]), ("unstated", None))
+
+    def test_providers_in_australia(self):
+        vercel = [
+            {"provider_name": "bedrock", "pricing": {"prompt": "0.000004", "completion": "0.00002"},
+             "inference_regions": [
+                 {"scope": "specific", "geo_region": "us", "provider_region": "us-east-1"},
+                 {"scope": "specific", "geo_region": "au", "provider_region": "ap-southeast-2",
+                  "pricing": {"prompt": "0.0000044", "completion": "0.000022",
+                              "prompt_tiers": [{"cost": "0.0000044", "min": 0, "max": 200001}]}}]},
+            {"provider_name": "anthropic", "pricing": {"prompt": "0.000004", "completion": "0.00002"}},
+        ]
+        openrouter = [
+            {"provider_name": "Sydney Cloud", "tag": "sydney", "status": 0,
+             "pricing": {"prompt": "0.000005", "completion": "0.000025"}},
+            {"provider_name": "Sydney Cloud", "tag": "sydney/flex", "status": 0,
+             "pricing": {"prompt": "0.000001", "completion": "0.000005"}},
+            {"provider_name": "US Only", "tag": "us", "status": 0, "pricing": {"prompt": "0.000001", "completion": "0.000005"}},
+        ]
+        listings = {"Sydney Cloud": {"headquarters": "AU", "datacenters": ["AU", "US"]},
+                    "US Only": {"headquarters": "US", "datacenters": ["US"]}}
+        providers = snapshot._providers(vercel, openrouter, listings)
+        self.assertEqual(providers[0]["inference_regions"], ["au", "us"])
+        list_price = {"blended_3to1_per_1m": metrics.blended(4.0, 20.0)}
+        australia = snapshot._australia(providers, list_price, 1.0)
+        self.assertEqual(australia["scope"], "australia")
+        # Bedrock's Sydney region at its own price, and the OpenRouter provider with an Australian datacenter; not flex.
+        self.assertEqual([(d["provider"], d["region"]) for d in australia["providers"]],
+                         [("bedrock", "ap-southeast-2"), ("Sydney Cloud", "AU")])
+        self.assertTrue(australia["providers"][0]["tiered"])
+        self.assertEqual((australia["cheapest"]["provider"], australia["cheapest"]["blended_aud_per_1m"]),
+                         ("bedrock", metrics.blended(4.4, 22.0)))
+        self.assertAlmostEqual(australia["vs_list_price"], 0.1)
+
+        # Providers known but none in Australia: an empty answer. No provider data at all: unknown.
+        none_here = snapshot._australia(snapshot._providers(vercel[1:], openrouter[2:], listings), list_price, 1.0)
+        self.assertEqual((none_here["count"], none_here["cheapest"], none_here["vs_list_price"]), (0, None, None))
+        self.assertIsNone(snapshot._australia([], list_price, 1.0))
+
+    def test_australian_hosted_spread_map(self):
+        result = self.build(with_aa=True)
+        models = {m["id"]: m for m in result["models"]}
+        coder = models["alibaba/qwen3-coder"]["providers_in_australia"]
+        self.assertEqual((coder["count"], coder["providers"][0]["region"]), (1, "ap-southeast-2"))
+        self.assertIsNone(models["anthropic/claude-sonnet-4.5"]["providers_in_australia"])
+        self.assertEqual(next(p for p in result["points"] if p["point"] == 10)["status"], "phase_1")
+        hosted = result["summary"]["hosted_in_australia"]
+        self.assertEqual((hosted["scope"], hosted["models"]), ("australia", 1))
+        self.assertEqual(hosted["models_by_intelligence"][0]["australian_providers"], ["alibaba (ap-southeast-2)"])
+        by_price = result["spread_map"]["by_token_price"]
+        self.assertEqual([p["id"] for p in by_price["australian_hosted_models"]["frontier"]], ["alibaba/qwen3-coder"])
+        self.assertTrue(models["alibaba/qwen3-coder"]["spread"]["by_token_price"]["on_australian_hosted_frontier"])
 
     def test_value_for_money_has_an_intelligence_floor(self):
         models = {m["id"]: m for m in self.build(with_aa=True)["models"]}

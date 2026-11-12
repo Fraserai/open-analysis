@@ -1,0 +1,159 @@
+---
+import data from "../data/today.json";
+import { aud } from "../lib/format";
+
+const W = 1000;
+const H = 520;
+const M = { top: 24, right: 28, bottom: 52, left: 52 };
+
+const models = data.models.filter((m) => m.cost_per_task_aud != null);
+const frontier = new Set(data.frontier);
+const overpay = data.insights.overpay?.id;
+
+const costs = models.map((m) => m.cost_per_task_aud!);
+const xMin = Math.log10(Math.min(...costs) * 0.7);
+const xMax = Math.log10(Math.max(...costs) * 1.5);
+const yMin = Math.max(0, Math.floor(Math.min(...models.map((m) => m.intelligence)) / 10) * 10);
+const yMax = Math.ceil(Math.max(...models.map((m) => m.intelligence)) / 10) * 10 + 2;
+
+const x = (cost: number) => M.left + ((Math.log10(cost) - xMin) / (xMax - xMin)) * (W - M.left - M.right);
+const y = (score: number) => H - M.bottom - ((score - yMin) / (yMax - yMin)) * (H - M.top - M.bottom);
+
+const xTicks = [0.003, 0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30].filter(
+  (t) => Math.log10(t) >= xMin && Math.log10(t) <= xMax,
+);
+const yTicks: number[] = [];
+for (let t = yMin; t <= yMax; t += 10) yTicks.push(t);
+
+const front = models
+  .filter((m) => frontier.has(m.id))
+  .sort((a, b) => a.cost_per_task_aud! - b.cost_per_task_aud!);
+// Staircase: each frontier model is the cheapest way to reach its level.
+let path = "";
+front.forEach((m, i) => {
+  const px = x(m.cost_per_task_aud!);
+  const py = y(m.intelligence);
+  path += i === 0 ? `M${px},${py}` : ` H${px} V${py}`;
+});
+const area = front.length
+  ? `${path} H${W - M.right} V${H - M.bottom} H${x(front[0].cost_per_task_aud!)} Z`
+  : "";
+
+const others = models.filter((m) => !frontier.has(m.id));
+
+// Label placement: try four spots around each labelled dot and keep the first that clears
+// the labels already placed and every dot. Width is estimated from the text length.
+type Box = { x1: number; y1: number; x2: number; y2: number };
+const overlaps = (a: Box, b: Box) => a.x1 < b.x2 && b.x1 < a.x2 && a.y1 < b.y2 && b.y1 < a.y2;
+const dots: Box[] = models.map((m) => {
+  const cx = x(m.cost_per_task_aud!);
+  const cy = y(m.intelligence);
+  return { x1: cx - 6, y1: cy - 6, x2: cx + 6, y2: cy + 6 };
+});
+const placed: Box[] = [];
+const labelled = [...front, ...models.filter((m) => m.id === overpay)];
+const labels = labelled.map((m) => {
+  const cx = x(m.cost_per_task_aud!);
+  const cy = y(m.intelligence);
+  const w = m.name.length * 6.6;
+  const h = 14;
+  const spots = [
+    { x: cx + 11, y: cy - 9, anchor: "start" },
+    { x: cx + 11, y: cy + 17, anchor: "start" },
+    { x: cx - 11, y: cy - 9, anchor: "end" },
+    { x: cx - 11, y: cy + 17, anchor: "end" },
+  ];
+  const boxOf = (s: (typeof spots)[number]): Box => {
+    const x1 = s.anchor === "start" ? s.x : s.x - w;
+    return { x1, y1: s.y - h + 3, x2: x1 + w, y2: s.y + 3 };
+  };
+  const fits = (s: (typeof spots)[number]) => {
+    const b = boxOf(s);
+    return b.x1 >= M.left && b.x2 <= W - 4 && b.y1 >= 0 && ![...placed, ...dots].some((o) => overlaps(b, o));
+  };
+  const spot = spots.find(fits) ?? spots.find((s) => !placed.some((o) => overlaps(boxOf(s), o))) ?? spots[0];
+  placed.push(boxOf(spot));
+  return { m, ...spot, over: m.id === overpay };
+});
+---
+
+<div class="relative">
+  <svg viewBox={`0 0 ${W} ${H}`} class="h-auto w-full" role="img" aria-label="Intelligence against cost per task">
+    <defs>
+      <linearGradient id="frontier-fill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#c6f432" stop-opacity="0.16" />
+        <stop offset="100%" stop-color="#c6f432" stop-opacity="0" />
+      </linearGradient>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="4" result="b" />
+        <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+      </filter>
+    </defs>
+
+    {yTicks.map((t) => (
+      <g>
+        <line x1={M.left} x2={W - M.right} y1={y(t)} y2={y(t)} stroke="white" stroke-opacity="0.06" />
+        <text x={M.left - 12} y={y(t)} dy="0.32em" text-anchor="end" class="num fill-zinc-500 text-[11px]">{t}</text>
+      </g>
+    ))}
+    {xTicks.map((t) => (
+      <g>
+        <line x1={x(t)} x2={x(t)} y1={M.top} y2={H - M.bottom} stroke="white" stroke-opacity="0.04" />
+        <text x={x(t)} y={H - M.bottom + 22} text-anchor="middle" class="num fill-zinc-500 text-[11px]">{aud(t)}</text>
+      </g>
+    ))}
+    <text x={W - M.right} y={H - 6} text-anchor="end" class="fill-zinc-500 text-[11px]">
+      Cost per task, AUD (log scale) →
+    </text>
+    <text x={14} y={M.top} class="fill-zinc-500 text-[11px]" transform={`rotate(-90 14 ${M.top})`} text-anchor="end">
+      ← Intelligence Index
+    </text>
+
+    <path d={area} fill="url(#frontier-fill)" />
+    <path d={path} fill="none" stroke="#c6f432" stroke-width="1.5" stroke-opacity="0.7" />
+
+    {others.map((m) => (
+      <circle
+        class="dot"
+        cx={x(m.cost_per_task_aud!)}
+        cy={y(m.intelligence)}
+        r={m.id === overpay ? 6 : 4.5}
+        fill={m.id === overpay ? "#fb7185" : "#71717a"}
+        fill-opacity={m.id === overpay ? 0.95 : 0.55}
+      >
+        <title>{`${m.name} · ${m.intelligence} · ${aud(m.cost_per_task_aud)} per task`}</title>
+      </circle>
+    ))}
+
+    {models.filter((m) => m.australia?.hosted).map((m) => (
+      <circle cx={x(m.cost_per_task_aud!)} cy={y(m.intelligence)} r="10" fill="none" stroke="#f5b83d" stroke-width="1.5" />
+    ))}
+
+    {front.map((m) => (
+      <circle class="dot" cx={x(m.cost_per_task_aud!)} cy={y(m.intelligence)} r="6" fill="#c6f432" filter="url(#glow)">
+        <title>{`${m.name} · ${m.intelligence} · ${aud(m.cost_per_task_aud)} per task`}</title>
+      </circle>
+    ))}
+
+    {labels.map((l) => (
+      <text
+        x={l.x}
+        y={l.y}
+        text-anchor={l.anchor}
+        class={`${l.over ? "fill-over" : "fill-zinc-200"} text-[12px] font-medium`}
+        paint-order="stroke"
+        stroke="#111113"
+        stroke-width="4"
+      >
+        {l.m.name}
+      </text>
+    ))}
+  </svg>
+
+  <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-zinc-400">
+    <span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-value"></span>Best at its price (frontier)</span>
+    <span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-zinc-500"></span>Overpriced: something smarter is cheaper</span>
+    <span class="flex items-center gap-2"><span class="size-3 rounded-full border-[1.5px] border-wattle"></span>Hosted in Australia</span>
+    <span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-over"></span>Biggest overpay today</span>
+  </div>
+</div>
