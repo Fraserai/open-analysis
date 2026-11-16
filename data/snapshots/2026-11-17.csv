@@ -1,0 +1,474 @@
+id,name,creator,on_gateways,open_weights,intelligence_index,intelligence_source,input_aud_per_1m,output_aud_per_1m,blended_aud_per_1m,price_source,cheapest_blended_aud_per_1m,cheapest_gateway,cheapest_provider,cheapest_quantized_blended_aud_per_1m,cheapest_quantized_provider,cheapest_quantized_quantization,cost_per_task_aud,cost_per_task_source,cost_per_task_on_frontier,cost_per_task_dominated_by,value_index_points_per_aud,token_price_on_frontier,token_price_dominated_by,vercel_id,openrouter_id,artificial_analysis_slug,scope
+anthropic/claude-fable-5.2,Claude Fable 5.2,anthropic,True,False,64.6,artificial_analysis_via_openrouter,11.8361,59.1804,23.6721,vercel,23.6721,vercel,anthropic,,,,,,,,2.73,True,,anthropic/claude-fable-5.2,anthropic/claude-fable-5.2,,global
+google/gemini-4-carbon,Gemini 4 Carbon,google,True,False,60,artificial_analysis_via_openrouter,2.959,14.7951,5.918,vercel,5.918,vercel,google,,,,,,,,10.14,True,,google/gemini-4-carbon,google/gemini-4-carbon,,global
+anthropic/claude-opus-5.5,Claude Opus 5.5,anthropic,True,False,59.1,artificial_analysis_via_openrouter,5.918,29.5902,11.8361,vercel,11.8361,vercel,anthropic,,,,,,,,4.99,False,google/gemini-4-carbon,anthropic/claude-opus-5.5,anthropic/claude-opus-5.5,,global
+openai/gpt-6-astra,GPT-6 Astra,openai,True,False,56.9,artificial_analysis_via_openrouter,14.7951,73.9754,29.5902,vercel,29.5902,vercel,azure,,,,,,,,1.92,False,google/gemini-4-carbon,openai/gpt-6-astra,openai/gpt-6-astra,,global
+openai/gpt-6.1-sol,GPT-6.1 Sol,openai,True,False,54.6,artificial_analysis_via_openrouter,2.959,14.7951,5.918,vercel,5.918,vercel,azure,,,,,,,,9.23,False,google/gemini-4-carbon,openai/gpt-6.1-sol,openai/gpt-6.1-sol,,global
+anthropic/claude-sonnet-5.5,Claude Sonnet 5.5,anthropic,True,False,54.5,artificial_analysis_via_openrouter,2.959,14.7951,5.918,vercel,5.918,vercel,anthropic,,,,,,,,9.21,False,google/gemini-4-carbon,anthropic/claude-sonnet-5.5,anthropic/claude-sonnet-5.5,,global
+google/gemini-4-hydrogen,Gemini 4 Hydrogen,google,True,False,53.9,artificial_analysis_via_openrouter,2.2193,11.0963,4.4385,vercel,4.4385,vercel,google,,,,,,,,12.14,True,,google/gemini-4-hydrogen,google/gemini-4-hydrogen,,global
+openai/gpt-6.1-terra,GPT-6.1 Terra,openai,True,False,51.3,artificial_analysis_via_openrouter,1.4795,7.3975,2.959,vercel,2.959,vercel,azure,,,,,,,,17.34,True,,openai/gpt-6.1-terra,openai/gpt-6.1-terra,,global
+google/gemini-4-argon,Gemini 4 Argon,google,True,False,50.4,artificial_analysis_via_openrouter,2.959,14.7951,5.918,vercel,5.918,vercel,google,,,,,,,,8.52,False,openai/gpt-6.1-terra,google/gemini-4-argon,google/gemini-4-argon,,global
+anthropic/claude-fable-5.1,Claude Fable 5.1,anthropic,True,False,50,artificial_analysis_via_openrouter,14.7951,73.9754,29.5902,vercel,29.5902,vercel,anthropic,,,,,,,,1.69,False,openai/gpt-6.1-terra,anthropic/claude-fable-5.1,anthropic/claude-fable-5.1,,global
+moonshotai/kimi-k3.1-pro,Kimi K3.1 Pro,moonshotai,True,True,46.5,artificial_analysis_via_openrouter,2.959,14.7951,5.918,vercel,3.3745,vercel,relace,3.3745,Relace,fp4,,,,,7.86,False,openai/gpt-6.1-terra,moonshotai/kimi-k3.1-pro,moonshotai/kimi-k3.1-pro,,global
+anthropic/claude-opus-5,Claude Opus 5,anthropic,True,False,44.2,artificial_analysis_via_openrouter,7.3975,36.9877,14.7951,vercel,14.7951,vercel,anthropic,,,,,,,,2.99,False,openai/gpt-6.1-terra,anthropic/claude-opus-5,anthropic/claude-opus-5,,global
+openai/gpt-6-sol,GPT-6 Sol,openai,True,False,44.2,artificial_analysis_via_openrouter,2.959,14.7951,5.918,vercel,5.918,vercel,azure,,,,,,,,7.47,False,openai/gpt-6.1-terra,openai/gpt-6-sol,openai/gpt-6-sol,,global
+meta/muse-wonder,Muse Wonder,meta,True,False,43.6,artificial_analysis_via_openrouter,5.918,29.5902,11.8361,openrouter,11.8361,openrouter,Google,,,,,,,,3.68,False,openai/gpt-6.1-terra,,meta/muse-wonder,,global
+meta/muse-spark-1.3,Muse Spark 1.3,meta,True,False,36.6,artificial_analysis_via_openrouter,1.8494,6.2879,2.959,vercel,2.959,vercel,meta,,,,,,,,12.37,False,anthropic/claude-haiku-5.5,meta/muse-spark-1.3,meta/muse-spark-1.3,,global
+anthropic/claude-haiku-5.5,Claude Haiku 5.5,anthropic,True,False,36.5,artificial_analysis_via_openrouter,0.148,0.7398,0.2959,vercel,0.2959,vercel,anthropic,,,,,,,,123.35,True,,anthropic/claude-haiku-5.5,anthropic/claude-haiku-5.5,,global
+spacexai/grok-4.7,Grok 4.7,xai,True,False,35.5,artificial_analysis_via_openrouter,2.959,8.8771,4.4385,vercel,4.4385,vercel,bedrock,,,,,,,,8.0,False,anthropic/claude-haiku-5.5,spacexai/grok-4.7,x-ai/grok-4.7,,global
+tencent/hy4,Tencent Hy4,tencent,True,True,34.6,artificial_analysis_via_openrouter,0.617,1.8501,0.9252,vercel,0.9252,vercel,tencent,0.9252,Tencent,fp4,,,,,37.4,False,anthropic/claude-haiku-5.5,tencent/hy4,tencent/hy4,,global
+alibaba/qwen3.8-max-0902,Qwen3.8 Max 0902,alibaba,True,False,33.7,artificial_analysis_via_openrouter,2.959,8.8771,4.4385,vercel,4.4385,vercel,alibaba,,,,,,,,7.59,False,anthropic/claude-haiku-5.5,alibaba/qwen3.8-max-0902,qwen/qwen3.8-max-0902,,global
+openai/gpt-5.6-terra,GPT 5.6 Terra,openai,True,False,32.3,artificial_analysis_via_openrouter,2.959,17.7541,6.6578,vercel,6.6578,vercel,azure,,,,,,,,4.85,False,anthropic/claude-haiku-5.5,openai/gpt-5.6-terra,openai/gpt-5.6-terra,,global
+zai/glm-5.3,GLM 5.3,zai,True,True,31.7,artificial_analysis_via_openrouter,2.0713,6.5098,3.1809,vercel,0.7165,vercel,wafer,0.5954,Wafer,fp4,,,,,9.97,False,anthropic/claude-haiku-5.5,zai/glm-5.3,z-ai/glm-5.3,,global
+spacexai/grok-4.6,Grok 4.6,xai,True,False,31,artificial_analysis_via_openrouter,2.959,8.8771,4.4385,vercel,4.4385,vercel,bedrock,,,,,,,,6.98,False,anthropic/claude-haiku-5.5,spacexai/grok-4.6,x-ai/grok-4.6,,global
+google/gemini-3.8-flash,Gemini 3.8 Flash,google,True,False,30.8,artificial_analysis_via_openrouter,1.1096,5.5482,2.2193,vercel,2.2193,vercel,google,,,,,,,,13.88,False,anthropic/claude-haiku-5.5,google/gemini-3.8-flash,google/gemini-3.8-flash,,global
+thinkingmachines/inkling-2-small,Inkling 2 Small,thinkingmachines,True,True,30.6,artificial_analysis_via_openrouter,0.4439,1.4795,0.7028,vercel,0.6676,vercel,deepinfra,0.3514,PrimeIntellect,fp4,,,,,43.54,False,anthropic/claude-haiku-5.5,thinkingmachines/inkling-2-small,thinkingmachines/inkling-2-small,,global
+xiaomi/mimo-v2.6-pro,MiMo V2.6 Pro,xiaomi,True,True,29.9,artificial_analysis_via_openrouter,0.6436,1.2872,0.8045,vercel,0.6033,vercel,gmicloud,,,,,,,,,False,anthropic/claude-haiku-5.5,xiaomi/mimo-v2.6-pro,xiaomi/mimo-v2.6-pro,,global
+inclusionai/ling-3.1-flash,Ling 3.1 Flash,inclusionai,True,True,29.6,artificial_analysis_via_openrouter,0.4439,1.3316,0.6658,vercel,0.0999,openrouter,Novita,,,,,,,,,False,anthropic/claude-haiku-5.5,inclusionai/ling-3.1-flash,inclusionai/ling-3.1-flash,,global
+minimax/minimax-m3.1-flash,MiniMax-M3.1-Flash,minimax,True,True,29.1,artificial_analysis_via_openrouter,0.2219,0.8877,0.3884,vercel,0.1942,openrouter,Minimax,0.1942,Inferact vLLM,nvfp4,,,,,,False,anthropic/claude-haiku-5.5,minimax/minimax-m3.1-flash,minimax/minimax-m3.1-flash,,global
+deepseek/deepseek-v4.1-flash-1017,DeepSeek V4.1 Flash 1017,deepseek,True,True,28.6,artificial_analysis_via_openrouter,0.4439,1.7754,0.7767,vercel,0.1724,vercel,morph,0.2249,Wafer,mxfp4,,,,,,False,anthropic/claude-haiku-5.5,deepseek/deepseek-v4.1-flash-1017,deepseek/deepseek-v4.1-flash-1017,,global
+stepfun/step-5-preview,Step 5 Preview,stepfun,True,True,28.5,artificial_analysis_via_openrouter,1.4795,3.9947,2.1083,vercel,2.1083,vercel,stepfun,2.1083,Featherless,fp4,,,,,,False,anthropic/claude-haiku-5.5,stepfun/step-5-preview,stepfun/step-5-preview,,global
+upstage/solar-pro4,Solar Pro 4,upstage,True,False,28.2,artificial_analysis_via_openrouter,0.4439,1.7754,0.7767,openrouter,0.3884,openrouter,Upstage,,,,,,,,,False,anthropic/claude-haiku-5.5,,upstage/solar-pro4,,global
+openai/gpt-6-luna,GPT-6 Luna,openai,True,False,27.9,artificial_analysis_via_openrouter,0.148,0.7398,0.2959,vercel,0.2959,vercel,azure,,,,,,,,,False,anthropic/claude-haiku-5.5,openai/gpt-6-luna,openai/gpt-6-luna,,global
+zai/glm-5.3-flash,GLM 5.3 Flash,zai,True,True,27.8,artificial_analysis_via_openrouter,0.2219,0.7398,0.3514,vercel,0.0733,vercel,relace,0.0733,Relace,fp4,,,,,,False,anthropic/claude-haiku-5.5,zai/glm-5.3-flash,z-ai/glm-5.3-flash,,global
+xiaomi/mimo-v2.6-flash,MiMo V2.6 Flash,xiaomi,True,True,26.7,artificial_analysis_via_openrouter,0.2071,0.4143,0.2589,vercel,0.2071,vercel,gmicloud,,,,,,,,,True,,xiaomi/mimo-v2.6-flash,xiaomi/mimo-v2.6-flash,,global
+mistral/mistral-large-4,Mistral Large 4,mistral,True,True,26.1,artificial_analysis_via_openrouter,1.0357,3.107,1.5535,vercel,1.5535,vercel,mistral,,,,,,,,,False,xiaomi/mimo-v2.6-flash,mistral/mistral-large-4,mistralai/mistral-large-4-0,,global
+meta/muse-spark-open,Muse Spark Open,meta,True,True,24.9,artificial_analysis_via_openrouter,1.8494,6.2879,2.959,vercel,2.959,vercel,baseten,2.959,Nebius,fp4,,,,,,False,xiaomi/mimo-v2.6-flash,meta/muse-spark-open,meta/muse-spark-open,,global
+openai/gpt-5.6-luna,GPT 5.6 Luna,openai,True,False,23.8,artificial_analysis_via_openrouter,0.2959,1.7754,0.6658,vercel,0.6658,vercel,azure,,,,,,,,,False,xiaomi/mimo-v2.6-flash,openai/gpt-5.6-luna,openai/gpt-5.6-luna,,global
+deepseek/deepseek-v4-pro-0813,DeepSeek V4 Pro 0813,deepseek,True,True,23.1,artificial_analysis_via_openrouter,0.9765,2.9294,1.4647,vercel,1.4618,openrouter,Baidu,1.7654,Wafer,mxfp4,,,,,,False,xiaomi/mimo-v2.6-flash,deepseek/deepseek-v4-pro-0813,deepseek/deepseek-v4-pro-0813,,global
+deepseek/deepseek-v4-pro,DeepSeek V4 Pro,deepseek,True,True,20.8,artificial_analysis_via_openrouter,1.953,5.8589,2.9294,vercel,1.4647,vercel,deepseek,1.5535,Relace,fp4,,,,,,False,xiaomi/mimo-v2.6-flash,deepseek/deepseek-v4-pro,deepseek/deepseek-v4-pro,,global
+alibaba/qwen3.8-27b,Qwen3.8 27B,alibaba,True,True,20.1,artificial_analysis_via_openrouter,0.0888,3.2549,0.8803,vercel,0.2071,vercel,runinfra,0.5937,Darkbloom,fp4,,,,,,False,xiaomi/mimo-v2.6-flash,alibaba/qwen3.8-27b,qwen/qwen3.8-27b,,global
+minimax/minimax-m3,MiniMax M3,minimax,True,True,18.9,artificial_analysis_via_openrouter,0.4439,1.7754,0.7767,vercel,0.6214,vercel,gmicloud,0.7767,nebius,fp4,,,,,,False,xiaomi/mimo-v2.6-flash,minimax/minimax-m3,minimax/minimax-m3,,global
+reflection/beam-1.0-501b-a23b,Beam 1.0 501B A23B,reflection,True,True,17.7,artificial_analysis_via_openrouter,0.4439,1.4795,0.7028,openrouter,0.8877,openrouter,DigitalOcean,0.6473,Nebius,fp4,,,,,,False,xiaomi/mimo-v2.6-flash,,reflection/beam-1.0-501b-a23b,,global
+moonshotai/kimi-k3,Kimi K3,moonshotai,True,True,17.4,artificial_analysis_via_openrouter,4.4385,22.1926,8.8771,vercel,4.2731,vercel,relace,3.8571,Wafer,mxfp4,,,,,,False,xiaomi/mimo-v2.6-flash,moonshotai/kimi-k3,moonshotai/kimi-k3,,global
+nvidia/nemotron-3.5-super-vl,NVIDIA Nemotron 3.5 Super VL,nvidia,True,True,13.6,artificial_analysis_via_openrouter,0.2959,0.7398,0.4069,vercel,0.3514,vercel,deepinfra,0.196,Darkbloom,nvfp4,,,,,,False,xiaomi/mimo-v2.6-flash,nvidia/nemotron-3.5-super-vl,nvidia/nemotron-3.5-super-vl,,global
+thinkingmachines/inkling-small,Inkling Small,thinkingmachines,True,True,12.9,artificial_analysis_via_openrouter,0.6658,1.7754,0.9432,vercel,0.7767,vercel,thinkingmachines,0.9432,DeepInfra,fp4,,,,,,False,xiaomi/mimo-v2.6-flash,thinkingmachines/inkling-small,thinkingmachines/inkling-small,,global
+thinkingmachines/inkling,Inkling,thinkingmachines,True,True,12.5,artificial_analysis_via_openrouter,1.4795,5.992,2.6076,vercel,2.6076,vercel,thinkingmachines,2.6076,togetherai,fp4,,,,,,False,xiaomi/mimo-v2.6-flash,thinkingmachines/inkling,thinkingmachines/inkling,,global
+nvidia/nemotron-3-ultra-550b-a55b,Nemotron 3 Ultra,nvidia,True,True,11.8,artificial_analysis_via_openrouter,0.8877,3.5508,1.5535,vercel,1.3685,openrouter,KT,1.3685,deepinfra,fp4,,,,,,False,xiaomi/mimo-v2.6-flash,nvidia/nemotron-3-ultra-550b-a55b,nvidia/nemotron-3-ultra-550b-a55b,,global
+google/gemini-3.5-flash-lite,Gemini 3.5 Flash Lite,google,True,False,11.7,artificial_analysis_via_openrouter,0.4439,3.6988,1.2576,vercel,1.2576,vercel,google,,,,,,,,,False,xiaomi/mimo-v2.6-flash,google/gemini-3.5-flash-lite,google/gemini-3.5-flash-lite,,global
+anthropic/claude-haiku-4.5,Claude Haiku 4.5,anthropic,True,False,7.4,artificial_analysis_via_openrouter,1.4795,7.3975,2.959,vercel,2.959,vercel,anthropic,,,,,,,,,False,xiaomi/mimo-v2.6-flash,anthropic/claude-haiku-4.5,anthropic/claude-haiku-4.5,,global
+meta/muse-glimmer-30b,Muse Glimmer 30B,meta,True,True,6.3,artificial_analysis_via_openrouter,0.5178,2.2193,0.9432,vercel,0.7767,openrouter,DeepInfra,,,,,,,,,False,nvidia/nemotron-3.5-lightning,meta/muse-glimmer-30b,meta/muse-glimmer-30b,,global
+cohere/command-a-plus,Command A+,cohere,True,True,6.2,artificial_analysis_via_openrouter,0.4439,2.2193,0.8877,openrouter,0.8877,openrouter,Cohere,,,,,,,,,False,nvidia/nemotron-3.5-lightning,,cohere/command-a-plus,,global
+google/gemini-3.1-flash-lite-preview,Gemini 3.1 Flash Lite Preview,google,True,False,6.2,artificial_analysis_via_openrouter,0.3699,2.2193,0.8322,openrouter,0.8322,openrouter,Google AI Studio,,,,,,,,,False,nvidia/nemotron-3.5-lightning,,google/gemini-3.1-flash-lite-preview,,global
+nvidia/nemotron-3.5-lightning,Nemotron 3.5 Lightning 30B,nvidia,True,True,5.5,artificial_analysis_via_openrouter,0.0888,0.2367,0.1258,vercel,0.0888,vercel,runinfra,0.0721,Darkbloom,int4,,,,,,True,,nvidia/nemotron-3.5-lightning,nvidia/nemotron-3.5-lightning,,global
+ibm-granite/granite-4.2-8b,Granite 4.2 8B,ibm-granite,True,True,5.1,artificial_analysis_via_openrouter,0.0888,0.2219,0.1221,openrouter,0.1221,openrouter,CoreWeave,,,,,,,,,True,,,ibm-granite/granite-4.2-8b,,global
+mistral/mistral-medium-3.5,Mistral Medium Latest,mistral,True,True,4.6,artificial_analysis_via_openrouter,2.2193,11.0963,4.4385,vercel,4.4385,vercel,mistral,,,,,,,,,False,ibm-granite/granite-4.2-8b,mistral/mistral-medium-3.5,mistralai/mistral-medium-3-5,,global
+google/gemma-4-31b-it,Gemma 4 31B IT,google,True,True,4.4,artificial_analysis_via_openrouter,0.2071,0.5918,0.3033,vercel,0.2367,openrouter,KT,0.2367,CoreWeave,fp4,,,,,,False,ibm-granite/granite-4.2-8b,google/gemma-4-31b-it,google/gemma-4-31b-it,,global
+mistral/mistral-small,Mistral Small,mistral,True,True,4.3,artificial_analysis_via_openrouter,0.2219,0.8877,0.3884,vercel,0.3884,vercel,mistral,,,,,,,,,False,ibm-granite/granite-4.2-8b,mistral/mistral-small,mistralai/mistral-small-2603,,global
+openai/gpt-oss-120b,GPT OSS 120B,openai,True,True,3.8,artificial_analysis_via_openrouter,0.148,0.7398,0.2959,vercel,0.0999,openrouter,DekaLLM,0.0888,Near AI,fp4,,,,,,False,ibm-granite/granite-4.2-8b,openai/gpt-oss-120b,openai/gpt-oss-120b,,global
+aion-labs/aion-2.0,Aion-2.0,aion-labs,True,False,,,1.1836,2.3672,1.4795,openrouter,1.4795,openrouter,AionLabs,,,,,,,,,,,,aion-labs/aion-2.0,,global
+aion-labs/aion-3.0,Aion-3.0,aion-labs,True,False,,,4.4385,8.8771,5.5482,openrouter,5.5482,openrouter,AionLabs,,,,,,,,,,,,aion-labs/aion-3.0,,global
+aion-labs/aion-3.0-mini,Aion-3.0-Mini,aion-labs,True,False,,,1.0357,2.0713,1.2946,openrouter,1.2946,openrouter,AionLabs,,,,,,,,,,,,aion-labs/aion-3.0-mini,,global
+aion-labs/aion-3.5,Aion 3.5,aion-labs,True,False,,,4.4385,8.8771,5.5482,openrouter,5.5482,openrouter,AionLabs,,,,,,,,,,,,aion-labs/aion-3.5,,global
+aion-labs/aion-3.5-mini,Aion 3.5 Mini,aion-labs,True,False,,,1.0357,2.0713,1.2946,openrouter,1.2946,openrouter,AionLabs,,,,,,,,,,,,aion-labs/aion-3.5-mini,,global
+aion-labs/aion-rp-llama-3.1-8b,Aion-RP 1.0 (8B),aion-labs,True,True,,,1.1836,2.3672,1.4795,openrouter,1.4795,openrouter,AionLabs,,,,,,,,,,,,aion-labs/aion-rp-llama-3.1-8b,,global
+alibaba/qwen-3-14b,Qwen3-14B,alibaba,True,True,,,0.1775,0.3551,0.2219,vercel,0.2219,vercel,deepinfra,0.1923,NextBit,int4,,,,,,,,alibaba/qwen-3-14b,qwen/qwen3-14b,,global
+alibaba/qwen-3-235b,Qwen3 235B A22B,alibaba,True,,,,0.3255,1.302,0.5696,vercel,0.5696,vercel,vertex,,,,,,,,,,,alibaba/qwen-3-235b,,,global
+alibaba/qwen-3-30b,Qwen3-30B-A3B,alibaba,True,True,,,0.1775,0.7398,0.3181,vercel,0.3181,vercel,deepinfra,,,,,,,,,,,alibaba/qwen-3-30b,qwen/qwen3-30b-a3b,,global
+alibaba/qwen-3-32b,Qwen 3 32B,alibaba,True,True,,,0.2219,0.8877,0.3884,vercel,0.1923,vercel,deepinfra,,,,,,,,,,,alibaba/qwen-3-32b,qwen/qwen3-32b,,global
+alibaba/qwen3-coder,Qwen3 Coder 480B A35B Instruct,alibaba,True,True,,,0.3255,2.6631,0.9099,vercel,0.9099,vercel,vertex,0.7028,DeepInfra,fp4,,,,,,,,alibaba/qwen3-coder,qwen/qwen3-coder,,global
+alibaba/qwen3-coder-30b-a3b,Qwen 3 Coder 30B A3B Instruct,alibaba,True,True,,,0.2219,0.8877,0.3884,vercel,0.3884,vercel,bedrock,,,,,,,,,,,alibaba/qwen3-coder-30b-a3b,qwen/qwen3-coder-30b-a3b-instruct,,global
+alibaba/qwen3-coder-next,Qwen3 Coder Next,alibaba,True,True,,,0.7398,1.7754,0.9987,vercel,0.4291,openrouter,Parasail,,,,,,,,,,,alibaba/qwen3-coder-next,qwen/qwen3-coder-next,,global
+alibaba/qwen3-max-thinking,Qwen 3 Max Thinking,alibaba,True,,,,1.7754,8.8771,3.5508,vercel,3.5508,vercel,alibaba,,,,,,,,,,,alibaba/qwen3-max-thinking,,,global
+alibaba/qwen3-next-80b-a3b-instruct,Qwen3 Next 80B A3B Instruct,alibaba,True,True,,,0.2219,1.7754,0.6103,vercel,0.5067,vercel,deepinfra,,,,,,,,,,,alibaba/qwen3-next-80b-a3b-instruct,qwen/qwen3-next-80b-a3b-instruct,,global
+alibaba/qwen3-next-80b-a3b-thinking,Qwen3 Next 80B A3B Thinking,alibaba,True,,,,0.2219,1.7754,0.6103,vercel,0.6103,vercel,vertex,,,,,,,,,,,alibaba/qwen3-next-80b-a3b-thinking,,,global
+alibaba/qwen3-vl-instruct,Qwen3 VL 235B A22B Instruct,alibaba,True,,,,0.2959,1.302,0.5474,vercel,0.5474,vercel,deepinfra,,,,,,,,,,,alibaba/qwen3-vl-instruct,,,global
+alibaba/qwen3.5-flash,Qwen 3.5 Flash,alibaba,True,,,,0.148,0.5918,0.2589,vercel,0.2589,vercel,alibaba,,,,,,,,,,,alibaba/qwen3.5-flash,,,global
+alibaba/qwen3.5-plus,Qwen 3.5 Plus,alibaba,True,False,,,0.5918,3.5508,1.3316,vercel,0.9987,openrouter,Alibaba,,,,,,,,,,,alibaba/qwen3.5-plus,qwen/qwen3.5-plus-20260420,,global
+alibaba/qwen3.6-27b,Qwen 3.6 27B,alibaba,True,True,,,0.8877,5.3262,1.9973,vercel,1.0172,openrouter,Chutes,,,,,,,,,,,alibaba/qwen3.6-27b,qwen/qwen3.6-27b,,global
+alibaba/qwen3.6-35b-a3b,Qwen 3.6 35B A3B,alibaba,True,True,,,0.5548,3.3289,1.2483,vercel,0.4402,openrouter,CoreWeave,0.3144,Darkbloom,fp4,,,,,,,,alibaba/qwen3.6-35b-a3b,qwen/qwen3.6-35b-a3b,,global
+alibaba/qwen3.6-plus,Qwen 3.6 Plus,alibaba,True,False,,,0.7398,4.4385,1.6644,vercel,1.0819,openrouter,Alibaba,,,,,,,,,,,alibaba/qwen3.6-plus,qwen/qwen3.6-plus,,global
+alibaba/qwen3.7-flash,Qwen 3.7 Flash,alibaba,True,False,,,0.0444,0.1923,0.0814,vercel,0.0814,vercel,alibaba,,,,,,,,,,,alibaba/qwen3.7-flash,qwen/qwen3.7-flash,,global
+alibaba/qwen3.7-max,Qwen 3.7 Max,alibaba,True,False,,,3.6988,11.0963,5.5482,vercel,3.2734,openrouter,Alibaba,,,,,,,,,,,alibaba/qwen3.7-max,qwen/qwen3.7-max,,global
+alibaba/qwen3.7-plus,Qwen 3.7 Plus,alibaba,True,False,,,0.5918,2.3672,1.0357,vercel,0.8285,openrouter,Alibaba,,,,,,,,,,,alibaba/qwen3.7-plus,qwen/qwen3.7-plus,,global
+alibaba/qwen3.8-2.4t-a95b,Qwen3.8 2.4T A95B,alibaba,True,True,,,2.959,8.8771,4.4385,vercel,4.4385,vercel,fireworks,4.4385,togetherai,fp4,,,,,,,,alibaba/qwen3.8-2.4t-a95b,qwen/qwen3.8-2.4t-a95b,,global
+alibaba/qwen3.8-flash,Qwen 3.8 Flash,alibaba,True,True,,,0.2219,0.6954,0.3403,vercel,0.3403,vercel,alibaba,,,,,,,,,,,alibaba/qwen3.8-flash,qwen/qwen3.8-flash,,global
+alibaba/qwen3.8-max,Qwen 3.8 Max,alibaba,True,,,,2.959,8.8771,4.4385,vercel,4.4385,vercel,alibaba,,,,,,,,,,,alibaba/qwen3.8-max,,,global
+alibaba/qwen3.8-max-prime,Qwen 3.8 Max Prime,alibaba,True,False,,,5.918,17.7541,8.8771,vercel,8.8771,vercel,alibaba,,,,,,,,,,,alibaba/qwen3.8-max-prime,qwen/qwen3.8-max-prime,,global
+alibaba/qwen3.8-omni-flash,Qwen 3.8 Omni Flash,alibaba,True,False,,,0.2219,0.6954,0.3403,vercel,0.3403,vercel,alibaba,,,,,,,,,,,alibaba/qwen3.8-omni-flash,qwen/qwen3.8-omni-flash,,global
+alibaba/qwen4-max,Qwen 4 Max,alibaba,True,False,,,2.2193,6.6578,3.3289,vercel,3.3289,vercel,alibaba,,,,,,,,,,,alibaba/qwen4-max,qwen/qwen4-max,,global
+amazon/nova-2-lite,Nova 2 Lite,amazon,True,False,,,0.4882,4.0686,1.3833,vercel,1.2576,openrouter,Amazon Bedrock,,,,,,,,,,,amazon/nova-2-lite,amazon/nova-2-lite-v1,,global
+amazon/nova-lite,Nova Lite,amazon,True,False,,,0.0888,0.3551,0.1553,vercel,0.1553,vercel,bedrock,,,,,,,,,,,amazon/nova-lite,amazon/nova-lite-v1,,global
+amazon/nova-micro,Nova Micro,amazon,True,False,,,0.0518,0.2071,0.0906,vercel,0.0906,vercel,bedrock,,,,,,,,,,,amazon/nova-micro,amazon/nova-micro-v1,,global
+amazon/nova-premier-v1,Nova Premier 1.0,amazon,True,False,,,3.6988,18.4939,7.3975,openrouter,7.3975,openrouter,,,,,,,,,,,,,amazon/nova-premier-v1,,global
+amazon/nova-pro,Nova Pro,amazon,True,False,,,1.1836,4.7344,2.0713,vercel,2.0713,vercel,bedrock,,,,,,,,,,,amazon/nova-pro,amazon/nova-pro-v1,,global
+anthracite-org/magnum-v4-72b,Magnum v4 72B,anthracite-org,True,True,,,3.6988,7.3975,4.6235,openrouter,4.6235,openrouter,Mancer 2,,,,,,,,,,,,anthracite-org/magnum-v4-72b,,global
+anthropic/claude-fable-5,Claude Fable 5,anthropic,True,False,,,14.7951,73.9754,29.5902,vercel,29.5902,vercel,anthropic,,,,,,,,,,,anthropic/claude-fable-5,anthropic/claude-fable-5,,global
+anthropic/claude-fable-5-batch,Claude Fable 5 (Batch),anthropic,True,,,,7.3975,36.9877,14.7951,vercel,14.7951,vercel,,,,,,,,,,,,anthropic/claude-fable-5-batch,,,global
+anthropic/claude-fable-5.1-batch,Claude Fable 5.1 (Batch),anthropic,True,,,,7.3975,36.9877,14.7951,vercel,14.7951,vercel,,,,,,,,,,,,anthropic/claude-fable-5.1-batch,,,global
+anthropic/claude-fable-5.2-batch,Claude Fable 5.2 (Batch),anthropic,True,,,,5.918,29.5902,11.8361,vercel,11.8361,vercel,,,,,,,,,,,,anthropic/claude-fable-5.2-batch,,,global
+anthropic/claude-fable-5.2-fast,Claude Fable 5.2 (Fast),anthropic,True,,,,23.6721,118.3607,47.3443,vercel,23.6721,vercel,anthropic,,,,,,,,,,,anthropic/claude-fable-5.2-fast,,,global
+anthropic/claude-haiku-4.5-batch,Claude Haiku 4.5 (Batch),anthropic,True,,,,0.7398,3.6988,1.4795,vercel,1.4795,vercel,,,,,,,,,,,,anthropic/claude-haiku-4.5-batch,,,global
+anthropic/claude-haiku-5.5-batch,Claude Haiku 5.5 (Batch),anthropic,True,,,,0.074,0.3699,0.148,vercel,0.148,vercel,,,,,,,,,,,,anthropic/claude-haiku-5.5-batch,,,global
+anthropic/claude-opus-4.1,Claude Opus 4.1,anthropic,True,False,,,22.1926,110.9632,44.3853,openrouter,44.3853,openrouter,Amazon Bedrock,,,,,,,,,,,,anthropic/claude-opus-4.1,,global
+anthropic/claude-opus-4.5,Claude Opus 4.5,anthropic,True,False,,,7.3975,36.9877,14.7951,vercel,14.7951,vercel,anthropic,,,,,,,,,,,anthropic/claude-opus-4.5,anthropic/claude-opus-4.5,,global
+anthropic/claude-opus-4.5-batch,Claude Opus 4.5 (Batch),anthropic,True,,,,3.6988,18.4939,7.3975,vercel,7.3975,vercel,,,,,,,,,,,,anthropic/claude-opus-4.5-batch,,,global
+anthropic/claude-opus-4.6,Claude Opus 4.6,anthropic,True,False,,,7.3975,36.9877,14.7951,vercel,14.7951,vercel,anthropic,,,,,,,,,,,anthropic/claude-opus-4.6,anthropic/claude-opus-4.6,,global
+anthropic/claude-opus-4.6-batch,Claude Opus 4.6 (Batch),anthropic,True,,,,3.6988,18.4939,7.3975,vercel,7.3975,vercel,,,,,,,,,,,,anthropic/claude-opus-4.6-batch,,,global
+anthropic/claude-opus-4.7,Claude Opus 4.7,anthropic,True,False,,,7.3975,36.9877,14.7951,vercel,14.7951,vercel,anthropic,,,,,,,,,,,anthropic/claude-opus-4.7,anthropic/claude-opus-4.7,,global
+anthropic/claude-opus-4.7-batch,Claude Opus 4.7 (Batch),anthropic,True,,,,3.6988,18.4939,7.3975,vercel,7.3975,vercel,,,,,,,,,,,,anthropic/claude-opus-4.7-batch,,,global
+anthropic/claude-opus-4.8,Claude Opus 4.8,anthropic,True,False,,,7.3975,36.9877,14.7951,vercel,14.7951,vercel,anthropic,,,,,,,,,,,anthropic/claude-opus-4.8,anthropic/claude-opus-4.8,,global
+anthropic/claude-opus-4.8-batch,Claude Opus 4.8 (Batch),anthropic,True,,,,3.6988,18.4939,7.3975,vercel,7.3975,vercel,,,,,,,,,,,,anthropic/claude-opus-4.8-batch,,,global
+anthropic/claude-opus-4.8-fast,Claude Opus 4.8 (Fast),anthropic,True,,,,14.7951,73.9754,29.5902,vercel,14.7951,vercel,anthropic,,,,,,,,,,,anthropic/claude-opus-4.8-fast,,,global
+anthropic/claude-opus-5-batch,Claude Opus 5 (Batch),anthropic,True,,,,3.6988,18.4939,7.3975,vercel,7.3975,vercel,,,,,,,,,,,,anthropic/claude-opus-5-batch,,,global
+anthropic/claude-opus-5-fast,Claude Opus 5 (Fast),anthropic,True,,,,14.7951,73.9754,29.5902,vercel,14.7951,vercel,anthropic,,,,,,,,,,,anthropic/claude-opus-5-fast,,,global
+anthropic/claude-opus-5.5-batch,Claude Opus 5.5 (Batch),anthropic,True,,,,2.959,14.7951,5.918,vercel,5.918,vercel,,,,,,,,,,,,anthropic/claude-opus-5.5-batch,,,global
+anthropic/claude-opus-5.5-fast,Claude Opus 5.5 (Fast),anthropic,True,,,,11.8361,59.1804,23.6721,vercel,11.8361,vercel,anthropic,,,,,,,,,,,anthropic/claude-opus-5.5-fast,,,global
+anthropic/claude-sonnet-4.5,Claude Sonnet 4.5,anthropic,True,False,,,4.4385,22.1926,8.8771,vercel,8.8771,vercel,anthropic,,,,,,,,,,,anthropic/claude-sonnet-4.5,anthropic/claude-sonnet-4.5,,global
+anthropic/claude-sonnet-4.5-batch,Claude Sonnet 4.5 (Batch),anthropic,True,,,,2.2193,11.0963,4.4385,vercel,4.4385,vercel,,,,,,,,,,,,anthropic/claude-sonnet-4.5-batch,,,global
+anthropic/claude-sonnet-4.6,Claude Sonnet 4.6,anthropic,True,False,,,4.4385,22.1926,8.8771,vercel,8.8771,vercel,anthropic,,,,,,,,,,,anthropic/claude-sonnet-4.6,anthropic/claude-sonnet-4.6,,global
+anthropic/claude-sonnet-4.6-batch,Claude Sonnet 4.6 (Batch),anthropic,True,,,,2.2193,11.0963,4.4385,vercel,4.4385,vercel,,,,,,,,,,,,anthropic/claude-sonnet-4.6-batch,,,global
+anthropic/claude-sonnet-5,Claude Sonnet 5,anthropic,True,False,,,2.959,14.7951,5.918,vercel,5.918,vercel,anthropic,,,,,,,,,,,anthropic/claude-sonnet-5,anthropic/claude-sonnet-5,,global
+anthropic/claude-sonnet-5-batch,Claude Sonnet 5 (Batch),anthropic,True,,,,1.4795,7.3975,2.959,vercel,2.959,vercel,,,,,,,,,,,,anthropic/claude-sonnet-5-batch,,,global
+anthropic/claude-sonnet-5.5-batch,Claude Sonnet 5.5 (Batch),anthropic,True,,,,1.4795,7.3975,2.959,vercel,2.959,vercel,,,,,,,,,,,,anthropic/claude-sonnet-5.5-batch,,,global
+baidu/ernie-light-dt-1.0-intl,ERNIE-Light-DT-1.0,baidu,True,False,,,1.6718,5.8293,2.7112,openrouter,2.7112,openrouter,Baidu,,,,,,,,,,,,baidu/ernie-light-dt-1.0-intl,,global
+bytedance-seed/seed-2.0-lite,Seed-2.0-Lite,bytedance,True,False,,,0.3699,2.959,1.0172,openrouter,1.0172,openrouter,Seed,,,,,,,,,,,,bytedance-seed/seed-2.0-lite,,global
+bytedance-seed/seed-2.0-mini,Seed-2.0-Mini,bytedance,True,False,,,0.148,0.5918,0.2589,openrouter,0.2589,openrouter,Seed,,,,,,,,,,,,bytedance-seed/seed-2.0-mini,,global
+bytedance/seed-2.1-turbo,Seed 2.1 Turbo,bytedance,True,False,,,0.7398,3.6988,1.4795,vercel,1.4795,vercel,bytedance,,,,,,,,,,,bytedance/seed-2.1-turbo,bytedance-seed/seed-2-1-turbo,,global
+bytedance/ui-tars-1.5-7b,UI-TARS 7B ,bytedance,True,True,,,0.148,0.2959,0.1849,openrouter,0.1849,openrouter,Parasail,,,,,,,,,,,,bytedance/ui-tars-1.5-7b,,global
+callstack/apex,Apex,callstack,True,,,,0.7398,4.4385,1.6644,vercel,1.6644,vercel,callstack,,,,,,,,,,,callstack/apex,,,global
+cognitivecomputations/dolphin-mistral-24b-venice-edition,Uncensored,cognitivecomputations,True,True,,,0.2959,1.3316,0.5548,openrouter,0.5548,openrouter,Venice,,,,,,,,,,,,cognitivecomputations/dolphin-mistral-24b-venice-edition,,global
+cohere/command-a,Command A,cohere,True,True,,,3.6988,14.7951,6.4729,vercel,6.4729,vercel,cohere,,,,,,,,,,,cohere/command-a,cohere/command-a,,global
+cohere/command-r-08-2024,Command R (08-2024),cohere,True,True,,,0.2219,0.8877,0.3884,openrouter,0.3884,openrouter,Cohere,,,,,,,,,,,,cohere/command-r-08-2024,,global
+cohere/command-r-plus-08-2024,Command R+ (08-2024),cohere,True,True,,,3.6988,14.7951,6.4729,openrouter,6.4729,openrouter,Cohere,,,,,,,,,,,,cohere/command-r-plus-08-2024,,global
+cohere/command-r7b-12-2024,Command R7B (12-2024),cohere,True,True,,,0.0555,0.2219,0.0971,openrouter,0.0971,openrouter,Cohere,,,,,,,,,,,,cohere/command-r7b-12-2024,,global
+deepseek/deepseek-chat,DeepSeek V3,deepseek,True,True,,,0.4231,1.6911,0.7401,openrouter,0.6661,openrouter,StreamLake,0.6843,DeepInfra,fp4,,,,,,,,,deepseek/deepseek-chat,,global
+deepseek/deepseek-chat-v3-0324,DeepSeek V3 0324,deepseek,True,True,,,0.4291,1.6866,0.7435,openrouter,0.6473,openrouter,SiliconFlow,,,,,,,,,,,,deepseek/deepseek-chat-v3-0324,,global
+deepseek/deepseek-r1,DeepSeek-R1,deepseek,True,True,,,1.9973,7.9893,3.4953,vercel,1.3611,openrouter,SiliconFlow,1.3501,DeepInfra,fp4,,,,,,,,deepseek/deepseek-r1,deepseek/deepseek-r1-0528,,global
+deepseek/deepseek-v3.1,DeepSeek V3.1,deepseek,True,True,,,0.3699,1.4055,0.6288,vercel,0.6695,openrouter,SiliconFlow,0.6288,deepinfra,fp4,,,,,,,,deepseek/deepseek-v3.1,deepseek/deepseek-chat-v3.1,,global
+deepseek/deepseek-v3.1-terminus,DeepSeek V3.1 Terminus,deepseek,True,True,,,0.3995,1.4795,0.6695,openrouter,0.6695,openrouter,SiliconFlow,,,,,,,,,,,,deepseek/deepseek-v3.1-terminus,,global
+deepseek/deepseek-v3.2,DeepSeek V3.2,deepseek,True,True,,,0.9173,2.7371,1.3722,vercel,0.3462,openrouter,GMICloud,0.4291,deepinfra,fp4,,,,,,,,deepseek/deepseek-v3.2,deepseek/deepseek-v3.2,,global
+deepseek/deepseek-v3.2-exp,DeepSeek V3.2 Exp,deepseek,True,True,,,0.3995,0.6066,0.4513,openrouter,0.4513,openrouter,SiliconFlow,,,,,,,,,,,,deepseek/deepseek-v3.2-exp,,global
+deepseek/deepseek-v3.2-thinking,DeepSeek V3.2 Thinking,deepseek,True,,,,0.9173,2.7371,1.3722,vercel,1.3722,vercel,bedrock,0.4291,deepinfra,fp4,,,,,,,,deepseek/deepseek-v3.2-thinking,,,global
+deepseek/deepseek-v4-flash,DeepSeek V4 Flash,deepseek,True,True,,,0.1923,0.3847,0.2404,vercel,0.0924,openrouter,Baidu,0.196,Wafer,mxfp4,,,,,,,,deepseek/deepseek-v4-flash,deepseek/deepseek-v4-flash,,global
+deepseek/deepseek-v4-flash-0731,DeepSeek V4 Flash 0731,deepseek,True,True,,,0.1923,0.3847,0.2404,vercel,0.1221,vercel,boundless,0.1295,Relace,fp4,,,,,,,,deepseek/deepseek-v4-flash-0731,deepseek/deepseek-v4-flash-0731,,global
+deepseek/deepseek-v4-flash-vision-exp,DeepSeek V4 Flash Vision Exp,deepseek,True,True,,,0.319,0.9569,0.4785,vercel,0.4785,vercel,deepinfra,,,,,,,,,,,deepseek/deepseek-v4-flash-vision-exp,deepseek/deepseek-v4-flash-vision-exp,,global
+deepseek/deepseek-v4.1-flash,DeepSeek V4.1 Flash,deepseek,True,True,,,0.4439,1.7754,0.7767,vercel,0.1313,openrouter,Baidu,0.2663,Wafer,mxfp4,,,,,,,,deepseek/deepseek-v4.1-flash,deepseek/deepseek-v4.1-flash,,global
+deepseek/deepseek-v4.1-flash-1017-fast,DeepSeek V4.1 Flash 1017 Fast,deepseek,True,,,,0.8877,3.5508,1.5535,vercel,1.5535,vercel,baseten,,,,,,,,,,,deepseek/deepseek-v4.1-flash-1017-fast,,,global
+deepseek/deepseek-v4.1-flash-1017-ultrafast,DeepSeek V4.1 Flash 1017 Ultrafast,deepseek,True,,,,3.5508,14.2033,6.2139,vercel,6.2139,vercel,fireworks,,,,,,,,,,,deepseek/deepseek-v4.1-flash-1017-ultrafast,,,global
+deepseek/deepseek-v4.1-flash-fast,DeepSeek V4.1 Flash Fast,deepseek,True,,,,0.8877,3.5508,1.5535,vercel,1.5535,vercel,baseten,,,,,,,,,,,deepseek/deepseek-v4.1-flash-fast,,,global
+elorian/glimpse,Glimpse,elorian,True,False,,,0.8877,4.4385,1.7754,vercel,1.7754,vercel,elorian,,,,,,,,,,,elorian/glimpse,elorian/glimpse,,global
+fireworks/ember-1,Ember-1,fireworks,True,False,,,4.4385,22.1926,8.8771,vercel,8.8771,vercel,fireworks,,,,,,,,,,,fireworks/ember-1,fireworks/ember-1,,global
+google/gemini-2.5-flash,Gemini 2.5 Flash,google,True,False,,,0.4439,3.6988,1.2576,vercel,1.2576,vercel,google,,,,,,,,,,,google/gemini-2.5-flash,google/gemini-2.5-flash,,global
+google/gemini-2.5-flash-batch,Gemini 2.5 Flash (Batch),google,True,,,,0.2219,1.8494,0.6288,vercel,0.6288,vercel,,,,,,,,,,,,google/gemini-2.5-flash-batch,,,global
+google/gemini-2.5-flash-image,Nano Banana (Gemini 2.5 Flash Image),google,True,False,,,0.4439,3.6988,1.2576,vercel,1.2576,vercel,google,,,,,,,,,,,google/gemini-2.5-flash-image,google/gemini-2.5-flash-image,,global
+google/gemini-2.5-flash-lite,Gemini 2.5 Flash Lite,google,True,False,,,0.148,0.5918,0.2589,vercel,0.2589,vercel,google,,,,,,,,,,,google/gemini-2.5-flash-lite,google/gemini-2.5-flash-lite,,global
+google/gemini-2.5-flash-lite-batch,Gemini 2.5 Flash Lite (Batch),google,True,,,,0.074,0.2959,0.1295,vercel,0.1295,vercel,,,,,,,,,,,,google/gemini-2.5-flash-lite-batch,,,global
+google/gemini-2.5-pro,Gemini 2.5 Pro,google,True,False,,,1.8494,14.7951,5.0858,vercel,5.0858,vercel,google,,,,,,,,,,,google/gemini-2.5-pro,google/gemini-2.5-pro,,global
+google/gemini-2.5-pro-batch,Gemini 2.5 Pro (Batch),google,True,,,,0.9247,7.3975,2.5429,vercel,2.5429,vercel,,,,,,,,,,,,google/gemini-2.5-pro-batch,,,global
+google/gemini-2.5-pro-preview,Gemini 2.5 Pro Preview 06-05,google,True,False,,,1.8494,14.7951,5.0858,openrouter,5.0858,openrouter,Google AI Studio,,,,,,,,,,,,google/gemini-2.5-pro-preview,,global
+google/gemini-3-flash,Gemini 3 Flash,google,True,False,,,0.7398,4.4385,1.6644,vercel,1.6644,vercel,google,,,,,,,,,,,google/gemini-3-flash,google/gemini-3-flash-preview,,global
+google/gemini-3-flash-batch,Gemini 3 Flash (Batch),google,True,,,,0.3699,2.2193,0.8322,vercel,0.8322,vercel,,,,,,,,,,,,google/gemini-3-flash-batch,,,global
+google/gemini-3-pro-image,Nano Banana Pro (Gemini 3 Pro Image),google,True,False,,,2.959,17.7541,6.6578,vercel,6.6578,vercel,google,,,,,,,,,,,google/gemini-3-pro-image,google/gemini-3-pro-image,,global
+google/gemini-3-pro-image-preview,Nano Banana Pro (Gemini 3 Pro Image Preview),google,True,False,,,2.959,17.7541,6.6578,openrouter,6.6578,openrouter,Google AI Studio,,,,,,,,,,,,google/gemini-3-pro-image-preview,,global
+google/gemini-3.1-flash-image,Gemini 3.1 Flash Image (Nano Banana 2),google,True,False,,,0.7398,4.4385,1.6644,vercel,1.6644,vercel,google,,,,,,,,,,,google/gemini-3.1-flash-image,google/gemini-3.1-flash-image,,global
+google/gemini-3.1-flash-image-preview,Nano Banana 2 (Gemini 3.1 Flash Image Preview),google,True,False,,,0.7398,4.4385,1.6644,openrouter,1.6644,openrouter,Google AI Studio,,,,,,,,,,,,google/gemini-3.1-flash-image-preview,,global
+google/gemini-3.1-flash-lite,Gemini 3.1 Flash Lite,google,True,False,,,0.3699,2.2193,0.8322,vercel,0.8322,vercel,google,,,,,,,,,,,google/gemini-3.1-flash-lite,google/gemini-3.1-flash-lite,,global
+google/gemini-3.1-flash-lite-batch,Gemini 3.1 Flash Lite (Batch),google,True,,,,0.1849,1.1096,0.4161,vercel,0.4161,vercel,,,,,,,,,,,,google/gemini-3.1-flash-lite-batch,,,global
+google/gemini-3.1-flash-lite-image,Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite),google,True,False,,,0.3699,2.2193,0.8322,vercel,0.8322,vercel,google,,,,,,,,,,,google/gemini-3.1-flash-lite-image,google/gemini-3.1-flash-lite-image,,global
+google/gemini-3.1-pro-preview,Gemini 3.1 Pro Preview,google,True,False,,,2.959,17.7541,6.6578,vercel,6.6578,vercel,google,,,,,,,,,,,google/gemini-3.1-pro-preview,google/gemini-3.1-pro-preview,,global
+google/gemini-3.1-pro-preview-batch,Gemini 3.1 Pro Preview (Batch),google,True,,,,1.4795,8.8771,3.3289,vercel,3.3289,vercel,,,,,,,,,,,,google/gemini-3.1-pro-preview-batch,,,global
+google/gemini-3.1-pro-preview-customtools,Gemini 3.1 Pro Preview Custom Tools,google,True,False,,,2.959,17.7541,6.6578,openrouter,6.6578,openrouter,Google AI Studio,,,,,,,,,,,,google/gemini-3.1-pro-preview-customtools,,global
+google/gemini-3.5-flash,Gemini 3.5 Flash,google,True,False,,,2.2193,13.3156,4.9933,vercel,4.9933,vercel,vertex,,,,,,,,,,,google/gemini-3.5-flash,google/gemini-3.5-flash,,global
+google/gemini-3.5-flash-lite-batch,Gemini 3.5 Flash Lite (Batch),google,True,,,,0.2219,1.8494,0.6288,vercel,0.6288,vercel,,,,,,,,,,,,google/gemini-3.5-flash-lite-batch,,,global
+google/gemini-3.6-flash,Gemini 3.6 Flash,google,True,False,,,1.1096,5.5482,2.2193,vercel,2.2193,vercel,google,,,,,,,,,,,google/gemini-3.6-flash,google/gemini-3.6-flash,,global
+google/gemini-3.6-flash-batch,Gemini 3.6 Flash (Batch),google,True,,,,0.5548,2.7741,1.1096,vercel,1.1096,vercel,,,,,,,,,,,,google/gemini-3.6-flash-batch,,,global
+google/gemini-3.7-flash,Gemini 3.7 Flash,google,True,False,,,1.1096,5.5482,2.2193,vercel,2.2193,vercel,vertex,,,,,,,,,,,google/gemini-3.7-flash,google/gemini-3.7-flash,,global
+google/gemini-nano-banana-2.1,Gemini Nano Banana 2.1,google,True,False,,,2.2193,11.0963,4.4385,vercel,4.4385,vercel,google,,,,,,,,,,,google/gemini-nano-banana-2.1,google/gemini-nano-banana-2.1,,global
+google/gemini-omni-1.1-flash,Gemini Omni 1.1 Flash,google,True,False,,,2.2193,13.3156,4.9933,openrouter,4.9933,openrouter,Google AI Studio,,,,,,,,,,,,google/gemini-omni-1.1-flash,,global
+google/gemini-omni-1.2-flash,Gemini Omni 1.2 Flash,google,True,False,,,2.2193,13.3156,4.9933,vercel,4.9933,vercel,google,,,,,,,,,,,google/gemini-omni-1.2-flash,google/gemini-omni-1.2-flash,,global
+google/gemini-omni-flash-preview,Gemini Omni Flash Preview,google,True,,,,2.2193,13.3156,4.9933,vercel,4.9933,vercel,vertex,,,,,,,,,,,google/gemini-omni-flash-preview,,,global
+google/gemma-2-27b-it,Gemma 2 27B,google,True,True,,,0.9617,0.9617,0.9617,openrouter,,,,0.9617,NextBit,int4,,,,,,,,,google/gemma-2-27b-it,,global
+google/gemma-3-12b-it,Gemma 3 12B,google,True,True,,,0.074,0.2219,0.111,openrouter,,,,0.1387,NextBit,int4,,,,,,,,,google/gemma-3-12b-it,,global
+google/gemma-3-27b-it,Gemma 3 27B,google,True,True,,,0.1184,0.5178,0.2182,openrouter,0.2182,openrouter,NextBit,,,,,,,,,,,,google/gemma-3-27b-it,,global
+google/gemma-3-4b-it,Gemma 3 4B,google,True,True,,,0.074,0.148,0.0925,openrouter,0.0925,openrouter,DeepInfra,,,,,,,,,,,,google/gemma-3-4b-it,,global
+google/gemma-4-26b-a4b-it,Google Gemma 4 26B A4B,google,True,True,,,0.2219,0.8877,0.3884,vercel,0.0999,openrouter,Darkbloom,0.1664,AkashML,fp4,,,,,,,,google/gemma-4-26b-a4b-it,google/gemma-4-26b-a4b-it,,global
+google/lyria-3-clip-preview,Lyria 3 Clip Preview,google,True,False,,,0.0,0.0,0.0,openrouter,,,,,,,,,,,,,,,google/lyria-3-clip-preview,,global
+google/lyria-3-pro-preview,Lyria 3 Pro Preview,google,True,False,,,0.0,0.0,0.0,openrouter,,,,,,,,,,,,,,,google/lyria-3-pro-preview,,global
+gryphe/mythomax-l2-13b,MythoMax 13B,gryphe,True,True,,,0.1184,0.1627,0.1295,openrouter,0.1295,openrouter,Parasail,,,,,,,,,,,,gryphe/mythomax-l2-13b,,global
+humansand/ampersand-v0.1,Ampersand v0.1,humansand,True,,,,0.0,0.0,0.0,vercel,,,,,,,,,,,,,,humansand/ampersand-v0.1,,,global
+inception/mercury-3,Mercury 3,inception,True,,,,0.148,0.5178,0.2404,vercel,0.2404,vercel,inception,,,,,,,,,,,inception/mercury-3,,,global
+inclusionai/ling-3.0-flash,Ling 3.0 Flash,inclusionai,True,True,,,0.0311,0.0932,0.0466,vercel,0.0466,vercel,novita,0.1332,DeepInfra,fp4,,,,,,,,inclusionai/ling-3.0-flash,inclusionai/ling-3.0-flash,,global
+inclusionai/ling-3.0-flash-fin,Ling 3.0 Flash Fin,inclusionai,True,,,,0.111,0.3255,0.1646,vercel,0.1646,vercel,novita,,,,,,,,,,,inclusionai/ling-3.0-flash-fin,,,global
+inclusionai/ling-3.0-flash-sante,Ling 3.0 Flash Sante,inclusionai,True,,,,0.111,0.3255,0.1646,vercel,0.1646,vercel,novita,,,,,,,,,,,inclusionai/ling-3.0-flash-sante,,,global
+inclusionai/ling-3.0-flash-vl,Ling 3.0 Flash VL,inclusionai,True,True,,,0.111,0.3255,0.1646,vercel,0.1646,vercel,novita,0.1332,DeepInfra,fp4,,,,,,,,inclusionai/ling-3.0-flash-vl,inclusionai/ling-3.0-flash-vl,,global
+inclusionai/ling-3.0-tiny,Ling 3.0 Tiny,inclusionai,True,True,,,0.0222,0.0666,0.0333,openrouter,0.0333,openrouter,,,,,,,,,,,,,inclusionai/ling-3.0-tiny,,global
+inclusionai/ling-3.1-flash-1019,Ling 3.1 Flash 1019,inclusionai,True,,,,0.4439,1.3316,0.6658,vercel,0.6658,vercel,novita,,,,,,,,,,,inclusionai/ling-3.1-flash-1019,,,global
+inference-net/schematron-v2-small,Schematron V2 Small,inference-net,True,True,,,0.074,0.3403,0.1406,vercel,0.1406,vercel,inference-net,,,,,,,,,,,inference-net/schematron-v2-small,inference-net/schematron-v2-small,,global
+inference-net/schematron-v2-turbo,Schematron V2 Turbo,inference-net,True,True,,,0.0444,0.2219,0.0888,vercel,0.0888,vercel,inference-net,,,,,,,,,,,inference-net/schematron-v2-turbo,inference-net/schematron-v2-turbo,,global
+interfaze/interfaze-beta,Interfaze Beta,interfaze,True,,,,2.2193,5.1783,2.959,vercel,2.959,vercel,interfaze,,,,,,,,,,,interfaze/interfaze-beta,,,global
+kt/midm-k-3.0-pro,Mi:dm K 3.0 Pro,kt,True,False,,,0.2959,1.1836,0.5178,openrouter,0.5178,openrouter,KT,,,,,,,,,,,,kt/midm-k-3.0-pro,,global
+liquid/lfm-3-1.7b,LFM3-1.7B,liquid,True,True,,,0.1184,0.2959,0.1627,openrouter,0.1627,openrouter,Liquid,,,,,,,,,,,,liquid/lfm-3-1.7b,,global
+liquid/lfm2.5-24b-a2b,LFM2.5-24B-A2B,liquid,True,True,,,0.074,1.0357,0.3144,vercel,0.3144,vercel,liquid,,,,,,,,,,,liquid/lfm2.5-24b-a2b,liquid/lfm-2.5-24b-a2b,,global
+mancer/weaver,Weaver (alpha),mancer,True,False,,,0.4439,0.7398,0.5178,openrouter,0.5178,openrouter,Mancer 2,,,,,,,,,,,,mancer/weaver,,global
+meituan/longcat-2.0,LongCat 2.0,meituan,True,True,,,1.1096,4.4385,1.9419,openrouter,0.7767,openrouter,AtlasCloud,,,,,,,,,,,,meituan/longcat-2.0,,global
+meituan/longcat-2.5,LongCat 2.5,meituan,True,,,,0.4439,1.7754,0.7767,vercel,0.7767,vercel,meituan,,,,,,,,,,,meituan/longcat-2.5,,,global
+meta-llama/llama-3.2-1b-instruct,Llama 3.2 1B Instruct,meta,True,True,,,0.0399,0.2974,0.1043,openrouter,0.1043,openrouter,Cloudflare,,,,,,,,,,,,meta-llama/llama-3.2-1b-instruct,,global
+meta-llama/llama-3.2-3b-instruct,Llama 3.2 3B Instruct,meta,True,True,,,0.0753,0.4956,0.1804,openrouter,0.1775,openrouter,Parasail,,,,,,,,,,,,meta-llama/llama-3.2-3b-instruct,,global
+meta-llama/llama-guard-4-12b,Llama Guard 4 12B,meta,True,True,,,0.2663,0.2663,0.2663,openrouter,0.2663,openrouter,DeepInfra,,,,,,,,,,,,meta-llama/llama-guard-4-12b,,global
+meta/llama-3.1-70b,Llama 3.1 70B Instruct,meta,True,True,,,1.0652,1.0652,1.0652,vercel,1.0652,vercel,bedrock,,,,,,,,,,,meta/llama-3.1-70b,meta-llama/llama-3.1-70b-instruct,,global
+meta/llama-3.1-8b,Llama 3.1 8B Instruct,meta,True,True,,,0.3255,0.3255,0.3255,vercel,0.037,openrouter,DeepInfra,,,,,,,,,,,meta/llama-3.1-8b,meta-llama/llama-3.1-8b-instruct,,global
+meta/llama-3.3-70b,Llama 3.3 70B Instruct,meta,True,True,,,1.0652,1.0652,1.0652,vercel,0.2293,openrouter,DeepInfra,,,,,,,,,,,meta/llama-3.3-70b,meta-llama/llama-3.3-70b-instruct,,global
+meta/llama-4-maverick,Llama 4 Maverick 17B Instruct,meta,True,True,,,0.3551,1.4351,0.6251,vercel,0.6251,vercel,bedrock,,,,,,,,,,,meta/llama-4-maverick,meta-llama/llama-4-maverick,,global
+meta/llama-4-scout,Llama 4 Scout 17B Instruct,meta,True,True,,,0.2515,0.9765,0.4328,vercel,0.2219,vercel,deepinfra,,,,,,,,,,,meta/llama-4-scout,meta-llama/llama-4-scout,,global
+meta/muse-ember,Muse Ember,meta,True,False,,,0.148,0.7398,0.2959,vercel,0.2959,vercel,meta,,,,,,,,,,,meta/muse-ember,meta/muse-ember,,global
+meta/muse-spark-1.1,Muse Spark 1.1,meta,True,False,,,1.8494,6.2879,2.959,vercel,2.959,vercel,meta,,,,,,,,,,,meta/muse-spark-1.1,meta/muse-spark-1.1,,global
+meta/muse-spark-1.2,Muse Spark 1.2,meta,True,False,,,1.8494,6.2879,2.959,vercel,2.959,vercel,meta,,,,,,,,,,,meta/muse-spark-1.2,meta/muse-spark-1.2,,global
+meta/muse-spark-1.2-contributor,Muse Spark 1.2 Contributor,meta,True,False,,,0.148,0.2959,0.1849,vercel,0.1849,vercel,meta,,,,,,,,,,,meta/muse-spark-1.2-contributor,meta/muse-spark-1.2-contributor,,global
+meta/muse-spark-1.3-contributor,Muse Spark 1.3 Contributor,meta,True,False,,,0.148,0.2959,0.1849,vercel,0.1849,vercel,meta,,,,,,,,,,,meta/muse-spark-1.3-contributor,meta/muse-spark-1.3-contributor,,global
+meta/muse-wonder-1.0,Muse Wonder,meta,True,,,,5.918,29.5902,11.8361,vercel,11.8361,vercel,meta,,,,,,,,,,,meta/muse-wonder-1.0,,,global
+microsoft/phi-4,Phi 4,microsoft,True,True,,,0.1036,0.2071,0.1295,openrouter,0.1295,openrouter,DeepInfra,,,,,,,,,,,,microsoft/phi-4,,global
+minimax/minimax-m2,MiniMax M2,minimax,True,,,,0.4439,1.7754,0.7767,vercel,0.7767,vercel,minimax,,,,,,,,,,,minimax/minimax-m2,,,global
+minimax/minimax-m2.1,MiniMax M2.1,minimax,True,,,,0.4439,1.7754,0.7767,vercel,0.7767,vercel,bedrock,,,,,,,,,,,minimax/minimax-m2.1,,,global
+minimax/minimax-m2.1-lightning,MiniMax M2.1 Lightning,minimax,True,,,,0.4439,3.5508,1.2206,vercel,1.2206,vercel,minimax,,,,,,,,,,,minimax/minimax-m2.1-lightning,,,global
+minimax/minimax-m2.5,MiniMax M2.5,minimax,True,True,,,0.4439,1.7754,0.7767,vercel,0.651,openrouter,Venice,,,,,,,,,,,minimax/minimax-m2.5,minimax/minimax-m2.5,,global
+minimax/minimax-m2.5-highspeed,MiniMax M2.5 High Speed,minimax,True,,,,0.8877,3.5508,1.5535,vercel,1.5535,vercel,minimax,,,,,,,,,,,minimax/minimax-m2.5-highspeed,,,global
+minimax/minimax-m2.7,MiniMax M2.7,minimax,True,True,,,0.4439,1.7754,0.7767,vercel,0.5437,vercel,gmicloud,,,,,,,,,,,minimax/minimax-m2.7,minimax/minimax-m2.7,,global
+minimax/minimax-m2.7-highspeed,MiniMax M2.7 High Speed,minimax,True,,,,0.8877,3.5508,1.5535,vercel,1.5535,vercel,minimax,,,,,,,,,,,minimax/minimax-m2.7-highspeed,,,global
+mistral/codestral,Mistral Codestral,mistral,True,False,,,0.4439,1.3316,0.6658,vercel,0.6658,vercel,mistral,,,,,,,,,,,mistral/codestral,mistralai/codestral-2508,,global
+mistral/ministral-14b,Ministral 14B,mistral,True,True,,,0.2959,0.2959,0.2959,vercel,0.2959,vercel,mistral,,,,,,,,,,,mistral/ministral-14b,mistralai/ministral-14b-2512,,global
+mistral/ministral-3b,Ministral 3B,mistral,True,True,,,0.148,0.148,0.148,vercel,0.148,vercel,mistral,,,,,,,,,,,mistral/ministral-3b,mistralai/ministral-3b-2512,,global
+mistral/ministral-8b,Ministral 8B,mistral,True,True,,,0.2219,0.2219,0.2219,vercel,0.2219,vercel,mistral,,,,,,,,,,,mistral/ministral-8b,mistralai/ministral-8b-2512,,global
+mistral/mistral-large-3,Mistral Large 3,mistral,True,True,,,0.7398,2.2193,1.1096,vercel,1.1096,vercel,mistral,,,,,,,,,,,mistral/mistral-large-3,mistralai/mistral-large-2512,,global
+mistral/mistral-nemo,Mistral Nemo 12B,mistral,True,True,,,0.0429,0.0444,0.0433,vercel,0.0264,openrouter,Io Net,,,,,,,,,,,mistral/mistral-nemo,mistralai/mistral-nemo,,global
+mistralai/devstral-2512,Devstral 2 2512,mistral,True,True,,,0.5918,2.959,1.1836,openrouter,1.1836,openrouter,Mistral,,,,,,,,,,,,mistralai/devstral-2512,,global
+mistralai/mistral-large,Mistral Large,mistral,True,False,,,2.959,8.8771,4.4385,openrouter,4.4385,openrouter,Mistral,,,,,,,,,,,,mistralai/mistral-large,,global
+mistralai/mistral-large-2407,Mistral Large 2407,mistral,True,True,,,2.959,8.8771,4.4385,openrouter,4.4385,openrouter,Mistral,,,,,,,,,,,,mistralai/mistral-large-2407,,global
+mistralai/mistral-medium-3,Mistral Medium 3,mistral,True,False,,,0.5918,2.959,1.1836,openrouter,1.1836,openrouter,Mistral,,,,,,,,,,,,mistralai/mistral-medium-3,,global
+mistralai/mistral-medium-3.1,Mistral Medium 3.1,mistral,True,False,,,0.5918,2.959,1.1836,openrouter,1.1836,openrouter,Mistral,,,,,,,,,,,,mistralai/mistral-medium-3.1,,global
+mistralai/mistral-saba,Saba,mistral,True,False,,,0.2959,0.8877,0.4439,openrouter,0.4439,openrouter,Mistral,,,,,,,,,,,,mistralai/mistral-saba,,global
+mistralai/mistral-small-24b-instruct-2501,Mistral Small 3,mistral,True,True,,,0.074,0.1184,0.0851,openrouter,0.0851,openrouter,DeepInfra,,,,,,,,,,,,mistralai/mistral-small-24b-instruct-2501,,global
+mistralai/mistral-small-3.1-24b-instruct,Mistral Small 3.1 24B,mistral,True,True,,,0.5193,0.8211,0.5948,openrouter,0.5948,openrouter,Cloudflare,,,,,,,,,,,,mistralai/mistral-small-3.1-24b-instruct,,global
+mistralai/mistral-small-3.2-24b-instruct,Mistral Small 3.2 24B,mistral,True,True,,,0.148,0.4439,0.2219,openrouter,0.1572,openrouter,DeepInfra,,,,,,,,,,,,mistralai/mistral-small-3.2-24b-instruct,,global
+mistralai/mixtral-8x22b-instruct,Mixtral 8x22B Instruct,mistral,True,True,,,2.959,8.8771,4.4385,openrouter,4.4385,openrouter,Mistral,,,,,,,,,,,,mistralai/mixtral-8x22b-instruct,,global
+mistralai/voxtral-small-24b-2507,Voxtral Small 24B 2507,mistral,True,True,,,0.148,0.4439,0.2219,openrouter,0.2219,openrouter,Mistral,,,,,,,,,,,,mistralai/voxtral-small-24b-2507,,global
+mixedbread/toast-1,Toast 1,mixedbread,True,,,,0.4439,1.0652,0.5992,vercel,0.5992,vercel,mixedbread,,,,,,,,,,,mixedbread/toast-1,,,global
+moondream/moondream3-preview,Moondream 3 Preview,moondream,True,True,,,0.4439,3.6988,1.2576,openrouter,1.2576,openrouter,PrimeIntellect,,,,,,,,,,,,moondream/moondream3-preview,,global
+moondream/moondream3.1-9b-a2b,Moondream 3.1,moondream,True,True,,,0.4439,3.6988,1.2576,openrouter,1.2576,openrouter,PrimeIntellect,,,,,,,,,,,,moondream/moondream3.1-9b-a2b,,global
+moonshotai/kimi-k2,Kimi K2 Instruct,moonshotai,True,True,,,0.8433,3.4029,1.4832,vercel,1.4832,vercel,novita,,,,,,,,,,,moonshotai/kimi-k2,moonshotai/kimi-k2,,global
+moonshotai/kimi-k2-0905,Kimi K2 0905,moonshotai,True,True,,,0.8877,3.6988,1.5905,openrouter,1.5905,openrouter,Novita,,,,,,,,,,,,moonshotai/kimi-k2-0905,,global
+moonshotai/kimi-k2-thinking,Kimi K2 Thinking,moonshotai,True,True,,,0.8877,3.6988,1.5905,openrouter,1.5905,openrouter,Novita,,,,,,,,,,,,moonshotai/kimi-k2-thinking,,global
+moonshotai/kimi-k2.5,Kimi K2.5,moonshotai,True,True,,,0.8877,4.4385,1.7754,vercel,1.6866,openrouter,Novita,1.4684,AtlasCloud,int4,,,,,,,,moonshotai/kimi-k2.5,moonshotai/kimi-k2.5,,global
+moonshotai/kimi-k2.6,Kimi K2.6,moonshotai,True,True,,,1.4055,5.918,2.5337,vercel,1.5202,openrouter,DigitalOcean,1.0388,Baidu,fp4,,,,,,,,moonshotai/kimi-k2.6,moonshotai/kimi-k2.6,,global
+moonshotai/kimi-k2.7-code,Kimi K2.7 Code,moonshotai,True,True,,,1.4055,5.918,2.5337,vercel,1.9002,openrouter,StreamLake,1.7754,CoreWeave,int4,,,,,,,,moonshotai/kimi-k2.7-code,moonshotai/kimi-k2.7-code,,global
+moonshotai/kimi-k2.7-code-highspeed,Kimi K2.7 Code High Speed,moonshotai,True,,,,2.8111,11.8361,5.0673,vercel,5.0673,vercel,moonshotai,,,,,,,,,,,moonshotai/kimi-k2.7-code-highspeed,,,global
+moonshotai/kimi-k3-fast,Kimi K3 Fast,moonshotai,True,,,,8.8771,33.2889,14.98,vercel,13.3156,vercel,fireworks,,,,,,,,,,,moonshotai/kimi-k3-fast,,,global
+moonshotai/kimi-k3.1-pro-highspeed,Kimi K3.1 Pro Highspeed,moonshotai,True,,,,5.918,29.5902,11.8361,vercel,11.8361,vercel,bedrock,,,,,,,,,,,moonshotai/kimi-k3.1-pro-highspeed,,,global
+morph/morph-v3-fast,Morph V3 Fast,morph,True,False,,,1.1836,1.7754,1.3316,vercel,1.3316,vercel,morph,,,,,,,,,,,morph/morph-v3-fast,morph/morph-v3-fast,,global
+morph/morph-v3-large,Morph V3 Large,morph,True,False,,,1.3316,2.8111,1.7014,vercel,1.7014,vercel,morph,,,,,,,,,,,morph/morph-v3-large,morph/morph-v3-large,,global
+motif-technologies/motif-3,Motif 3,motif-technologies,True,True,,,0.4439,1.7754,0.7767,openrouter,0.7767,openrouter,KT,,,,,,,,,,,,motif-technologies/motif-3,,global
+nex-agi/nex-n2.5-mini,Nex-N2.5-Mini,nex-agi,True,True,,,0.037,0.148,0.0647,openrouter,0.0647,openrouter,,,,,,,,,,,,,nex-agi/nex-n2.5-mini,,global
+nex-agi/nex-n2.5-pro,Nex-N2.5-Pro,nex-agi,True,True,,,0.111,0.3699,0.1757,openrouter,0.1757,openrouter,Nex AGI,,,,,,,,,,,,nex-agi/nex-n2.5-pro,,global
+nex-agi/nex-n2.6,Nex-N2.6,nex-agi,True,True,,,0.2219,0.7398,0.3514,openrouter,0.2811,openrouter,Nex AGI,,,,,,,,,,,,nex-agi/nex-n2.6,,global
+nousresearch/hermes-4-405b,Hermes 4 405B,nousresearch,True,True,,,1.4795,4.4385,2.2193,openrouter,2.2193,openrouter,Nebius,,,,,,,,,,,,nousresearch/hermes-4-405b,,global
+nvidia/nemotron-3-nano-30b-a3b,Nemotron 3 Nano 30B A3B,nvidia,True,True,,,0.0888,0.3551,0.1553,openrouter,0.1553,openrouter,Nebius,,,,,,,,,,,,nvidia/nemotron-3-nano-30b-a3b,,global
+nvidia/nemotron-3-super-120b-a12b,NVIDIA Nemotron 3 Super 120B A12B,nvidia,True,True,,,0.2219,0.9617,0.4069,vercel,0.2312,openrouter,DeepInfra,,,,,,,,,,,nvidia/nemotron-3-super-120b-a12b,nvidia/nemotron-3-super-120b-a12b,,global
+nvidia/nemotron-3.5-content-safety,Nemotron 3.5 Content Safety,nvidia,True,True,,,0.2959,0.2959,0.2959,openrouter,0.2959,openrouter,DeepInfra,,,,,,,,,,,,nvidia/nemotron-3.5-content-safety,,global
+nvidia/nemotron-3.5-lightning-free,Nemotron 3.5 Lightning Free,nvidia,True,,,,0.0,0.0,0.0,vercel,,,,,,,,,,,,,,nvidia/nemotron-3.5-lightning-free,,,global
+nvidia/nemotron-nano-12b-v2-vl,Nvidia Nemotron Nano 12B V2 VL,nvidia,True,,,,0.2959,0.8877,0.4439,vercel,0.4439,vercel,bedrock,,,,,,,,,,,nvidia/nemotron-nano-12b-v2-vl,,,global
+nvidia/nemotron-nano-9b-v2,Nvidia Nemotron Nano 9B V2,nvidia,True,,,,0.0888,0.3403,0.1516,vercel,0.1516,vercel,bedrock,,,,,,,,,,,nvidia/nemotron-nano-9b-v2,,,global
+openai/gpt-3.5-turbo-0613,GPT-3.5 Turbo (older v0613),openai,True,False,,,1.4795,2.959,1.8494,openrouter,1.8494,openrouter,Azure,,,,,,,,,,,,openai/gpt-3.5-turbo-0613,,global
+openai/gpt-3.5-turbo-16k,GPT-3.5 Turbo 16k,openai,True,False,,,4.4385,5.918,4.8084,openrouter,4.8084,openrouter,Azure,,,,,,,,,,,,openai/gpt-3.5-turbo-16k,,global
+openai/gpt-4,GPT-4,openai,True,False,,,44.3853,88.7705,55.4816,openrouter,55.4816,openrouter,Azure,,,,,,,,,,,,openai/gpt-4,,global
+openai/gpt-4.1,GPT-4.1,openai,True,False,,,2.959,11.8361,5.1783,vercel,5.1783,vercel,azure,,,,,,,,,,,openai/gpt-4.1,openai/gpt-4.1,,global
+openai/gpt-4.1-batch,GPT-4.1 (Batch),openai,True,,,,1.4795,5.918,2.5891,vercel,2.5891,vercel,,,,,,,,,,,,openai/gpt-4.1-batch,,,global
+openai/gpt-4.1-fast,GPT-4.1 (Fast),openai,True,,,,5.1783,20.7131,9.062,vercel,5.1783,vercel,openai,,,,,,,,,,,openai/gpt-4.1-fast,,,global
+openai/gpt-4.1-mini,GPT-4.1 mini,openai,True,False,,,0.5918,2.3672,1.0357,vercel,1.0357,vercel,azure,,,,,,,,,,,openai/gpt-4.1-mini,openai/gpt-4.1-mini,,global
+openai/gpt-4.1-mini-batch,GPT-4.1 mini (Batch),openai,True,,,,0.2959,1.1836,0.5178,vercel,0.5178,vercel,,,,,,,,,,,,openai/gpt-4.1-mini-batch,,,global
+openai/gpt-4.1-mini-fast,GPT-4.1 mini (Fast),openai,True,,,,1.0357,4.1426,1.8124,vercel,1.0357,vercel,openai,,,,,,,,,,,openai/gpt-4.1-mini-fast,,,global
+openai/gpt-4.1-nano,GPT-4.1 nano,openai,True,False,,,0.148,0.5918,0.2589,vercel,0.2589,vercel,azure,,,,,,,,,,,openai/gpt-4.1-nano,openai/gpt-4.1-nano,,global
+openai/gpt-4o,GPT-4o,openai,True,False,,,3.6988,14.7951,6.4729,vercel,6.4729,vercel,azure,,,,,,,,,,,openai/gpt-4o,openai/gpt-4o,,global
+openai/gpt-4o-2024-05-13,GPT-4o (2024-05-13),openai,True,False,,,7.3975,22.1926,11.0963,openrouter,11.0963,openrouter,Azure,,,,,,,,,,,,openai/gpt-4o-2024-05-13,,global
+openai/gpt-4o-2024-08-06,GPT-4o (2024-08-06),openai,True,False,,,3.6988,14.7951,6.4729,openrouter,6.4729,openrouter,Azure,,,,,,,,,,,,openai/gpt-4o-2024-08-06,,global
+openai/gpt-4o-2024-11-20,GPT-4o (2024-11-20),openai,True,False,,,3.6988,14.7951,6.4729,openrouter,6.4729,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-4o-2024-11-20,,global
+openai/gpt-4o-batch,GPT-4o (Batch),openai,True,,,,1.8494,7.3975,3.2364,vercel,3.2364,vercel,,,,,,,,,,,,openai/gpt-4o-batch,,,global
+openai/gpt-4o-fast,GPT-4o (Fast),openai,True,,,,6.2879,25.1516,11.0038,vercel,6.4729,vercel,openai,,,,,,,,,,,openai/gpt-4o-fast,,,global
+openai/gpt-4o-mini,GPT-4o mini,openai,True,False,,,0.2219,0.8877,0.3884,vercel,0.3884,vercel,azure,,,,,,,,,,,openai/gpt-4o-mini,openai/gpt-4o-mini,,global
+openai/gpt-4o-mini-2024-07-18,GPT-4o-mini (2024-07-18),openai,True,False,,,0.2219,0.8877,0.3884,openrouter,0.3884,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-4o-mini-2024-07-18,,global
+openai/gpt-4o-mini-batch,GPT-4o mini (Batch),openai,True,,,,0.111,0.4439,0.1942,vercel,0.1942,vercel,,,,,,,,,,,,openai/gpt-4o-mini-batch,,,global
+openai/gpt-4o-mini-fast,GPT-4o mini (Fast),openai,True,,,,0.3699,1.4795,0.6473,vercel,0.3884,vercel,openai,,,,,,,,,,,openai/gpt-4o-mini-fast,,,global
+openai/gpt-5,GPT-5,openai,True,False,,,1.8494,14.7951,5.0858,vercel,5.0858,vercel,azure,,,,,,,,,,,openai/gpt-5,openai/gpt-5,,global
+openai/gpt-5-batch,GPT-5 (Batch),openai,True,,,,0.9247,7.3975,2.5429,vercel,2.5429,vercel,,,,,,,,,,,,openai/gpt-5-batch,,,global
+openai/gpt-5-codex,GPT-5-Codex,openai,True,,,,1.8494,14.7951,5.0858,vercel,5.0858,vercel,azure,,,,,,,,,,,openai/gpt-5-codex,,,global
+openai/gpt-5-fast,GPT-5 (Fast),openai,True,,,,3.6988,29.5902,10.1716,vercel,5.0858,vercel,openai,,,,,,,,,,,openai/gpt-5-fast,,,global
+openai/gpt-5-image,GPT-5 Image,openai,True,False,,,14.7951,14.7951,14.7951,openrouter,14.7951,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-5-image,,global
+openai/gpt-5-image-mini,GPT-5 Image Mini,openai,True,False,,,3.6988,2.959,3.5138,openrouter,3.5138,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-5-image-mini,,global
+openai/gpt-5-mini,GPT-5 mini,openai,True,False,,,0.3699,2.959,1.0172,vercel,1.0172,vercel,azure,,,,,,,,,,,openai/gpt-5-mini,openai/gpt-5-mini,,global
+openai/gpt-5-mini-batch,GPT-5 mini (Batch),openai,True,,,,0.1849,1.4795,0.5086,vercel,0.5086,vercel,,,,,,,,,,,,openai/gpt-5-mini-batch,,,global
+openai/gpt-5-mini-fast,GPT-5 mini (Fast),openai,True,,,,0.6658,5.3262,1.8309,vercel,1.0172,vercel,openai,,,,,,,,,,,openai/gpt-5-mini-fast,,,global
+openai/gpt-5-nano,GPT-5 nano,openai,True,False,,,0.074,0.5918,0.2034,vercel,0.2034,vercel,azure,,,,,,,,,,,openai/gpt-5-nano,openai/gpt-5-nano,,global
+openai/gpt-5-nano-batch,GPT-5 nano (Batch),openai,True,,,,0.037,0.2959,0.1017,vercel,0.1017,vercel,,,,,,,,,,,,openai/gpt-5-nano-batch,,,global
+openai/gpt-5-pro,GPT-5 pro,openai,True,False,,,22.1926,177.5411,61.0297,vercel,61.0297,vercel,openai,,,,,,,,,,,openai/gpt-5-pro,openai/gpt-5-pro,,global
+openai/gpt-5-pro-batch,GPT-5 pro (Batch),openai,True,,,,11.0963,88.7705,30.5149,vercel,30.5149,vercel,,,,,,,,,,,,openai/gpt-5-pro-batch,,,global
+openai/gpt-5.1,GPT-5.1,openai,True,False,,,1.8494,14.7951,5.0858,openrouter,5.0858,openrouter,Azure,,,,,,,,,,,,openai/gpt-5.1,,global
+openai/gpt-5.1-codex,GPT-5.1-Codex,openai,True,False,,,1.8494,14.7951,5.0858,vercel,5.0858,vercel,azure,,,,,,,,,,,openai/gpt-5.1-codex,openai/gpt-5.1-codex,,global
+openai/gpt-5.1-codex-max,GPT 5.1 Codex Max,openai,True,False,,,1.8494,14.7951,5.0858,vercel,5.0858,vercel,azure,,,,,,,,,,,openai/gpt-5.1-codex-max,openai/gpt-5.1-codex-max,,global
+openai/gpt-5.1-codex-mini,GPT 5.1 Codex Mini,openai,True,False,,,0.3699,2.959,1.0172,vercel,1.0172,vercel,azure,,,,,,,,,,,openai/gpt-5.1-codex-mini,openai/gpt-5.1-codex-mini,,global
+openai/gpt-5.1-thinking,GPT 5.1 Thinking,openai,True,,,,1.8494,14.7951,5.0858,vercel,5.0858,vercel,azure,,,,,,,,,,,openai/gpt-5.1-thinking,,,global
+openai/gpt-5.1-thinking-fast,GPT 5.1 Thinking (Fast),openai,True,,,,3.6988,29.5902,10.1716,vercel,5.0858,vercel,openai,,,,,,,,,,,openai/gpt-5.1-thinking-fast,,,global
+openai/gpt-5.2,GPT 5.2,openai,True,False,,,2.5891,20.7131,7.1201,vercel,7.1201,vercel,azure,,,,,,,,,,,openai/gpt-5.2,openai/gpt-5.2,,global
+openai/gpt-5.2-batch,GPT 5.2 (Batch),openai,True,,,,1.2946,10.3566,3.5601,vercel,3.5601,vercel,,,,,,,,,,,,openai/gpt-5.2-batch,,,global
+openai/gpt-5.2-chat,GPT-5.2 Chat,openai,True,False,,,2.5891,20.7131,7.1201,openrouter,7.1201,openrouter,Azure,,,,,,,,,,,,openai/gpt-5.2-chat,,global
+openai/gpt-5.2-codex,GPT 5.2 Codex,openai,True,False,,,2.5891,20.7131,7.1201,vercel,7.1201,vercel,azure,,,,,,,,,,,openai/gpt-5.2-codex,openai/gpt-5.2-codex,,global
+openai/gpt-5.2-fast,GPT 5.2 (Fast),openai,True,,,,5.1783,41.4262,14.2403,vercel,7.1201,vercel,openai,,,,,,,,,,,openai/gpt-5.2-fast,,,global
+openai/gpt-5.2-pro,GPT 5.2 ,openai,True,False,,,31.0697,248.5575,85.4416,vercel,85.4416,vercel,openai,,,,,,,,,,,openai/gpt-5.2-pro,openai/gpt-5.2-pro,,global
+openai/gpt-5.3-codex,GPT 5.3 Codex,openai,True,False,,,2.5891,20.7131,7.1201,vercel,7.1201,vercel,azure,,,,,,,,,,,openai/gpt-5.3-codex,openai/gpt-5.3-codex,,global
+openai/gpt-5.3-codex-fast,GPT 5.3 Codex (Fast),openai,True,,,,5.1783,41.4262,14.2403,vercel,7.1201,vercel,openai,,,,,,,,,,,openai/gpt-5.3-codex-fast,,,global
+openai/gpt-5.4,GPT 5.4,openai,True,False,,,3.6988,22.1926,8.3222,vercel,8.3222,vercel,azure,,,,,,,,,,,openai/gpt-5.4,openai/gpt-5.4,,global
+openai/gpt-5.4-batch,GPT 5.4 (Batch),openai,True,,,,1.8494,11.0963,4.1611,vercel,4.1611,vercel,,,,,,,,,,,,openai/gpt-5.4-batch,,,global
+openai/gpt-5.4-fast,GPT 5.4 (Fast),openai,True,,,,7.3975,44.3853,16.6445,vercel,8.3222,vercel,openai,,,,,,,,,,,openai/gpt-5.4-fast,,,global
+openai/gpt-5.4-image-2,GPT-5.4 Image 2,openai,True,False,,,11.8361,22.1926,14.4252,openrouter,14.4252,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-5.4-image-2,,global
+openai/gpt-5.4-mini,GPT 5.4 Mini,openai,True,False,,,1.1096,6.6578,2.4967,vercel,2.4967,vercel,azure,,,,,,,,,,,openai/gpt-5.4-mini,openai/gpt-5.4-mini,,global
+openai/gpt-5.4-mini-batch,GPT 5.4 Mini (Batch),openai,True,,,,0.5548,3.3289,1.2483,vercel,1.2483,vercel,,,,,,,,,,,,openai/gpt-5.4-mini-batch,,,global
+openai/gpt-5.4-mini-fast,GPT 5.4 Mini (Fast),openai,True,,,,2.2193,13.3156,4.9933,vercel,2.4967,vercel,openai,,,,,,,,,,,openai/gpt-5.4-mini-fast,,,global
+openai/gpt-5.4-nano,GPT 5.4 Nano,openai,True,False,,,0.2959,1.8494,0.6843,vercel,0.6843,vercel,azure,,,,,,,,,,,openai/gpt-5.4-nano,openai/gpt-5.4-nano,,global
+openai/gpt-5.4-nano-batch,GPT 5.4 Nano (Batch),openai,True,,,,0.148,0.9247,0.3421,vercel,0.3421,vercel,,,,,,,,,,,,openai/gpt-5.4-nano-batch,,,global
+openai/gpt-5.4-pro,GPT 5.4 Pro,openai,True,False,,,44.3853,266.3116,99.8668,vercel,99.8668,vercel,azure,,,,,,,,,,,openai/gpt-5.4-pro,openai/gpt-5.4-pro,,global
+openai/gpt-5.5,GPT 5.5,openai,True,False,,,7.3975,44.3853,16.6445,vercel,16.6445,vercel,azure,,,,,,,,,,,openai/gpt-5.5,openai/gpt-5.5,,global
+openai/gpt-5.5-batch,GPT 5.5 (Batch),openai,True,,,,3.6988,22.1926,8.3222,vercel,8.3222,vercel,,,,,,,,,,,,openai/gpt-5.5-batch,,,global
+openai/gpt-5.5-fast,GPT 5.5 (Fast),openai,True,,,,18.4939,110.9632,41.6112,vercel,16.6445,vercel,openai,,,,,,,,,,,openai/gpt-5.5-fast,,,global
+openai/gpt-5.5-pro,GPT 5.5 Pro,openai,True,False,,,44.3853,266.3116,99.8668,vercel,99.8668,vercel,openai,,,,,,,,,,,openai/gpt-5.5-pro,openai/gpt-5.5-pro,,global
+openai/gpt-5.5-pro-batch,GPT 5.5 Pro (Batch),openai,True,,,,22.1926,133.1558,49.9334,vercel,49.9334,vercel,,,,,,,,,,,,openai/gpt-5.5-pro-batch,,,global
+openai/gpt-5.6-luna-batch,GPT 5.6 Luna (Batch),openai,True,,,,0.148,0.8877,0.3329,vercel,0.3329,vercel,,,,,,,,,,,,openai/gpt-5.6-luna-batch,,,global
+openai/gpt-5.6-luna-fast,GPT 5.6 Luna (Fast),openai,True,,,,0.5918,3.5508,1.3316,vercel,0.6658,vercel,openai,,,,,,,,,,,openai/gpt-5.6-luna-fast,,,global
+openai/gpt-5.6-luna-pro,GPT-5.6 Luna Pro,openai,True,False,,,0.2959,1.7754,0.6658,openrouter,0.6658,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-5.6-luna-pro,,global
+openai/gpt-5.6-sol,GPT 5.6 Sol,openai,True,False,,,5.918,29.5902,11.8361,vercel,11.8361,vercel,bedrock,,,,,,,,,,,openai/gpt-5.6-sol,openai/gpt-5.6-sol,,global
+openai/gpt-5.6-sol-batch,GPT 5.6 Sol (Batch),openai,True,,,,2.959,14.7951,5.918,vercel,5.918,vercel,,,,,,,,,,,,openai/gpt-5.6-sol-batch,,,global
+openai/gpt-5.6-sol-fast,GPT 5.6 Sol (Fast),openai,True,,,,11.8361,59.1804,23.6721,vercel,11.8361,vercel,openai,,,,,,,,,,,openai/gpt-5.6-sol-fast,,,global
+openai/gpt-5.6-sol-pro,GPT-5.6 Sol Pro,openai,True,False,,,5.918,29.5902,11.8361,openrouter,11.8361,openrouter,Azure,,,,,,,,,,,,openai/gpt-5.6-sol-pro,,global
+openai/gpt-5.6-terra-batch,GPT 5.6 Terra (Batch),openai,True,,,,1.4795,8.8771,3.3289,vercel,3.3289,vercel,,,,,,,,,,,,openai/gpt-5.6-terra-batch,,,global
+openai/gpt-5.6-terra-fast,GPT 5.6 Terra (Fast),openai,True,,,,5.918,35.5082,13.3156,vercel,6.6578,vercel,openai,,,,,,,,,,,openai/gpt-5.6-terra-fast,,,global
+openai/gpt-5.6-terra-pro,GPT-5.6 Terra Pro,openai,True,False,,,2.959,17.7541,6.6578,openrouter,6.6578,openrouter,Azure,,,,,,,,,,,,openai/gpt-5.6-terra-pro,,global
+openai/gpt-6-astra-batch,GPT-6 Astra (Batch),openai,True,,,,7.3975,36.9877,14.7951,vercel,14.7951,vercel,,,,,,,,,,,,openai/gpt-6-astra-batch,,,global
+openai/gpt-6-astra-fast,GPT-6 Astra (Fast),openai,True,,,,29.5902,147.9509,59.1804,vercel,29.5902,vercel,openai,,,,,,,,,,,openai/gpt-6-astra-fast,,,global
+openai/gpt-6-astra-pro,GPT-6 Astra Pro,openai,True,False,,,14.7951,73.9754,29.5902,openrouter,29.5902,openrouter,Azure,,,,,,,,,,,,openai/gpt-6-astra-pro,,global
+openai/gpt-6-luna-batch,GPT-6 Luna (Batch),openai,True,,,,0.074,0.3699,0.148,vercel,0.148,vercel,,,,,,,,,,,,openai/gpt-6-luna-batch,,,global
+openai/gpt-6-luna-fast,GPT-6 Luna (Fast),openai,True,,,,0.2959,1.4795,0.5918,vercel,0.2959,vercel,openai,,,,,,,,,,,openai/gpt-6-luna-fast,,,global
+openai/gpt-6-luna-pro,GPT-6 Luna Pro,openai,True,False,,,0.148,0.7398,0.2959,openrouter,0.2959,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-6-luna-pro,,global
+openai/gpt-6-sol-batch,GPT-6 Sol (Batch),openai,True,,,,1.4795,7.3975,2.959,vercel,2.959,vercel,,,,,,,,,,,,openai/gpt-6-sol-batch,,,global
+openai/gpt-6-sol-fast,GPT-6 Sol (Fast),openai,True,,,,5.918,29.5902,11.8361,vercel,5.918,vercel,openai,,,,,,,,,,,openai/gpt-6-sol-fast,,,global
+openai/gpt-6-sol-pro,GPT-6 Sol Pro,openai,True,False,,,2.959,14.7951,5.918,openrouter,5.918,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-6-sol-pro,,global
+openai/gpt-6.1-sol-batch,GPT-6.1 Sol (Batch),openai,True,,,,1.4795,7.3975,2.959,vercel,2.959,vercel,,,,,,,,,,,,openai/gpt-6.1-sol-batch,,,global
+openai/gpt-6.1-sol-fast,GPT-6.1 Sol (Fast),openai,True,,,,5.918,29.5902,11.8361,vercel,5.918,vercel,openai,,,,,,,,,,,openai/gpt-6.1-sol-fast,,,global
+openai/gpt-6.1-sol-pro,GPT-6.1 Sol Pro,openai,True,False,,,2.959,14.7951,5.918,openrouter,5.918,openrouter,Azure,,,,,,,,,,,,openai/gpt-6.1-sol-pro,,global
+openai/gpt-6.1-terra-fast,GPT-6.1 Terra (Fast),openai,True,,,,2.959,14.7951,5.918,vercel,2.959,vercel,openai,,,,,,,,,,,openai/gpt-6.1-terra-fast,,,global
+openai/gpt-6.1-terra-pro,GPT-6.1 Terra Pro,openai,True,False,,,1.4795,7.3975,2.959,openrouter,2.959,openrouter,Azure,,,,,,,,,,,,openai/gpt-6.1-terra-pro,,global
+openai/gpt-audio,GPT Audio,openai,True,False,,,3.6988,14.7951,6.4729,openrouter,6.4729,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-audio,,global
+openai/gpt-audio-mini,GPT Audio Mini,openai,True,False,,,0.8877,3.5508,1.5535,openrouter,1.5535,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-audio-mini,,global
+openai/gpt-chat-latest,GPT Chat Latest,openai,True,False,,,7.3975,44.3853,16.6445,openrouter,16.6445,openrouter,OpenAI,,,,,,,,,,,,openai/gpt-chat-latest,,global
+openai/gpt-oss-20b,GPT OSS 20B,openai,True,True,,,0.0444,0.2071,0.0851,vercel,0.0533,openrouter,Darkbloom,0.0333,PrimeIntellect,fp4,,,,,,,,openai/gpt-oss-20b,openai/gpt-oss-20b,,global
+openai/gpt-oss-safeguard-120b,GPT OSS Safeguard 120B,openai,True,,,,0.2219,0.8877,0.3884,vercel,0.3884,vercel,bedrock,,,,,,,,,,,openai/gpt-oss-safeguard-120b,,,global
+openai/gpt-oss-safeguard-20b,GPT OSS Safeguard 20B,openai,True,True,,,0.1036,0.2959,0.1516,vercel,0.1516,vercel,bedrock,,,,,,,,,,,openai/gpt-oss-safeguard-20b,openai/gpt-oss-safeguard-20b,,global
+openai/o1,o1,openai,True,,,,22.1926,88.7705,38.8371,vercel,38.8371,vercel,azure,,,,,,,,,,,openai/o1,,,global
+openai/o3,o3,openai,True,False,,,2.959,11.8361,5.1783,vercel,5.1783,vercel,openai,,,,,,,,,,,openai/o3,openai/o3,,global
+openai/o3-fast,o3 (Fast),openai,True,,,,5.1783,20.7131,9.062,vercel,5.1783,vercel,openai,,,,,,,,,,,openai/o3-fast,,,global
+openai/o3-mini,o3-mini,openai,True,,,,1.6275,6.5098,2.8481,vercel,2.8481,vercel,azure,,,,,,,,,,,openai/o3-mini,,,global
+openai/o3-pro,o3 Pro,openai,True,False,,,29.5902,118.3607,51.7828,vercel,51.7828,vercel,openai,,,,,,,,,,,openai/o3-pro,openai/o3-pro,,global
+openai/o4-mini,o4-mini,openai,True,,,,1.6275,6.5098,2.8481,vercel,2.8481,vercel,azure,,,,,,,,,,,openai/o4-mini,,,global
+paperinstruments/ultramarine-1-flash,Ultramarine 1 Flash,paperinstruments,True,,,,0.2219,0.7398,0.3514,vercel,0.3514,vercel,fireworks,,,,,,,,,,,paperinstruments/ultramarine-1-flash,,,global
+particle-ai/particle-1,Particle-1,particle-ai,True,False,,,0.0888,0.7398,0.2515,openrouter,0.2515,openrouter,Particle AI,,,,,,,,,,,,particle-ai/particle-1,,global
+particle/particle-1,Particle-1,particle,True,,,,0.1849,0.7398,0.3236,vercel,0.3236,vercel,particle,,,,,,,,,,,particle/particle-1,,,global
+perceptron/perceptron-mk1,Perceptron Mk1,perceptron,True,False,,,0.2219,2.2193,0.7213,openrouter,0.7213,openrouter,Perceptron,,,,,,,,,,,,perceptron/perceptron-mk1,,global
+perceptron/perceptron-mk1.5,Perceptron Mk1.5,perceptron,True,False,,,0.2219,2.2193,0.7213,openrouter,0.7213,openrouter,Perceptron,,,,,,,,,,,,perceptron/perceptron-mk1.5,,global
+perplexity/sonar,Sonar,perplexity,True,False,,,0.3699,3.6988,1.2021,vercel,1.2021,vercel,perplexity,,,,,,,,,,,perplexity/sonar,perplexity/sonar,,global
+perplexity/sonar-deep-research,Sonar Deep Research,perplexity,True,False,,,2.959,11.8361,5.1783,openrouter,5.1783,openrouter,Perplexity,,,,,,,,,,,,perplexity/sonar-deep-research,,global
+perplexity/sonar-pro,Sonar Pro,perplexity,True,False,,,4.4385,22.1926,8.8771,openrouter,8.8771,openrouter,Perplexity,,,,,,,,,,,,perplexity/sonar-pro,,global
+perplexity/sonar-pro-search,Sonar Pro Search,perplexity,True,False,,,4.4385,22.1926,8.8771,openrouter,8.8771,openrouter,Perplexity,,,,,,,,,,,,perplexity/sonar-pro-search,,global
+perplexity/sonar-reasoning-pro,Sonar Reasoning Pro,perplexity,True,False,,,2.959,11.8361,5.1783,openrouter,5.1783,openrouter,Perplexity,,,,,,,,,,,,perplexity/sonar-reasoning-pro,,global
+prism-ml/ternary-bonsai-2-27b,Ternary Bonsai 2 27B,prism-ml,True,True,,,0.111,0.7398,0.2682,openrouter,,,,0.2682,Darkbloom,int4,,,,,,,,,prism-ml/ternary-bonsai-2-27b,,global
+prism-ml/ternary-bonsai-2-9b,Ternary Bonsai 2 9B,prism-ml,True,True,,,0.1184,0.1923,0.1369,openrouter,,,,0.1369,Darkbloom,int4,,,,,,,,,prism-ml/ternary-bonsai-2-9b,,global
+quiverai/arrow-2,Arrow 2,quiverai,True,,,,5.918,29.5902,11.8361,vercel,11.8361,vercel,quiverai,,,,,,,,,,,quiverai/arrow-2,,,global
+quiverai/arrow-2-telos,Arrow 2 Telos,quiverai,True,,,,8.8771,44.3853,17.7541,vercel,17.7541,vercel,quiverai,,,,,,,,,,,quiverai/arrow-2-telos,,,global
+qwen/qwen-2.5-72b-instruct,Qwen2.5 72B Instruct,alibaba,True,True,,,0.5326,0.5918,0.5474,openrouter,0.5474,openrouter,DeepInfra,,,,,,,,,,,,qwen/qwen-2.5-72b-instruct,,global
+qwen/qwen-2.5-coder-32b-instruct,Qwen2.5 Coder 32B Instruct,alibaba,True,True,,,0.9765,1.4795,1.1022,openrouter,1.1022,openrouter,Cloudflare,,,,,,,,,,,,qwen/qwen-2.5-coder-32b-instruct,,global
+qwen/qwen-plus,Qwen-Plus,alibaba,True,False,,,0.3847,1.154,0.577,openrouter,0.577,openrouter,Alibaba,,,,,,,,,,,,qwen/qwen-plus,,global
+qwen/qwen2.5-vl-72b-instruct,Qwen2.5 VL 72B Instruct,alibaba,True,True,,,1.1836,1.4795,1.2576,openrouter,1.2576,openrouter,Parasail,,,,,,,,,,,,qwen/qwen2.5-vl-72b-instruct,,global
+qwen/qwen3-235b-a22b-2507,Qwen3 235B A22B Instruct 2507,alibaba,True,True,,,0.2071,1.1836,0.4513,openrouter,0.4439,openrouter,Venice,,,,,,,,,,,,qwen/qwen3-235b-a22b-2507,,global
+qwen/qwen3-235b-a22b-thinking-2507,Qwen3 235B A22B Thinking 2507,alibaba,True,True,,,0.6658,5.1783,1.7939,openrouter,1.7939,openrouter,Venice,,,,,,,,,,,,qwen/qwen3-235b-a22b-thinking-2507,,global
+qwen/qwen3-30b-a3b-instruct-2507,Qwen3 30B A3B Instruct 2507,alibaba,True,True,,,0.148,0.4439,0.2219,openrouter,0.2108,openrouter,DekaLLM,,,,,,,,,,,,qwen/qwen3-30b-a3b-instruct-2507,,global
+qwen/qwen3-coder-flash,Qwen3 Coder Flash,alibaba,True,False,,,0.2885,1.4425,0.577,openrouter,0.577,openrouter,Alibaba,,,,,,,,,,,,qwen/qwen3-coder-flash,,global
+qwen/qwen3-vl-235b-a22b-instruct,Qwen3 VL 235B A22B Instruct,alibaba,True,True,,,0.3107,2.8111,0.9358,openrouter,0.5474,openrouter,DeepInfra,,,,,,,,,,,,qwen/qwen3-vl-235b-a22b-instruct,,global
+qwen/qwen3-vl-30b-a3b-instruct,Qwen3 VL 30B A3B Instruct,alibaba,True,True,,,0.2219,0.8877,0.3884,openrouter,0.3884,openrouter,DeepInfra,,,,,,,,,,,,qwen/qwen3-vl-30b-a3b-instruct,,global
+qwen/qwen3-vl-8b-instruct,Qwen3 VL 8B Instruct,alibaba,True,True,,,0.3699,1.1096,0.5548,openrouter,0.5548,openrouter,Parasail,,,,,,,,,,,,qwen/qwen3-vl-8b-instruct,,global
+qwen/qwen3.5-122b-a10b,Qwen3.5-122B-A10B,alibaba,True,True,,,0.3847,3.0774,1.0578,openrouter,1.0578,openrouter,SiliconFlow,,,,,,,,,,,,qwen/qwen3.5-122b-a10b,,global
+qwen/qwen3.5-27b,Qwen3.5-27B,alibaba,True,True,,,0.3847,3.8467,1.2502,openrouter,0.7934,openrouter,Alibaba,,,,,,,,,,,,qwen/qwen3.5-27b,,global
+qwen/qwen3.5-35b-a3b,Qwen3.5-35B-A3B,alibaba,True,True,,,0.2071,1.4795,0.5252,openrouter,0.5252,openrouter,DeepInfra,0.3495,Darkbloom,fp4,,,,,,,,,qwen/qwen3.5-35b-a3b,,global
+qwen/qwen3.5-397b-a17b,Qwen3.5 397B A17B,alibaba,True,True,,,0.6658,4.4385,1.609,openrouter,1.2983,openrouter,Alibaba,,,,,,,,,,,,qwen/qwen3.5-397b-a17b,,global
+qwen/qwen3.5-9b,Qwen3.5-9B,alibaba,True,True,,,0.2382,0.3492,0.2659,openrouter,0.1664,openrouter,SiliconFlow,0.1369,Darkbloom,fp4,,,,,,,,,qwen/qwen3.5-9b,,global
+qwen/qwen3.5-flash-02-23,Qwen3.5-Flash,alibaba,True,False,,,0.0962,0.3847,0.1683,openrouter,0.1683,openrouter,Alibaba,,,,,,,,,,,,qwen/qwen3.5-flash-02-23,,global
+qwen/qwen3.5-plus-02-15,Qwen3.5 Plus 2026-02-15,alibaba,True,False,,,0.3847,2.308,0.8655,openrouter,0.8655,openrouter,Alibaba,,,,,,,,,,,,qwen/qwen3.5-plus-02-15,,global
+qwen/qwen3.6-flash,Qwen3.6 Flash,alibaba,True,False,,,0.2774,1.6644,0.6242,openrouter,0.6242,openrouter,,,,,,,,,,,,,qwen/qwen3.6-flash,,global
+reflection/beam,Beam 1.0,reflection,True,,,,0.0,0.0,0.0,vercel,0.6473,vercel,nebius,,,,,,,,,,,reflection/beam,,,global
+reflection/beam-free,Beam 1.0 (Free),reflection,True,,,,0.0,0.0,0.0,vercel,,,,,,,,,,,,,,reflection/beam-free,,,global
+rekaai/reka-edge,Reka Edge,rekaai,True,True,,,0.148,0.148,0.148,openrouter,0.148,openrouter,Reka,,,,,,,,,,,,rekaai/reka-edge,,global
+rekaai/reka-flash-3,Reka Flash 3,rekaai,True,True,,,0.148,0.2959,0.1849,openrouter,0.1849,openrouter,Reka,,,,,,,,,,,,rekaai/reka-flash-3,,global
+relace/relace-apply-3,Relace Apply 3,relace,True,False,,,1.2576,1.8494,1.4055,openrouter,1.4055,openrouter,Relace,,,,,,,,,,,,relace/relace-apply-3,,global
+relace/relace-search,Relace Search,relace,True,False,,,1.4795,4.4385,2.2193,openrouter,2.2193,openrouter,Relace,,,,,,,,,,,,relace/relace-search,,global
+ricursiveai/ripple-65b-preview,Ripple 65B Preview,ricursiveai,True,True,,,0.148,0.4439,0.2219,openrouter,0.2219,openrouter,PrimeIntellect,,,,,,,,,,,,ricursiveai/ripple-65b-preview,,global
+sakana/fugu-max,Fugu Max,sakana,True,False,,,2.959,8.8771,4.4385,vercel,4.4385,vercel,sakana,,,,,,,,,,,sakana/fugu-max,sakana/fugu-max,,global
+sakana/fugu-ultra,Fugu Ultra,sakana,True,False,,,7.3975,44.3853,16.6445,vercel,16.6445,vercel,sakana,,,,,,,,,,,sakana/fugu-ultra,sakana/fugu-ultra,,global
+sakana/fugu-ultra-v2,Fugu Ultra v2,sakana,True,False,,,7.3975,44.3853,16.6445,vercel,16.6445,vercel,sakana,,,,,,,,,,,sakana/fugu-ultra-v2,sakana/fugu-ultra-v2,,global
+sakana/namazu,Sakana Namazu,sakana,True,,,,1.4055,5.918,2.5337,vercel,2.5337,vercel,sakana,,,,,,,,,,,sakana/namazu,,,global
+sakana/sakana-namazu,Sakana Namazu,sakana,True,False,,,1.4055,5.918,2.5337,openrouter,2.5337,openrouter,Sakana AI,,,,,,,,,,,,sakana/sakana-namazu,,global
+sao10k/l3-lunaris-8b,Llama 3 8B Lunaris,sao10k,True,True,,,0.0592,0.074,0.0629,openrouter,0.0629,openrouter,Parasail,,,,,,,,,,,,sao10k/l3-lunaris-8b,,global
+sao10k/l3.1-euryale-70b,Llama 3.1 Euryale 70B v2.2,sao10k,True,True,,,1.2576,1.2576,1.2576,openrouter,1.2576,openrouter,DeepInfra,,,,,,,,,,,,sao10k/l3.1-euryale-70b,,global
+scaledown/extract,Extract,scaledown,True,False,,,0.074,0.0,0.0555,openrouter,0.0444,openrouter,ScaleDown,,,,,,,,,,,,scaledown/extract,,global
+scaledown/scaledown-extract-1,Extract-1,scaledown,True,,,,0.074,0.0,0.0555,vercel,0.0555,vercel,scaledown,,,,,,,,,,,scaledown/scaledown-extract-1,,,global
+scaledown/scaledown-summarize-1,Summarize-1,scaledown,True,,,,0.074,0.0,0.0555,vercel,0.0555,vercel,scaledown,,,,,,,,,,,scaledown/scaledown-summarize-1,,,global
+scaledown/summarize,Summarize,scaledown,True,False,,,0.074,0.0,0.0555,openrouter,0.0444,openrouter,ScaleDown,,,,,,,,,,,,scaledown/summarize,,global
+spacexai/grok-4.20-multi-agent,Grok 4.20 Multi-Agent,xai,True,False,,,1.8494,3.6988,2.3117,vercel,2.3117,vercel,xai,,,,,,,,,,,spacexai/grok-4.20-multi-agent,x-ai/grok-4.20-multi-agent,,global
+spacexai/grok-4.20-multi-agent-batch,Grok 4.20 Multi-Agent (Batch),xai,True,,,,1.4795,2.959,1.8494,vercel,1.8494,vercel,,,,,,,,,,,,spacexai/grok-4.20-multi-agent-batch,,,global
+spacexai/grok-4.20-multi-agent-beta,Grok 4.20 Multi Agent Beta,xai,True,,,,1.8494,3.6988,2.3117,vercel,2.3117,vercel,xai,,,,,,,,,,,spacexai/grok-4.20-multi-agent-beta,,,global
+spacexai/grok-4.20-non-reasoning,Grok 4.20 Non-Reasoning,xai,True,,,,1.8494,3.6988,2.3117,vercel,2.3117,vercel,xai,,,,,,,,,,,spacexai/grok-4.20-non-reasoning,,,global
+spacexai/grok-4.20-non-reasoning-batch,Grok 4.20 Non-Reasoning (Batch),xai,True,,,,1.4795,2.959,1.8494,vercel,1.8494,vercel,,,,,,,,,,,,spacexai/grok-4.20-non-reasoning-batch,,,global
+spacexai/grok-4.20-non-reasoning-beta,Grok 4.20 Beta Non-Reasoning,xai,True,,,,1.8494,3.6988,2.3117,vercel,2.3117,vercel,xai,,,,,,,,,,,spacexai/grok-4.20-non-reasoning-beta,,,global
+spacexai/grok-4.20-reasoning,Grok 4.20 Reasoning,xai,True,,,,1.8494,3.6988,2.3117,vercel,2.3117,vercel,xai,,,,,,,,,,,spacexai/grok-4.20-reasoning,,,global
+spacexai/grok-4.20-reasoning-batch,Grok 4.20 Reasoning (Batch),xai,True,,,,1.4795,2.959,1.8494,vercel,1.8494,vercel,,,,,,,,,,,,spacexai/grok-4.20-reasoning-batch,,,global
+spacexai/grok-4.20-reasoning-beta,Grok 4.20 Beta Reasoning,xai,True,,,,1.8494,3.6988,2.3117,vercel,2.3117,vercel,xai,,,,,,,,,,,spacexai/grok-4.20-reasoning-beta,,,global
+spacexai/grok-4.3,Grok 4.3,xai,True,False,,,1.8494,3.6988,2.3117,vercel,2.3117,vercel,vertex,,,,,,,,,,,spacexai/grok-4.3,x-ai/grok-4.3,,global
+spacexai/grok-4.3-batch,Grok 4.3 (Batch),xai,True,,,,1.4795,2.959,1.8494,vercel,1.8494,vercel,,,,,,,,,,,,spacexai/grok-4.3-batch,,,global
+spacexai/grok-4.5,Grok 4.5,xai,True,False,,,2.959,8.8771,4.4385,vercel,4.4385,vercel,xai,,,,,,,,,,,spacexai/grok-4.5,x-ai/grok-4.5,,global
+spacexai/grok-build-0.1,Grok Build 0.1,xai,True,False,,,1.4795,2.959,1.8494,vercel,1.8494,vercel,xai,,,,,,,,,,,spacexai/grok-build-0.1,x-ai/grok-build-0.1,,global
+stealth/glyph-cluster,Glyph Cluster,stealth,True,,,,0.0,0.0,0.0,vercel,,,,,,,,,,,,,,stealth/glyph-cluster,,,global
+stepfun/step-3.7-flash,Step 3.7 Flash,stepfun,True,True,,,0.2959,1.7014,0.6473,vercel,0.6473,vercel,stepfun,,,,,,,,,,,stepfun/step-3.7-flash,stepfun/step-3.7-flash,,global
+tencent/hy-mt2-1.8b,Hy-MT2-1.8B,tencent,True,True,,,0.0651,0.2619,0.1143,openrouter,0.1143,openrouter,Tencent,,,,,,,,,,,,tencent/hy-mt2-1.8b,,global
+tencent/hy-mt2-30b-a3b,Hy-MT2-30B-A3B,tencent,True,True,,,0.1095,0.4365,0.1912,openrouter,0.1912,openrouter,Tencent,,,,,,,,,,,,tencent/hy-mt2-30b-a3b,,global
+tencent/hy-mt2-7b,Hy-MT2-7B,tencent,True,True,,,0.1095,0.4365,0.1912,openrouter,0.1912,openrouter,Tencent,,,,,,,,,,,,tencent/hy-mt2-7b,,global
+tencent/hy-mt2-lite,Tencent Hy-MT2-Lite,tencent,True,,,,0.0651,0.2619,0.1143,vercel,0.1143,vercel,tencent,,,,,,,,,,,tencent/hy-mt2-lite,,,global
+tencent/hy-mt2-plus,Tencent Hy-MT2-Plus,tencent,True,,,,0.1095,0.4365,0.1912,vercel,0.1912,vercel,tencent,,,,,,,,,,,tencent/hy-mt2-plus,,,global
+tencent/hy-mt2-pro,Tencent Hy-MT2-Pro,tencent,True,,,,0.1095,0.4365,0.1912,vercel,0.1912,vercel,tencent,,,,,,,,,,,tencent/hy-mt2-pro,,,global
+tencent/hy3,Tencent Hy3,tencent,True,True,,,0.2071,0.8581,0.3699,vercel,0.2136,openrouter,Tencent,,,,,,,,,,,tencent/hy3,tencent/hy3,,global
+tencent/hy3-preview,Hy3 preview,tencent,True,True,,,0.2663,0.8877,0.4217,openrouter,0.4217,openrouter,GMICloud,,,,,,,,,,,,tencent/hy3-preview,,global
+tencent/hy4-flash,Tencent Hy4 Flash,tencent,True,False,,,0.0518,0.2079,0.0908,vercel,0.0908,vercel,tencent,,,,,,,,,,,tencent/hy4-flash,tencent/hy4-flash,,global
+tencent/hy4-preview,Tencent Hy4 Preview,tencent,True,True,,,1.2339,3.7003,1.8505,vercel,1.6654,openrouter,Tencent,1.8505,DeepInfra,fp4,,,,,,,,tencent/hy4-preview,tencent/hy4-preview,,global
+thedrummer/cydonia-24b-v4.1,Cydonia 24B V4.1,thedrummer,True,True,,,0.4439,0.7398,0.5178,openrouter,0.5178,openrouter,Parasail,,,,,,,,,,,,thedrummer/cydonia-24b-v4.1,,global
+thedrummer/skyfall-36b-v2,Skyfall 36B V2,thedrummer,True,True,,,0.8137,1.1836,0.9062,openrouter,0.9062,openrouter,Parasail,,,,,,,,,,,,thedrummer/skyfall-36b-v2,,global
+thedrummer/unslopnemo-12b,UnslopNemo 12B,thedrummer,True,True,,,0.5918,0.5918,0.5918,openrouter,0.5918,openrouter,Parasail,,,,,,,,,,,,thedrummer/unslopnemo-12b,,global
+unbiased/pareto-26.10,Pareto 26.10,unbiased,True,False,,,1.1836,4.7344,2.0713,openrouter,2.0713,openrouter,Unbiased,,,,,,,,,,,,unbiased/pareto-26.10,,global
+unbiased/pareto-26.10-preview,Pareto 26.10 Preview,unbiased,True,False,,,1.1836,4.7344,2.0713,openrouter,2.0713,openrouter,Unbiased,,,,,,,,,,,,unbiased/pareto-26.10-preview,,global
+unbiased/pareto-26.9,Pareto 26.9,unbiased,True,False,,,3.6988,11.0963,5.5482,openrouter,5.5482,openrouter,Unbiased,,,,,,,,,,,,unbiased/pareto-26.9,,global
+undi95/remm-slerp-l2-13b,ReMM SLERP 13B,undi95,True,True,,,0.4439,0.7398,0.5178,openrouter,0.5178,openrouter,Mancer 2,,,,,,,,,,,,undi95/remm-slerp-l2-13b,,global
+upstage/solar-mini4,Solar Mini 4,upstage,True,False,,,0.148,0.5918,0.2589,openrouter,0.1295,openrouter,Upstage,,,,,,,,,,,,upstage/solar-mini4,,global
+writer/palmyra-x5,Palmyra X5,writer,True,False,,,0.8877,8.8771,2.885,openrouter,2.885,openrouter,Amazon Bedrock,,,,,,,,,,,,writer/palmyra-x5,,global
+x-ai/grok-4.20,Grok 4.20,xai,True,False,,,1.8494,3.6988,2.3117,openrouter,2.3117,openrouter,xAI,,,,,,,,,,,,x-ai/grok-4.20,,global
+xiaomi/mimo-v2.5,MiMo-V2.5,xiaomi,True,True,,,0.5918,2.959,1.1836,openrouter,1.1836,openrouter,Venice,,,,,,,,,,,,xiaomi/mimo-v2.5,,global
+xiaomi/mimo-v2.5-pro,MiMo-V2.5-Pro,xiaomi,True,True,,,0.6436,1.2872,0.8045,openrouter,1.1984,openrouter,DigitalOcean,,,,,,,,,,,,xiaomi/mimo-v2.5-pro,,global
+xiaomi/mimo-v2.6-pro-ultraspeed,MiMo V2.6 Pro UltraSpeed,xiaomi,True,False,,,6.4359,12.8717,8.0448,vercel,8.0448,vercel,xiaomi,,,,,,,,,,,xiaomi/mimo-v2.6-pro-ultraspeed,xiaomi/mimo-v2.6-pro-ultraspeed,,global
+z-ai/glm-4.6v,GLM 4.6V,zai,True,True,,,0.4439,1.3316,0.6658,openrouter,0.6658,openrouter,Novita,,,,,,,,,,,,z-ai/glm-4.6v,,global
+z-ai/glm-5.3-prime,GLM 5.3 Prime,zai,True,False,,,4.1426,13.0197,6.3619,openrouter,6.3619,openrouter,Alibaba,,,,,,,,,,,,z-ai/glm-5.3-prime,,global
+zai/glm-4.5,GLM 4.5,zai,True,True,,,0.8877,3.2549,1.4795,vercel,1.4795,vercel,zai,,,,,,,,,,,zai/glm-4.5,z-ai/glm-4.5,,global
+zai/glm-4.5-air,GLM 4.5 Air,zai,True,True,,,0.2959,1.6275,0.6288,vercel,0.4586,openrouter,Novita,,,,,,,,,,,zai/glm-4.5-air,z-ai/glm-4.5-air,,global
+zai/glm-4.5v,GLM 4.5V,zai,True,True,,,0.8877,2.6631,1.3316,vercel,1.3316,vercel,novita,,,,,,,,,,,zai/glm-4.5v,z-ai/glm-4.5v,,global
+zai/glm-4.6,GLM 4.6,zai,True,True,,,0.8877,3.2549,1.4795,vercel,1.424,vercel,novita,1.1244,Venice,fp4,,,,,,,,zai/glm-4.6,z-ai/glm-4.6,,global
+zai/glm-4.7,GLM 4.7,zai,True,True,,,0.8877,3.2549,1.4795,vercel,1.4795,vercel,bedrock,1.0911,deepinfra,fp4,,,,,,,,zai/glm-4.7,z-ai/glm-4.7,,global
+zai/glm-4.7-flash,GLM 4.7 Flash,zai,True,True,,,0.1036,0.5918,0.2256,vercel,0.2151,openrouter,Cloudflare,,,,,,,,,,,zai/glm-4.7-flash,z-ai/glm-4.7-flash,,global
+zai/glm-4.7-flashx,GLM 4.7 FlashX,zai,True,,,,0.0888,0.5918,0.2145,vercel,0.2145,vercel,zai,,,,,,,,,,,zai/glm-4.7-flashx,,,global
+zai/glm-5,GLM 5,zai,True,True,,,1.4795,4.7344,2.2932,vercel,1.3759,openrouter,StreamLake,,,,,,,,,,,zai/glm-5,z-ai/glm-5,,global
+zai/glm-5-turbo,GLM 5 Turbo,zai,True,False,,,1.7754,5.918,2.8111,vercel,2.8111,vercel,zai,,,,,,,,,,,zai/glm-5-turbo,z-ai/glm-5-turbo,,global
+zai/glm-5.1,GLM 5.1,zai,True,True,,,2.0713,6.5098,3.1809,vercel,2.0422,openrouter,Baidu,,,,,,,,,,,zai/glm-5.1,z-ai/glm-5.1,,global
+zai/glm-5.2,GLM 5.2,zai,True,True,,,2.0713,6.5098,3.1809,vercel,1.3929,openrouter,StreamLake,1.2899,deepinfra,fp4,,,,,,,,zai/glm-5.2,z-ai/glm-5.2,,global
+zai/glm-5.2-fast,GLM 5.2 Fast,zai,True,,,,4.1426,13.0197,6.3619,vercel,4.7714,vercel,baseten,,,,,,,,,,,zai/glm-5.2-fast,,,global
+zai/glm-5.3-fast,GLM 5.3 Fast,zai,True,,,,3.107,9.7648,4.7714,vercel,4.7714,vercel,baseten,,,,,,,,,,,zai/glm-5.3-fast,,,global
+zai/glm-5.3-flashx,GLM 5.3 FlashX,zai,True,False,,,0.5474,1.8494,0.8729,vercel,0.8729,vercel,zai,,,,,,,,,,,zai/glm-5.3-flashx,z-ai/glm-5.3-flashx,,global
+zai/glm-5.3-flashx-legal,GLM 5.3 FlashX Legal,zai,True,False,,,0.5474,1.8494,0.8729,vercel,0.8729,vercel,zai,,,,,,,,,,,zai/glm-5.3-flashx-legal,z-ai/glm-5.3-flashx-legal,,global
+zai/glm-5v-turbo,GLM 5V Turbo,zai,True,False,,,1.7754,5.918,2.8111,vercel,2.8111,vercel,zai,,,,,,,,,,,zai/glm-5v-turbo,z-ai/glm-5v-turbo,,global
